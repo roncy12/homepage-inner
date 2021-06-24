@@ -1,0 +1,3434 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{font-family: 'Montserrat', sans-serif !important	;}
+h1, h2, h3, h4, h5, h6{font-family: 'Montserrat', sans-serif !important	;}
+.navUser-action svg {
+    fill: #fff;
+}
+
+.header-top.position--center.header-simple {
+    background: url("https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/vector-smart-object1.png?t=1582162975&_ga=2.40243946.977186237.1582159027-2022119561.1571639426");
+    background-color: #132448;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 4px 20px -10px #222;
+}
+
+a.navPages-action {
+    color: #fff !important;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+a.navPages-action:hover {
+    text-decoration: none;
+}
+.navUser-action svg {
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: .7px;
+}
+
+.globalBanner-label {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.globalBanner {
+    background-color: #bed7e9;
+    color: #132448;
+    padding: 5px;
+}
+
+.navUser-item--cart .navUser-action {
+    color: #fff;
+}
+
+span.Cart_label {
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 3px;
+    color: #fff;
+}
+
+span.Account_label {
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 3px;
+    color: #fff;
+}
+
+.mattress-cool:hover, .mattress-luxe:hover, .mattress-alpha:hover {
+    filter: brightness(1);
+}
+// .mattress-cool {
+//     height: 450px;
+//     position: relative;
+//     background: url('../img/homepage/cool.jpg');
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     margin-left: 5px;
+//     margin-right: 5px;
+//     width: 100%;
+//     filter: brightness(.9);
+// }
+
+// .mattress-luxe {
+//     height: 450px;
+//     position: relative;
+//     background: url('../img/homepage/luxe.jpg');
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     margin-left: 5px;
+//     margin-right: 5px;
+//     width: 100%;
+//     filter: brightness(.9);
+// }
+
+// .mattress-alpha {
+//     height: 450px;
+//     position: relative;
+//     background: url('../img/homepage/alpha.jpg');
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     margin-left: 5px;
+//     margin-right: 5px;
+//     width: 100%;
+//     filter: brightness(.9);
+// }
+
+
+
+// a.mattress-section-button {
+//     position: absolute;
+//     bottom: 15%;
+//     color: #fff;
+//     text-decoration: none;
+//     left: 50%;
+//     transform: translatex(-50%);
+//     background-color: #00d2ff;
+//     padding: 10px 40px;
+//     font-size: 18px;
+// }
+
+.another-mattress-description > h3 {
+    font-weight: 900;
+    color: #174567;
+    font-size: 21px;
+}
+
+.another-mattress-description > span {
+    color: #666666;
+    font-size: 15px;
+}
+
+.another-mattress {
+    text-align: center;
+}
+
+.homepage-mattress-section.row {
+    margin-bottom: 4%;
+    margin-left: 2%;
+    margin-right: 2%
+}
+
+h1.another-mattress-title {
+    text-align: center;
+    color: #174567;
+    font-weight: 900;
+    font-size: 24px;
+    margin-bottom: 4%;
+}
+
+.homepage-adverts-section {
+    margin-top: 2%;
+}
+
+.blog-heading > h2 {
+    color: #174567;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 4%;
+}
+
+.blog-heading > p {
+    text-align: center;
+    color: #666666;
+}
+
+.blogPosts-more > a {
+    color: #666666;
+}
+
+.test-mattress-img {
+    text-align: center;
+    position: relative;
+}
+
+a.test-mattress-button {
+    position: absolute;
+    bottom: 43%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00d2ff;
+    padding: 10px 25px;
+    font-size: 17px;
+    color: #fff;
+    display: none;
+}
+
+.test-mattress-img:hover a.test-mattress-button {
+    
+    display: block;
+}
+
+.test-mattresses-section {
+    background: url("https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/rectangle-10-copy-3.jpg?t=1581666335&_ga=2.127098181.911729626.1581580201-2022119561.1571639426");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.test-mattresses-title {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+.test-mattresses-title > h2 {
+    color: #174567;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.test-mattresses-title > p {
+    color: #666666;
+}
+
+.card-body .card-text {
+    color: #888888;
+    font-size: 15px;
+}
+
+.card-title > a {
+    color: #666666!important;
+    text-decoration: none;
+}
+
+h3.card-title.blogPost-title {
+    color: #666666;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.footer .socialLinks .icon svg {
+    fill: #fff;
+}
+
+.footer {
+     background: url("https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/vector-smart-object1.png?t=1582162975&_ga=2.40243946.977186237.1582159027-2022119561.1571639426");
+    background-color: #132448;
+}
+
+.footer-payment-icons svg {
+    fill: #fff;
+}
+
+.footer-copyright a, .footer-copyright > .powered-by {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.footer-copyright-bottom {
+    background-color: #174567;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-copyright {
+    text-align: center!important;
+    width: 33.33%;
+}
+
+.footer-payment-icons {
+    justify-content: center;
+    margin: 0;
+    font-size: 21px;
+}
+
+.footer-info-heading {
+    color: #00d2ff;
+    font-weight: 900;
+    text-transform: none;
+    font-size: 24px;
+}
+
+.footer-info-list a {
+    color: #fff;
+}
+
+.footer-info-col--small {
+    width: 25%;
+}
+
+article.footer-info-col.footer-info-col--small > a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+article.footer-info-col.footer-info-col--small > p {
+    color: #ffffff;
+}
+
+ul.socialLinks.socialLinks--alt {
+    margin-top: 2%;
+}
+
+a.like-us {
+    border: 1px solid #00d2ff;
+    padding: 10px 15px 10px 15px;
+    color: #00d2ff!important;
+}
+
+img.like-us-img {
+    vertical-align: inherit;
+    margin-left: 4%;
+    margin-right: 1%;
+}
+
+.homepage-packaging-section > img {
+    width: 100%;
+}
+
+.homepage-adverts-section > img {
+    width: 100%;
+}
+
+.container {
+    padding: 0 2rem;
+}
+
+article.footer-info-col.footer-info-col--small.logo {
+    text-align: center;
+}
+
+.footer-info {
+    width: 95%;
+    margin: 0 auto;
+}
+.countPill {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+// category page
+
+
+.container-categ {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 118.5rem;
+    position: relative;
+
+}
+
+.categ-shop.row {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+p.why-mattress-desc {
+    text-align: center;
+    color: #666666;
+}
+
+h1.why-mattress-title {
+    text-align: center;
+    color: #174567;
+    font-weight: 900;
+}
+
+.FAQS-categ {
+    background: url("https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/family-image1.jpg?t=1582179008&_ga=2.40622442.977186237.1582159027-2022119561.1571639426");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 70px;
+}
+
+.accordion-faqs {
+    display: block;
+    color: #174675;
+    border-bottom: 2px solid #174675;
+    width: 50%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.FAQS-categ > h3 {
+    color: #174567;
+    font-weight: 900;
+    font-size: 24px;
+    margin-bottom: 2%;
+}
+
+.body.has-globalBanner.categ-body {
+    margin-bottom: 0;
+}
+
+.another-mattress-description {
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+.categ-shop.row > .col-lg-6.col-md-6.col-sm-12 > img {
+    width: 100%;
+}
+
+
+.col-lg-6.col-md-6.col-sm-12.left-categ-row {
+    padding-left: 3%;
+}
+
+.col-lg-6.col-md-6.col-sm-12.right-categ-row {
+    padding-right: 3%;
+}
+// .slick-slide {
+//     width: 100%!important;
+// }
+
+// .slick-track {
+//     margin-left: 0;
+//     margin-right: 0;
+//     width: 100%!important;
+// }
+
+
+
+.container {
+    padding: 0;
+    overflow: hidden;
+}
+.body.has-globalBanner {
+    margin-bottom: 0;
+}
+
+.comfort-section {
+    text-align: center;
+    color: #174567;
+}
+
+.comfort-section > h3 {
+    font-weight: 900;
+    color: #174576;
+}
+
+.comfort-section > p {
+    color: #444444;
+    font-size: 18px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.homepage-comfort-section.row {
+    margin-bottom: 4%;
+}
+
+.homepage-review-section > h3 {
+    color: #174567;
+    font-weight: 900;
+    margin: 0;
+    text-align: center;
+}
+
+.homepage-review-section > h2 {
+    font-weight: 500;
+    color: #174567;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.categ-banner {
+    margin-bottom: 1%;
+}
+
+a.shop-mattress-button {
+    padding: 20px 50px 20px 50px;
+    background-color: #00d2ff;
+    color: #fff;
+}
+
+a.shop-mattress-button:hover {
+    color: #222;
+}
+
+.master-bedroom {
+    height: 100%;
+    position: relative;
+    background: url('https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/masters.jpg?t=1600221665&_ga=2.185752618.2053009513.1600216022-2022119561.1571639426');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100%;
+    
+}
+
+.guest-bedroom {
+    height: 100%;
+    position: relative;
+    background: url('https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/guest.jpg?t=1600221667&_ga=2.194247342.2053009513.1600216022-2022119561.1571639426');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100%;
+
+}
+
+.kids-bedroom {
+    height: 100%;
+    position: relative;
+    background: url('https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/kids.jpg?t=1600222228&_ga=2.220855195.2053009513.1600216022-2022119561.1571639426');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100%;
+ 
+}
+
+.rf123 {
+    height: 400px;
+}
+.room-type {
+    position: absolute;
+    color: #fff;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100%;
+    padding: 2%;
+    bottom: 0;
+    left: 5%;
+}
+.room-type > p {margin-bottom:0;}
+
+.room-type > h4 {
+    margin: 0;
+    color: #00d2ff;
+    font-weight: 600;
+}
+.room-type > p > a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+#Demo1,#Demo2,#Demo3 {
+    
+    width: 50%;
+}
+
+
+.is-page{font-family: 'Montserrat', sans-serif;}
+.is-page h1{font-size:36px;font-weight:700;margin:15px 0;}
+.is-page h2{font-size:32px;font-weight:700;margin:15px 0;}
+.is-page h3{font-size:22px;font-weight:700;margin:15px 0;}
+.is-page h4{font-size:18px;font-weight:700;margin:15px 0;}
+.is-page p{font-size:16px;}
+.pg-top-banner{width:100%;}
+.pg-top-banner img{width:100%;}
+.aboutus-intro{width:80%;margin:0 auto;text-align:center;padding:50px 0;}
+.aboutus-intro div{width:45%;margin: 20px 2.4%;display:inline-block;vertical-align:middle;text-align:left;}
+.aboutus-intro div img{width:100%;}
+.aboutus-intro h2{color:#174567;}
+.aboutus-intro p{color:#666666;}
+
+.aboutus-mission{width:100%;display:flex;}
+.aboutus-mission div{width:50%;position:relative;}
+.aboutus-mission div img{width:100%;} 
+
+.abs-content{position:absolute !important;top:50%;left:50%;transform:translate(-50%,-50%);}
+.abs-content h2{color:#00d2ff;}
+.abs-content p{color:#fff;}
+
+
+.aboutus-vision{width:100%;margin:0 auto;padding:30px 0;text-align:center;}
+.aboutus-vision div{width:40%;margin:0 2.5%;text-align:left;display:inline-block;vertical-align:middle;}
+.aboutus-vision div img{width:100%;}
+.aboutus-vision div h2{color:#174567;}
+
+.aboutus-bottom{background:url(../img/aboutus-bottom-bg.png);background-size:cover;background-repeat:no-repeat;width:100%;margin:30px auto 0 auto;padding:30px 0;text-align:center;}
+.aboutus-bottom h2{color:#00d2ff;}
+.aboutus-bottom p{color:#fff;}
+.aboutus-bottom div{width:30%;margin:10px 1%;display:inline-block;vertical-align:middle;position:relative;}
+.aboutus-bottom div img{width:100%;}
+.aboutus-bottom div a{position:absolute;
+						top:50%;
+						left:50%;
+						transform:translate(-50%,-50%);
+						visibility:hidden;
+						opacity:0;
+						color:#fff;
+						background:#00b8df;
+						border-radius:5px 5px;
+						padding:10px 20px;
+						cursor:pointer;
+						font-size:15px;
+						font-weight:600;text-decoration:none;}
+.aboutus-bottom div:hover a{opacity:1;visibility:visible;transition:visibility 1s,opacity 1s;}
+.page-heading{display:none;}
+.page-content, .page-content--full{width:100% !important;}
+
+.certfication-intro{width:80%;margin:0 auto;padding:30px 0;text-align:center;}
+.certfication-intro h2{color:#1a4769;}
+.certfication-intro p{color:#444;}
+
+.certipur-desc{width:100%;display:flex;padding:30px 0;}
+.certipur-desc div{width:50%;position:relative;}
+.certipur-desc div img{width:100%;}
+.cert-abs-content{text-align:center;width:80% !important;position:absolute !important;top:50%;left:50%;transform:translate(-50%,-50%);}
+.cert-abs-content h1{color:#fff;}
+.cert-abs-content p{color:#fff;}
+.cert-abs-content h4{text-align:left;color:#00d2ff;}
+.cert-abs-content li p{color:#fff;display: inline-block;margin:5px 0;vertical-align:middle;}
+.certpur-list{color:#fff;width:100% !important;padding:0px !important;margin-left: 20px !important;}
+.certpur-list li{text-align:left;color:#00d2ff;margin:5px 0;}
+
+
+.certification-seal{text-align:center;width:100%;padding:40px 10%;background:url(../img/certicifation-moon-bg.png);background-size:cover;background-repeat:no-repeat;}
+.certification-seal p{color:#1a4769;}
+.certification-seal p span{font-weight:700;}
+
+
+.certification-bottom{background:url(../img/certification-bottom-bg.png);background-size:cover;background-repeat:no-repeat;width:100%;margin:0 auto;padding:70px 0;text-align:center;}
+.certification-bottom h2{color:#00d2ff;}
+.certification-bottom p{color:#fff;}
+.certification-bottom div{width:30%;margin:10px 1%;display:inline-block;vertical-align:middle;position:relative;}
+.certification-bottom div img{width:100%;}
+.certification-bottom div a{position:absolute;
+						top:50%;
+						left:50%;
+						transform:translate(-50%,-50%);
+						visibility:hidden;
+						opacity:0;
+						color:#fff;
+						background:#00b8df;
+						border-radius:5px 5px;
+						padding:10px 20px;
+						cursor:pointer;
+						font-size:15px;
+						font-weight:600;}
+.certification-bottom div:hover a{opacity:1;visibility:visible;transition:visibility 1s,opacity 1s;}
+.ordtracker-abs-content{text-align:center;width:80% !important;position:absolute !important;top:50%;left:50%;transform:translate(-50%,-50%);}
+.ordtracker-abs-content h1{color:#fff;}
+.ordtracker-abs-content p{color:#fff;}
+.ordtracker-abs-content h4{text-align:left;color:#00d2ff;}
+.ordtracker-form{    width: 40%;
+    margin: 70px auto;
+    border: 2px solid #cecece;
+    padding: 30px 0;}
+.ordtracker-bottom{width:100%;padding:30px 0;text-align:center;background:#bed7e9;}
+.ordtracker-bottom h2{color:#1a4769;}
+.ordtracker-bottom p{color:#444444;}
+
+.ordtracker-bottom p a{color:#1a4769;font-weight:600;}
+
+input +.terms-showMore {
+	font-size: 16px;
+	display: block;
+	cursor: pointer;
+	padding: 10px 0;
+	margin: 10px 0;
+	color: #174567;
+	font-weight: 600;
+	background-image: url(show.png);
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+}
+
+input:checked + .terms-showMore {
+    background-image: url(hide.png);
+}
+
+
+input {
+	display:none;
+}
+	input + .terms-showMore +  * {
+	font-size:15px;
+	padding-left:5px;
+	text-align:left;
+	color:#666666;
+	max-height: 0;
+	/*and eventually delay an overflow:auto; */
+	overflow:hidden;
+	transition: max-height 1s, overflow 1s;
+}
+input:checked + .terms-showMore  + * { 
+	/* here comes the compromise, set a max-height that would for your usual contents*/
+	max-height: 2000px;
+	overflow:auto;
+	transition: max-height 1s, overflow 1s;
+}
+
+
+
+.faqs-abs-content{text-align:center;width:80% !important;position:absolute !important;top:50%;left:50%;transform:translate(-50%,-50%);}
+.faqs-abs-content h1{color:#fff;}
+.faqs-abs-content p{color:#fff;}
+.faqs-abs-content h4{text-align:left;color:#00d2ff;}
+
+.faqs-content{text-align:center;width: 95%;margin:0 auto;padding:20px 0;}
+
+.faqs-content h2{color:#174567;font-size:24px;}
+
+.faqs-title{text-align:left;width: 29%;margin: 0 2%;display:inline-block;vertical-align:top;}
+.faqs-desc{text-align:left;width: 60%;margin: 0 2.5%;display:inline-block;vertical-align:top;}
+
+.support-abs-content{text-align:center;width:80% !important;position:absolute !important;top:50%;left:50%;transform:translate(-50%,-50%);}
+.support-abs-content h1{color:#fff;}
+.support-abs-content p{color:#fff;}
+.support-abs-content h4{text-align:left;color:#00d2ff;}
+
+
+.support-intro{width:100%;margin:0 auto;padding:30px ;text-align:center;background:#bed7e9;}
+.support-intro h2{color:#1a4769;}
+.support-intro p{color:#444;}
+.support-intro div{width:25%;margin:0 5px;display:inline-block;vertical-align:middle;}
+.support-intro div a{color:#fff;padding:10px 20px;background:#00d2ff;display: block;cursor:pointer;text-decoration:none;}
+.support-intro div a:hover{color:#124a6a;}
+
+.support-form{width:100%;margin:0 auto;padding:30px ;text-align:center;}
+.support-form div{width:40%;margin:0 5%;display:inline-block;vertical-align:top;text-align:left;}
+.support-form div:last-child{width:30%}
+.support-form div a{color:#1a4769;display: block;cursor:pointer;margin:5px 0;font-weight:600;padding-left: 25px;text-decoration:none;}
+.support-form div h2{color:#1a4769;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************* PRODUCT PAGE   ***************************/
+.productView{position: relative;}
+.productView-img-container img{position: relative;top: 0;bottom: 0;left: 0;right: 0;margin: auto; max-height: 100%; width: 100%;}
+.productView-img-container{max-width:100%;}
+.productView-images .productView-image.has-thumbs{float:none;width:100%;}
+.productView-images{width:100%;position: relative;margin-bottom:0;}
+.productView-img-container:after{padding:0;}
+
+.productView-thumbs{float: none;
+    position: absolute;
+	left:5%;
+    top: 35%;
+    transform: translatey(-50%);
+	margin:0;
+	}
+	
+.productView-thumbnail-link{
+    border: none;
+    display: inline-block;
+    height: auto;
+    max-width: unset;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+}
+.productView-thumbnail-link:hover{
+	border:1px solid #00d2ff;
+}
+.productView-thumb{
+	margin-bottom: 20px;
+	width:auto;
+}
+.productView-thumb img{
+	padding: 0;
+    width: 120px;
+    position: unset;
+    max-width: none;
+}
+
+.productView-details .productView-product{display:inline-block;width:40%;margin:0 1%;border-bottom:none;}
+.productView-details .productView-options{display:inline-block;width:55%;margin:0 1%;border-bottom:none;}
+.productView-details{width:100%;margin-bottom: 0;padding-top: 35px;background: #f2ece8ba;position: absolute;bottom: 0;left: 0;}
+.productView-scrollToDescription{display:none!important;}
+.custom-productTitle{display:inline-block;width:75%;margin:0 1.5%;}
+.productView-title{font-weight:600;font-family: 'Montserrat', sans-serif !important	;color:#174567;margin-bottom: 0;}
+.productView-price{color: #222222;font-weight: 600;} 	
+.productView-price{display:inline-block;width:15%;margin:0 1.5%;font-size:24px;}
+.productView-options .form-field{display:inline-block;width:47%;margin:0 1%;}
+.form-label--inlineSmall small.required-label, .form-label small{display:none;}
+.form-select{padding: 5px 10px;font-size: 16px;height:auto;}
+.productView-options .form-field.form-field--increments{display:inline-block;width:11%;margin:0 1%;vertical-align:top;}
+.button--icon svg{fill:#222;}
+.cus-options{display:inline-block;width:50%;margin:0 1%;vertical-align:top;}
+.productView-options .form-input[type="number"]{width: 30%;padding: 3px;font-size: 15px;vertical-align:top;}
+.productView-options .form-action.form-addToCart .button{width: 100%;margin: 0;padding: 0;height:auto;}
+.productView-options.has-wishlist .form-action.form-addToCart{width: 24%;float: none;display: inline-block;margin:0;}
+.form-label{color:#222;}
+.button--primary{background-color: #00b8df;border-color: #00b8df;color: white;}
+.button--primary:hover, .button--primary:focus, .button--primary.is-active, .button--primary.active{background-color: #00b8df;border-color: #00b8df;color: white;}
+.productView-options .form-action .button.dropdown-menu-button-wishList .icon svg{stroke: #222;fill: #222;}
+
+.prodview-shipping{width:100%;padding: 0;display:block;background:#bed7e9;}
+.prodview-shipping-details{display: inline-block;width: 50%;padding: 30px 2.3%;background: #174567;text-align: center;vertical-align: middle;}
+.prodview-shipping-details p{color:#fff;}
+.prodview-shipping-details p a{color:#01cbf7;text-decoration:none;}
+.prodview-shipping-details div{display:inline-block;width:40%;margin:0 2.5%;vertical-align:top;}
+.prodview-shipping-details div h4{color:#01cbf7;font-weight: 700;margin:0 0 10px 0;}
+.prodview-shipping-details div p{color:#fff;font-weight: 700;margin:0;}
+	
+.prodview-shipping-other-details{display: inline-block;width: 49%;padding: 30px 1%;background: #bed7e9;text-align: center;vertical-align: middle;}
+.prodview-shipping-other-details div{display: inline-block;width: 23%;margin: 0 .5%;vertical-align: top;text-align: left;}
+.prodview-shipping-other-details div img{display:inline-block;width: 35%;}
+.prodview-shipping-other-details div p{display:inline-block;width: 62%;font-weight: 700;font-size: 13px;}
+
+.prodview-prodimg{width:100%;padding:50px 0;display:block;text-align: center;}
+.prodview-prodimg div{width:80%;margin:0 auto;}
+.prodview-prodimg h2{color:#174567;font-weight:700;}
+.prodview-prodimg h2 span{color:#01cbf7;}
+
+.sub-prodview-podimg{width:100%;padding:50px 0;display:block;text-align: center;}
+.sub-prodview-podimg div{width:29%;margin: 0 1.5%;display:inline-block;}
+.sub-prodview-podimg div  h5{color:#174567;font-weight:700;}
+.sub-prodview-podimg div  p{color:#222;}
+
+.prodview-anatomy{width:100%;padding:0;display:block;background:#174567;}
+.prodview-anatomy div{width:50%;display:inline-block;vertical-align:middle;}
+.prodview-anatomy div img{width:100%;}
+.prodview-anatomy div h4{margin:0;color:#00d2ff;font-weight:700;}
+.prodview-anatomy div ul {list-style-image: url(../img/prodpage/anatomy-list.png);}
+.prodview-anatomy div ul li{color:#fff;}
+
+.prodview-comorftlevel{width:100%;padding:50px 0;display:block;text-align:center;}
+.prodview-comorftlevel h3{color:#174567;font-weight:700;}
+.prodview-comorftlevel div{width:25%;margin: 0 2.5%;display:inline-block;vertical-align:top;}
+.prodview-comorftlevel div h4{color:#174567;font-weight:700;margin:10px 0;}
+
+.prodview-sizechart{width:100%;padding:50px 0;display:block;text-align:center;}
+.prodview-sizechart h3{color:#174567;font-weight:700;}
+
+.prodview-sizechart-img{width:95%;padding:50px 0;display:block;text-align:center;display:flex;margin:0 auto;justify-content: center;}
+.prodview-sizechart-img div{display:inline-block;vertical-align:bottom	;margin:0 10px;}
+
+.prodview-advantage{width:100%;padding:50px 0;display:block;text-align:center;}
+.prodview-advantage h3{color:#174567;font-weight:700;}
+.prodview-advantage div{display:inline-block;vertical-align:top	;margin:0 1.5%;width:30%;}
+.prodview-advantage div ing{width:100%;}
+
+
+
+
+.warranty-abs-content{text-align:center;width:80% !important;position:absolute !important;top:50%;left:50%;transform:translate(-50%,-50%);}
+.warranty-abs-content h1{color:#fff;}
+.warranty-abs-content p{color:#fff;}
+.warranty-abs-content h4{text-align:left;color:#00d2ff;}
+
+.warranty-intro{width:80%;margin:0 auto;padding:30px ;text-align:center;}
+.warranty-intro h2{color:#1a4769;}
+.warranty-intro p{color:#444;}
+.warranty-intro div{width:25%;margin:0 5px;display:inline-block;vertical-align:middle;}
+.warranty-intro div a{color:#fff;padding:10px 20px;background:#00d2ff;display: block;cursor:pointer;text-decoration:none;}
+.warranty-intro div a:hover{color:#124a6a;	}
+
+
+.warranty-form{width:80%;margin:0 auto;padding:30px ;}
+
+
+.warranty-details{width:100%;padding:20px 0;background:#bed7e9;color:#444;}
+.warranty-details div{width:80%;padding:30px 20px;margin:0 auto;}
+.warranty-details div h3{text-align:center;color:#174567;margin:0;font-weight:500;}
+.warranty-details div p{padding-left: 40px;}
+.warranty-details div ul{width: 100%;background: none;}
+.warranty-details div ul li{padding: 10px 0;}
+
+
+
+
+.product-review-section > h2 {
+    color: #174567;
+    font-weight: 700;
+}
+.product-review-section {
+    text-align: center;
+}
+.iconic-collection > h3 {
+    color: #174567;
+    font-weight: 700;
+    margin-bottom: 1%;
+}
+.iconic-collection {
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.iconic-collection-luxe > a.icon-button {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%);
+    background: #00b8df;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: none;
+}
+.iconic-collection-luxe:hover a.icon-button {
+    display: block;
+}
+.iconic-collection-alpha > a.icon-button {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%);
+    background: #00b8df;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: none;
+}
+.iconic-collection-alpha:hover a.icon-button {
+    display: block;
+}
+.productView-price {
+    color: #174567;
+}
+a.test-mattress-button {text-decoration: none;}
+.newsletterPopup .form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.prodview-advantage {
+    padding-top: 0;
+}
+.prodview-sizechart {
+    padding-bottom: 0;
+}
+.certfication-intro {
+    padding-bottom: 0;
+}
+.blog-heading > h2 {
+    margin-top: 0;
+}
+
+
+.heroCarousel-description {
+    font-weight: 600;
+    color: #222222;
+    font-size: 20px;
+}
+.heroCarousel-title {
+    font-size: 40px;
+    color: #273655;
+    font-weight: 900;
+}
+.heroCarousel-action {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #00d2ff;
+    padding: 10px 15px 10px 15px;
+}
+.heroCarousel-title:after {
+    content: none;
+}
+.heroCarousel-content {
+    left: 3%;
+    right: auto;
+    top: 50%;
+    width: 30%!important;
+    text-align: left;
+    background-color: transparent;
+}
+.heroCarousel-slide .heroCarousel-image {
+    max-height: 100%!important;
+}
+.heroCarousel-slide .heroCarousel-image-wrapper {
+    max-height: 100%;
+    height: 100%!important;
+}
+.categ-room-section.row {
+    margin-bottom: 7%;
+}
+.row {
+margin-left: 0;
+margin-right: 0;
+}
+
+.stamped-reviews-image {
+    display: none!important;
+}
+.coupon-topbar.navUser {
+    text-align: center;
+    font-weight: 600;
+    padding: 10px;
+}
+a.coupon-button {
+    background-color: #00d2ff;
+    color: #fff;
+    text-transform: none;
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+}
+
+// inner page
+
+.transit-content {
+    text-align: center;
+    margin-top: 2%;
+    color: #666666;
+}
+.transit-content ul {
+    text-align: left;
+    background: none;
+}
+.transit-content > p {
+    margin-bottom: 0;
+}
+.transit-chart {
+    margin: 0 auto;
+    width: 85%;
+    margin-top: 3%;
+}
+.transit-disclaimer > p {
+    margin-bottom: 0;
+    margin: 0 auto;
+    width: 55%;
+}
+.transit-disclaimer {
+    background: #bed7e9;
+    color: #666666;
+    padding: 15px;
+}
+.fixed-header-simple + .body.has-globalBanner {
+    margin-top: 8rem;
+}
+ul.breadcrumbs {
+    display: none;
+}
+
+// cart 
+
+
+
+.cart-heading > h1 {
+    color: #fff;
+    font-weight: 500;
+    padding: 1%;
+    margin-bottom: 0;
+}
+.cart-heading {
+    background: #00d2ff;
+    text-align: center;
+}
+thead.cart-header {
+    display: none;
+}
+tbody.cart-list {
+    border: none;
+}
+tr.cart-item {
+    border: none;
+}
+h4.cart-item-name > a {
+    color: #132447;
+    text-decoration: none;
+    font-weight: 600;
+}
+.cart-item-info {
+    width: 20%;
+}
+h3.cart-summary-heading {
+    text-align: center;
+    color: #132447;
+    font-weight: 500;
+}
+
+.cart-actions .button {
+    float: none;
+    background: #ff2d00;
+    border: none;
+    height: 3rem;
+    line-height: normal;
+}
+.cart-actions {
+    text-align: center;
+}
+.static-sidebar {
+    background: #bed7e9;
+    padding: 0 2%;
+}
+.container {
+    max-width: 100%!important;
+}
+main.page-content {
+    padding: 0;
+}
+table.cart {
+    width: 90%;
+    margin: 0 auto;
+}
+.coupon-form .form-input {
+    height: 2.5rem;
+}
+.coupon-form .button {
+
+    background: #666666;
+    border: none;
+    height: 2.5rem;
+    padding: 0;
+}
+h2.checkoutHeader-heading {
+    background: url("https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/vector-smart-object1.png?t=1582162975&_ga=2.40243946.977186237.1582159027-2022119561.1571639426");
+    text-align: center;
+    background-color: #132448;
+}
+a.checkoutHeader-link > #logoImage {
+    width: 200px;
+    padding: 2% 0;
+}
+.homepage-adverts-section {
+    background: url("https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/only-what-you.png?t=1601625615&_ga=2.8770485.107696235.1601252207-2022119561.1571639426");
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 3%;
+}
+.ads-content > div > div > h3 {
+    margin-bottom: 0;
+    color: #174567;
+    font-weight: 600;
+}
+.ads-content > div > div > img {
+    margin-right: 15px;
+}
+.ads-content > div {
+    display: flex;
+    align-items: center;
+}
+.ads-text > h1 {
+    color: #174567;
+    font-weight: 600;
+    font-size: 40px;
+}
+.ads-text > h1 > span {
+    color: #00d2ff;
+}
+.ads-abs {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.ads-content-text {
+    width: 73%;
+}
+.homepage-packaging-section {
+    display: flex;
+}
+.cares-img {
+    width: 50%;
+}
+.cares-img > img {
+    width: 100%;
+}
+.cares-text {
+    width: 50%;
+    background: #eceded;
+    padding: 5%;
+}
+.cares-text > h1 {
+    color: #174567;
+    font-weight: 700;
+    font-size: 40px;
+}
+.cares-text > p {
+    color: #222222;
+}
+.privacy-content {
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.privacy-legend {
+    width: 40%;
+    text-align: left;
+    padding-left: 5%;
+}
+.privacy-legend > h2 {
+    color: #174567;
+    font-size: 20px;
+    margin-top: 0;
+}
+.privacy-description {
+    width: 55%;
+}
+.privacy-description > p {
+    color: #666666;
+}
+.homepage-review-section > h2 > span {
+    color: #00d2ff;
+}
+.homepage-review-section > h2 {
+    margin-bottom: 1%;
+}
+.blog-heading > h2 > span {
+    color: #00d2ff;
+}
+.test-mattresses-title > h2 > span {
+    color: #00d2ff;
+}
+.mattress-title-shop h2 {
+    margin: 3% 0 0 0;
+    text-align: center;
+    color: #666666;
+}
+.mattress-button-div a span {
+    margin: 1% 0;
+    background: #132448;
+    color: #fff;
+    padding: 2% 0;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a.mattress-section-button > span > img {
+    margin-left: 2%;
+    height: 16px;
+}
+a.mattress-section-button {
+    text-align: center;
+    text-decoration: none;
+}
+.mattress-cool > img {
+    width: 100%;
+}
+.mattress-luxe > img {
+    width: 100%;
+}
+.mattress-alpha > img {
+    width: 100%;
+}
+.login > .login-row > form.login-form {
+    background: url("https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/loging-bg.jpg?t=1599460865&_ga=2.195105317.847040776.1599437166-1432688951.1599009154");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0;
+    padding: 5%;
+}
+.login > .login-row > form.login-form > h3 {
+    color: #00d2ff;
+    font-weight: 600;
+    text-align: center;
+    text-transform: none;
+}
+.login > .login-row > form.login-form > .form-actions .button {
+    width: 100%;
+}
+.login > .login-row > form.login-form > .form-actions a.forgot-password {
+    color: #fff;
+    text-decoration: none;
+}
+.login > .login-row > form.login-form > .form-actions {
+    margin-top: 0;
+}
+.login > .login-row > form.login-form > .form-field {
+    margin-bottom: 10px;
+}
+.login > .login-row > form.login-form > .form-field > .form-input {
+    height: 3rem;
+}
+.login > .login-row > form.login-form > .form-actions .button {
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 10px;
+    line-height: 1rem;
+}
+.panel-title {
+    font-size: 20px;
+    color: #174567;
+    font-weight: 600;
+}
+.new-customer .panel-body {
+    margin-bottom: 0;
+    padding: 0;
+    background: #f8fafb;
+}
+.new-customer .panel-header {
+    padding: 0;
+    background: #f8fafb;
+}
+.new-customer .panel {
+    border: 1px solid #dadada;
+    text-align: center;
+    padding: 5%;
+    background: #f8fafb;
+}
+li.new-customer-fact::before {
+    content: "\2022";
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    color: #00d2ff;
+}
+li.new-customer-fact {
+    color: #444444;
+}
+ul.new-customer-fact-list {
+    list-style: none;
+}
+.new-customer > .panel > .panel-body > a > button.button {
+    border: none;
+    background: #00d2ff;
+    color: #fff;
+    height: 3rem;
+    line-height: 1rem;
+    width: 100%;
+}
+.panel-body > :last-child {
+    margin-bottom: 0;
+    font-size: 12px;
+    margin-top: 2px;
+}
+.new-customer .new-customer-fact-list {
+    width: 100%; 
+}
+.estimator-form .button--primary {
+    width: 100%;
+}
+.setup-care-content {
+    width: 90%;
+    margin: 0 auto;
+}
+.setup-care-content > h2 {
+    color: #174567;
+    text-align: center;
+}
+.setup-care-content > p {
+    text-align: center;
+    color: #444444;
+}
+.setup-steps > div {
+    text-align: center;
+    width: 25%;
+}
+.setup-steps {
+    display: flex;
+        width: 95%;
+    margin: 0 auto;
+    justify-content: center;
+}
+.setup-steps > div > h3 img {
+    margin-right: 1%;
+}
+.setup-steps > div > h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+        color: #174567;
+}
+.setup-steps > div > p {
+    color: #444444;
+    margin-top: 0;
+        width: 80%;
+    margin: 0 auto;
+}
+h3.decompression {
+    color: #174567;
+    text-align: center;
+    font-size: 18px;
+    text-transform: none;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+h3.sweet-dreams {
+    color: #fff;
+    font-size: 24px;
+}
+.powered-by-stamp {
+    background: #174567;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.powered-by-stamp h3 {
+    color: #00d2ff;
+    margin: 0;
+}
+.powered-by-stamp p {
+    margin: 0;
+    color: #fff;
+}
+.steamped-bg-fullpage h4 {
+    color: #174567;
+    border-bottom: 1px solid #bed7e9;
+}
+.steamped-bg-fullpage {
+    background: url("https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/review-bg.jpg?t=1599715824&_ga=2.85833689.1918111745.1599697146-2022119561.1571639426");
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.steamped-bg-fullpage div#stamped-reviews-widget {
+    background: #fff;
+}
+.stamped-review-width {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.review-page-bottom {
+    background: url("https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/review-btm.jpg?t=1599716956&_ga=2.81567575.1918111745.1599697146-2022119561.1571639426");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: 0 auto;
+    padding: 70px 0;
+    text-align: center;
+}
+
+
+.review-page-bottom h2{color:#00d2ff;}
+.review-page-bottom p{color:#fff;}
+.review-page-bottom div{width:30%;margin:10px 1%;display:inline-block;vertical-align:middle;position:relative;}
+.review-page-bottom div img{width:100%;}
+.review-page-bottom div a{position:absolute;
+						top:50%;
+						left:50%;
+						transform:translate(-50%,-50%);
+						visibility:hidden;
+						opacity:0;
+						color:#fff;
+						background:#00b8df;
+						border-radius:5px 5px;
+						padding:10px 20px;
+						cursor:pointer;
+						font-size:15px;
+						font-weight:600;}
+.review-page-bottom div:hover a{opacity:1;visibility:visible;transition:visibility 1s,opacity 1s;}
+.review-page-bottom {
+    margin-top: 3%;
+}
+.steamped-bg-fullpage .stamped-review-width div#stamped-reviews-widget .stamped-widget-title {
+    display: none;
+}
+.stamped-star-badge span#stamped-badge-title {
+    color: #fff;
+}
+.stamped-star-badge span#stamped-badge-total {
+    color: #fff;
+}
+
+// blog page 
+
+.blog-page-width .card-body {
+    max-width: 60%;
+    flex: 0 0 60%;
+    text-align: left;
+}
+.blog-page-width figure.card-figure {
+    max-width: 40%;
+    flex: 0 0 40%;
+}
+
+.blog-page-width article.card {
+    display: flex;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+}
+.blog-page-width li.blogPost {
+    width: 100%;
+}
+.blog-page-width {
+    width: 90%;
+    margin: 0 auto;
+}
+.blog-page-width .card-title > a {
+    color: #222222!important;
+}
+.blog-page-width h2.blogpage-title {
+    color: #174567;
+    font-weight: 600;
+}
+.blog-page-width a.blogPost-link {
+    color: #00d2ff;
+    font-weight: 600;
+    text-decoration: none;
+        display: flex;
+    align-items: center;
+}
+.blog-page-width a.blogPost-link img {
+    margin-left: 1%;
+}
+.blog-page-width p.card-text {
+    color: #222222!important;
+}
+.blog-page-width .blog-parent-div ul.blogPosts.postColumns--4 {
+    width: 70%;
+    float: left;
+}
+.blog-page-width .blog-parent-div .newsletter-blog {
+    width: 30%;
+    float: right;
+}
+.blog-page-width .blog-parent-div .newsletter-blog > h5 {
+    color: #174567;
+    font-weight: 600;
+    text-align: center;
+    font-size: 18px;
+}
+.blog-page-width .blog-parent-div .newsletter-blog {
+    background: #e2e8ed;
+    padding: 1%;
+}
+.homepage-mattress-section.row > div > div > img {
+    height: 450px;
+}
+.mattress-luxe > p {
+    text-align: center;
+    color: #666666;
+    font-size: 18px;
+}
+.mattress-alpha > p {
+    text-align: center;
+    color: #666666;
+    font-size: 18px;
+}
+.mattress-cool > p {
+    text-align: center;
+    color: #666666;
+    font-size: 18px;
+}
+h3.room-type-heading {
+    text-align: center;
+    color: #142549;
+    font-weight: 600;
+    margin-bottom: 2%;
+    margin-top: 7%;
+}
+.mattress-title-shop > p {
+    margin: 0;
+    text-align: center;
+    color: #666666;
+    font-size: 18px;
+}
+.mattress-title-shop > p > span {
+    color: #00d2ff;
+}
+
+.track-button-innerContainer {
+    max-width: 100%!important;
+    align-items: center!important;
+}
+button.outline-none.p-2.rounded.flex {
+    background-color: #00d2ff!important;
+}
+a.aftership-poweredBy {
+    display: none!important;
+}
+.ordtracker-form > h3 {
+    text-align: center;
+    color: #174567;
+}
+.blogPosts { margin: 0;}
+.blogPost .card-body {
+    padding-top: 0;
+}
+.coupon-topbar.navUser {
+    display: flex!important;
+    justify-content: center;
+}
+.coupon-topbar.navUser > div {
+    margin-right: 5%;
+}
+.coupon-topbar.navUser > div > label {
+    margin-bottom: 0;
+}
+.previewCartAction-viewCart .button {
+    border-color: #174567;
+    color: #174567;
+}
+.productView {
+    padding-top: 0;
+}
+
+.accordion-faqs {
+  transition: 0.4s;
+    text-align: left;
+}
+
+
+.panel-faqs {
+  padding: 0 18px;
+  max-height: 0;
+  margin-top: 1%;
+  overflow: hidden;
+  transition: max-height 0.6s ease-out;
+    width: 50%;
+}
+article.footer-info-col.footer-info-col--small > p > a {
+    color: #fff;
+}
+article.footer-info-col.footer-info-col--small > p {
+    margin-bottom: 0;
+}
+button.accordion-faqs {
+    font-weight: 600;
+}
+.slick-dots li.slick-active button::before {
+    background: #174567;
+}
+.slick-dots li.slick-active button:before {
+    color: #174567;
+    opacity: 1;
+}
+
+/*Aris - Stamped Changes*/
+.homepage-review-section div#stamped-reviews-widget, .product-review-section div#stamped-reviews-widget {
+    max-width: 100% !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+    overflow: hidden !important;
+}
+.homepage-review-section {
+    padding: 3% 0 !important;
+}
+.product-review-section {
+    padding: 0 0 4% !important;
+}
+
+// RONCy CUSTOM HOMEPAGE
+.header-top.position--center.header-simple {
+    background: #fff;
+    background-color: #ffffff;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 4px 20px -10px #222;
+}
+a.navPages-action {
+    color: #132448 !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Almarai' !important;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+span.Cart_label {
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 3px;
+    color: #132448;
+    font-weight: 700;
+    display: none;
+}
+span.Account_label {
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 3px;
+    color: #132448;
+    font-weight: 700;
+    display: none;
+}
+
+.countPill {
+    background-color: #dd2424;
+    position: absolute;
+    top: 11px;
+    right: -5px;
+}
+.heroCarousel .slick-next, .heroCarousel .slick-prev {
+    background-color: #354669 !important;
+    color: #fff;
+    border: 0;
+    border-radius: 10%;
+}
+
+.navUser-action svg {
+    fill: #132448;
+    stroke: #132448;
+    stroke-width: .7px;
+}
+
+.fixed-header-simple + .body.has-globalBanner {
+    margin-top: 6rem;
+}
+
+
+
+
+// US BANNER
+.flex-mattrees-section div.usbanner-div {
+    width: 50%;
+}
+.usbanner-div > img {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+.flex-mattrees-section>div.banner-div1 {
+    width: 50%;
+}
+
+
+.banner-div1{
+    background: url("https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/banner-us-flash.png?t=1623735492");
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100%;
+    background-size: cover;
+}
+
+
+// CUSTOM STATIC REVIEW CAROUSEL
+.stamped-pagination .last, .stamped-pagination .next {
+    display: none !important;
+}
+
+.stamped-pagination a:not(.link):not(.btn) {
+    border: none !important;
+}
+.stamped-pagination .first, .stamped-pagination .previous {
+    display: none !important;
+}
+.stamped-header {
+    display: none!important;
+}
+.stamped-tab-container[style="display:none;"] {
+    display: none!important;
+}
+.stamped-reviews-filter {
+    display: none;
+}
+.stamped-header-title {
+    display: none;
+}
+.stamped-review-header .created, .stamped-review-header-byline .created {
+    display: none;
+}
+.stamped-review-header {
+    font-size: 14px;
+    width: 100%;
+    line-height: 18px;
+    position: absolute;
+    padding-top: 8%;
+}
+.stamped-review-header-starratings {
+    font-size: 20px;
+    display: inline-block;
+    margin-left: -68px;
+    position: absolute;
+    top: -14px;
+}
+.stamped-review[data-verified=buyer] .stamped-review-avatar:before {
+    content: '\e904';
+    font-family: stamped-font;
+    font-size: 21px !important;
+    position: absolute;
+    right: -34px;
+    bottom: 0;
+    color: #1cc286;
+    top: 32px;
+}
+.stamped-review-header .review-location {
+    display: none;
+}
+span.stamped-verified-badge {
+    top: 55%;
+    position: absolute;
+    left: 19%;
+}
+span.stamped-verified-badge {
+    top: 83%;
+    position: absolute;
+    left: 93px;
+}
+.stamped-review .author {
+    margin-right: 0;
+    left: 74px;
+    position: absolute;
+    top: 93px;
+    color: #fff;
+}
+
+.stamped-review-content {
+    margin: 0 0 15px;
+    clear: both;
+    width: 40%;
+    color: #fff;
+}
+.green-matt-review {
+    background: url("https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/is-parallax-pattern.png?t=1623642972&_ga=2.224919322.1496872644.1623634006-1835193253.1617777202");
+    background-repeat: no-repeat;
+    height: 650px;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 3%;
+    background-attachment: fixed;
+    transform-style: preserve-3d;
+    perspective: 1px;
+}
+#stamped-main-widget {
+    display: block;
+    overflow: hidden;
+    margin: 1em 15px;
+    font-style: normal;
+    padding-top: 12em;
+}
+.stamped-review .author {
+    margin-right: 0;
+    left: 74px;
+    position: absolute;
+    top: 106px;
+    color: #fff;
+}
+
+
+.stamped-pagination {
+    text-align: left;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    left: 0;
+}
+
+.green-matt-review h2 {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 34%;
+    font-weight: 600;
+    text-transform: initial;
+}
+
+.ads-content-text.green-context {
+    border-right: 1px solid black;
+}
+.green-context {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    transition-delay: 1500ms;
+}
+
+.heroCarousel.rev-carousel .slick-next, .heroCarousel.rev-carousel .slick-prev {
+    background-color: #354669 !important;
+    color: #fff;
+    border: 0;
+    border-radius: 10%;
+}
+section.heroCarousel.rev-carousel {
+    background: url("https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/is-parallax-pattern.png?t=1623642972&_ga=2.224919322.1496872644.1623634006-1835193253.1617777202");
+    background-repeat: no-repeat;
+    height: 750px;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 3%;
+    background-attachment: fixed;
+    transform-style: preserve-3d;
+    perspective: 1px;
+}
+
+.carousel-rev-con {
+    padding-top: 5%;
+    display: -ms-flexbox;
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    padding-left: 10%;
+
+}
+.carousel-rev-con>div {
+    width: 50%;
+}
+.carousel-rev-con .review-left-con > h2 {
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.carousel-rev-con .review-left-con > p {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.review-buyer {
+    display: flex;
+}
+.review-buyer div > h4 {
+    color: #fff;
+    padding-top: 12px;
+    margin-top: 0;
+    padding-left: 15%;
+    text-transform: capitalize;
+}
+.review-buyer div > p {
+    color: #1cc285;
+    padding-left: 22px;
+    margin-top: -12px;
+}
+.review-buyer div > p > span {
+    padding-right: 7px;
+    padding-top: 1px;
+}
+.verified-con>p {
+    display: flex;
+}
+.review-right-con>img {
+    margin-left: 25%;
+    margin-top: -65px;
+}
+.heroCarousel.rev-carousel .slick-dots {
+    bottom: 92px;
+    text-align: left;
+    left: 17.5%;
+}
+.heroCarousel.rev-carousel .slick-dots li button, .heroCarousel.rev-carousel.slick-dots li button::before {
+    border: 1px solid grey;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    background: grey;
+}
+
+
+.heroCarousel.rev-carousel .slick-dots li button, .heroCarousel.rev-carousel.slick-dots li button::before {
+    height: 1.07143rem;
+    width: 1.07143rem;
+    border-radius: 50%;
+}
+
+.heroCarousel.rev-carousel .slick-dots li.slick-active button:before {
+    color: #1fc0fb;
+    opacity: 1;
+    height: 1.07143rem;
+    width: 1.07143rem;
+    border-radius: 50%;
+    background: #1fc0fb;
+}
+.heroCarousel.rev-carousel .slick-dots li button:hover,.heroCarousel.rev-carousel .slick-dots li button:focus {
+    outline: none;
+    border: 1px solid grey;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    background: grey;
+}
+
+.fancy-div{
+    display: flex;
+     justify-content: center;
+}
+
+a.mattress-button-aff {
+    background-color: #132448;
+    color: #fff;
+    text-transform: none;
+    text-decoration: none;
+    /* padding: 5px 10px 5px 10px; */
+    padding: 12px 40px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.most-affordable-desc>p {
+    margin-bottom: 5%;
+}
+
+.slick-dots li button, .slick-dots li button::before {
+    height: 1.07143rem;
+    width: 1.07143rem;
+}
+
+// MOST AFFORDABLE USA
+.banner-most-affordable {
+    position: relative;
+    width: 95%;
+    margin: 0px auto;
+    padding-bottom: 2%;
+}
+.banner-most-affordable>img{
+    position: relative;
+    width: 100%;
+}
+
+.most-affordable-desc {
+    position: absolute;
+    top: 20%;
+    left: 4%;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: 500;
+}
+.most-affordable-desc h2 {
+    width: 50%;
+    line-height: 1.3;
+    color: rgb(23, 69, 103);
+    font-weight: 500;
+    font-size: 46px;
+    text-transform: capitalize;
+}
+.flex-mattrees-section.us {
+    margin-top: 45px;
+    margin-bottom: 2%;
+}
+.flex-mattrees-section div.usbanner-div {
+    width: 50%;
+}
+
+.flex-mattrees-section {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+}
+.us-banner-description {
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 10%;
+    width: 70%;
+    padding-top: 6%;
+}
+.us-banner-description > h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.flex-mattrees-section > div.night-sleep-div {
+    width: 70%;
+    position: relative;
+}
+.night-sleep-div > img {
+    width: 97%;
+    position: relative;
+}
+.another-mattress.night-div{
+    text-align: left;
+    position: absolute;
+    top: 40%;
+}
+
+.certified-prod-div {
+    width: 30%;
+    position: relative;
+}
+
+.certified-prod-div > img {
+    width: 100%;
+    height: 100%;
+}
+
+// REVIEW BANNER
+
+.review-banner {
+    width: 91%;
+    margin: -10px auto 0px;
+    padding-top: 5em;
+    position: relative;
+}
+.review-banner > img {
+    width: 100%;
+    position: relative;
+    height: 8em;
+}
+
+.review-banner-con {
+    position: absolute;
+    top: 57%;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 25px;
+}
+
+a.reviewreal-button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(19, 36, 72);
+    text-transform: none;
+    text-decoration: none;
+    padding: 18px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+div > a.reviewreal-button {
+    right: 4%;
+    position: absolute;
+    top: -7%;
+}
+.star-badge {
+    margin-top: 2%;
+    margin-left: 10%;
+}
+.review-banner-con > div {
+    width: 33%;
+}
+
+// EVERYTHING YOU NEED
+.homepage-adverts-section {
+    background: no-repeat fixed rgb(255, 255, 255);
+    width: 93%;
+    margin-bottom: 3%;
+    transform-style: preserve-3d;
+    perspective: 1px;
+}
+
+.ads-content-text {
+    width: 73%;
+    color: #132448;
+    font-weight: 500;
+}
+
+.ads-content {
+    display: flex;
+}
+
+.ads-abs {
+    position: absolute;
+    top: 55px;
+    left: 10%;
+}
+
+.ads-content > div {
+    display: flex;
+    align-items: center;
+}
+
+.ads-text > h1 {
+    color: rgb(19, 36, 72);
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: inherit;
+}
+.ads-text {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+// BLOG
+.blog-heading > h2 > span {
+    color: rgb(19, 36, 72);
+}
+
+.blog-heading > h2 {
+    color: rgb(19, 36, 72);
+    font-weight: 900;
+    text-align: center;
+    margin-top: 4%;
+}
+
+.blog-heading > h2 {
+    margin-top: 0px;
+}
+.blog-heading > p {
+    text-align: center;
+    color: rgb(23, 69, 103);
+    font-weight: 400;
+}
+
+.blog-homepage {
+    width: 85%;
+    margin: 0px auto;
+}
+
+.card-title > a {
+    text-decoration: none;
+    color: rgb(19, 36, 72) !important;
+}
+
+h3.card-title.blogPost-title {
+    color: rgb(102, 102, 102);
+    font-weight: 600;
+    font-size: 17px;
+    text-align: left;
+}
+.card-body > :first-child {
+    margin-top: 0px;
+    text-align: left;
+}
+.blogPosts-more > a {
+    background-color: rgb(19, 36, 72);
+    color: rgb(255, 255, 255);
+    text-transform: none;
+    text-decoration: none;
+    padding: 13px 15px;
+    border-radius: 2%;
+    font-weight: 400;
+}
+
+
+// STILL IN DOUBT
+.test-mattresses-section {
+    width: 85%;
+    background: url("https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/pre-footer-mattress-image.png?t=1623634068") 0% 0% / cover no-repeat;
+    background-repeat: no-repeat;
+    margin: 0px auto;
+}
+
+.footer-mattress-title {
+    font-size: 40px;
+    font-weight: 500;
+    color: rgb(255, 255, 255) !important;
+}
+a.mattress-button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(19, 36, 72);
+    text-transform: none;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.test-mattresses-title {
+    text-align: left;
+    padding-top: 8%;
+    padding-bottom: 5%;
+    padding-left: 13%;
+}
+
+// FOOTER
+.footer {
+    background: rgb(255, 255, 255);
+}
+
+.footer-info {
+    width: 75%;
+    margin: 0px auto;
+}
+
+.footer-info-heading {
+    color: rgb(19, 36, 72);
+    font-weight: 900;
+    text-transform: none;
+    font-size: 24px;
+}
+article.footer-info-col.footer-info-col--small > p > a {
+    color: rgb(19, 36, 72);
+    font-weight: 700;
+}
+article.footer-info-col.footer-info-col--small > p {
+    color: rgb(136, 136, 136);
+}
+
+.footer-info-list a{
+    color: rgb(136, 136, 136);
+}
+
+a.like-us {
+    background-color: rgb(226, 232, 237);
+    border: 1px solid rgb(226, 232, 237);
+    font-weight: 800;
+    border-radius: 3%;
+    padding: 17px 15px;
+    color: rgb(19, 36, 72) !important;
+}
+img.like-us-img {
+    vertical-align: text-bottom;
+    margin-left: 4%;
+    margin-right: 1%;
+    margin-top: 3%;
+}
+
+.footer-copyright-bottom {
+    background-color: rgb(226, 232, 237);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4em;
+}
+
+.footer-copyright a, .footer-copyright > .powered-by {
+    color: rgb(55, 55, 55);
+}
+
+.footer-copyright {
+    width: 33.33%;
+    text-align: center !important;
+}
+
+.footer-payment-icons svg {
+    height: 100%;
+    width: 100%;
+}
+.footer-payment-icons svg {
+    fill: rgb(255, 255, 255);
+    background: rgb(19, 36, 72);
+    border-radius: 5%;
+    padding: 4px;
+}
+
+.footer-payment-icons {
+    justify-content: space-evenly;
+    margin: 0px;
+    font-size: 21px;
+    width: 301px;
+}
+
+.footer-payment-icons span {
+    height: 2.5rem;
+    margin: auto -0.375rem;
+    position: relative;
+    width: 3.4375rem;
+}
+
+// NOT JUST ANOTHER MATTRESS
+
+.most-affordable-desc h2 {
+    width: 50%;
+    line-height: 1.3;
+    color: #174567;
+    font-weight: 500;
+    font-size: 46px;
+    text-transform: capitalize;
+}
+
+.flex-mattrees-section {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.flex-mattrees-section>div.night-sleep-div {
+    width: 70%;
+}
+
+.night-sleep-div>img {
+    width: 97%;
+}
+
+.certified-prod-div {
+    width: 30%;
+    position: relative;
+}
+
+.certified-prod-div>img {
+    width: 100%;
+    height: 100%;
+}
+
+.night-sleep-div > img {
+    width: 97%;
+    position: relative;
+}
+
+.flex-mattrees-section > div.night-sleep-div {
+    width: 70%;
+    position: relative;
+}
+
+// Second
+
+
+.long-term-div {
+    width: 30%;
+    position: relative;
+    margin-right: 2em;
+}
+.long-term-div>img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.feature-rich-div > img {
+    width: 100%;
+    position: relative;
+}
+
+.flex-mattrees-section > div.feature-rich-div{
+    width: 70%;
+    position: relative;
+}
+
+.another-mattress.cert-div {
+    text-align: left;
+    position: absolute;
+    top: 45%;
+}
+.another-mattress.long-term-con {
+    text-align: left;
+    position: absolute;
+    top: 45%;
+}
+.another-mattress.feature-matt {
+    text-align: left;
+    position: absolute;
+    top: 45%;
+}
+
+.another-mattress.night-div .another-mattress-img {
+    margin-left: 12%;
+}
+
+.another-mattress.cert-div .another-mattress-img {
+    margin-left: 12%;
+}
+.another-mattress.long-term-con .another-mattress-img {
+    margin-left: 12%;
+}
+
+.another-mattress.feature-matt .another-mattress-img {
+    margin-left: 12%;
+}
+// NIGHT
+.another-mattress-description.night-desc>h3 {
+    font-weight: 400;
+    color: #fff;
+    font-size: 26px;
+    text-align: left;
+}
+
+.another-mattress-description.night-desc>span {
+    color: #fff;
+    font-size: 18px;
+}
+
+a.learn-button {
+    background-color: #fff;
+    color: #132448;
+    text-transform: none;
+    text-decoration: none;
+    padding: 12px 65px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.another-mattress.night-div {
+    text-align: left;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    margin-left: -7%;
+}
+
+
+// PROD
+.another-mattress-description.cert-prod>h3 {
+    font-weight: 400;
+    color: #fff;
+    font-size: 26px;
+    text-align: left;
+}
+.another-mattress-description.cert-prod>span {
+    color: #fff;
+    font-size: 18px;
+}
+
+// LONG TRM
+.another-mattress-description.long-trm>h3 {
+    font-weight: 400;
+    color: #fff;
+    font-size: 26px;
+    text-align: left;
+}
+
+.another-mattress-description.long-trm>span {
+    color: #fff;
+    font-size: 18px;
+}
+
+// FEATURE-RICH
+.another-mattress-description.feature-m>h3 {
+    font-weight: 400;
+    color: #fff;
+    font-size: 26px;
+    text-align: left;
+}
+.another-mattress-description.feature-m>span {
+    color: #fff;
+    font-size: 18px;
+}
+
+// BANNER TITLE & DESCRIPTION
+
+.heroCarousel-title {
+    font-size: 40px;
+    color: #fff!important;
+    font-weight: 500;
+}
+
+.heroCarousel-description {
+    font-weight: 600;
+    color: #fff;
+    font-size: 20px;
+}
+
+.heroCarousel-action {
+    color: #132448;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #fff;
+    padding: 15px 15px 15px 15px;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+.heroCarousel-content {
+    left: 3%;
+    right: auto;
+    top: 50%;
+    width: 30% !important;
+    text-align: left;
+    background-color: transparent;
+}
+
+
+// REVIEW PRODUCT CAROUSEL STATIC CONTENT
+
+.heroCarousel.rev-carousel .slick-next, .heroCarousel.rev-carousel .slick-prev {
+    background-color: #354669 !important;
+    color: #fff;
+    border: 0;
+    border-radius: 10%;
+}
+section.heroCarousel.rev-carousel {
+    background: url("https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/is-parallax-pattern.png?t=1623642972&_ga=2.224919322.1496872644.1623634006-1835193253.1617777202");
+    background-repeat: no-repeat;
+    height: 750px;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 3%;
+    background-attachment: fixed;
+    transform-style: preserve-3d;
+    perspective: 1px;
+}
+
+.carousel-rev-con {
+    padding-top: 5%;
+    display: -ms-flexbox;
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    padding-left: 10%;
+
+}
+.carousel-rev-con>div {
+    width: 50%;
+}
+.carousel-rev-con .review-left-con > h2 {
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.carousel-rev-con .review-left-con > p {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.review-buyer {
+    display: flex;
+}
+.review-buyer div > h4 {
+    color: #fff;
+    padding-top: 12px;
+    margin-top: 0;
+    padding-left: 15%;
+    text-transform: capitalize;
+}
+.review-buyer div > p {
+    color: #1cc285;
+    padding-left: 22px;
+    margin-top: -12px;
+}
+.review-buyer div > p > span {
+    padding-right: 7px;
+    padding-top: 1px;
+}
+.verified-con>p {
+    display: flex;
+}
+.review-right-con>img {
+    margin-left: 25%;
+    margin-top: -65px;
+}
+
+.heroCarousel.rev-carousel .slick-dots {
+    bottom: 92px;
+    text-align: left;
+    left: 17.5%;
+}
+.heroCarousel.rev-carousel .slick-dots li button, .heroCarousel.rev-carousel.slick-dots li button::before {
+    border: 1px solid grey;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    background: grey;
+}
+
+
+.heroCarousel.rev-carousel .slick-dots li button, .heroCarousel.rev-carousel.slick-dots li button::before {
+    height: 1.07143rem;
+    width: 1.07143rem;
+    border-radius: 50%;
+}
+
+.heroCarousel.rev-carousel .slick-dots li.slick-active button:before {
+    color: #1fc0fb;
+    opacity: 1;
+    height: 1.07143rem;
+    width: 1.07143rem;
+    border-radius: 50%;
+    background: #1fc0fb;
+}
+.heroCarousel.rev-carousel .slick-dots li button:hover,.heroCarousel.rev-carousel .slick-dots li button:focus {
+    outline: none;
+    border: 1px solid grey;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    background: grey;
+}
+
+.fancy-div{
+    display: flex;
+     justify-content: center;
+}
+
+a.mattress-button-aff {
+    background-color: #132448;
+    color: #fff;
+    text-transform: none;
+    text-decoration: none;
+    /* padding: 5px 10px 5px 10px; */
+    padding: 12px 40px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.most-affordable-desc>p {
+    margin-bottom: 5%;
+}
+
+.slick-dots li button, .slick-dots li button::before {
+    height: 1.07143rem;
+    width: 1.07143rem;
+}
+a.mobileMenu-toggle {
+    top: 0;
+}
+
+.ads-content > div > div > img {
+    margin-right: 15px;
+    margin-top: -25px;
+}
+
+.ads-content > div > div > h3 {
+    margin-bottom: 0;
+    color: #132448;
+    font-weight: 600;
+    text-transform: inherit;
+    font-size: 20px;
+}
+
+.test-mattresses-title > h2 {
+    color: #174567;
+    font-weight: 500;
+    font-size: 36px;
+    margin-bottom: 24px;
+}
+
+// PRODUCT PAGE RONCY
+
+/** FAQSS **/
+.faqs-abs-content {
+    text-align: center;
+    width: 80%!important;
+    position: absolute!important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #ffffff;
+}
+
+.faqs-abs-content .p {
+    font-size: 16px;
+    padding-top: 1.5em;
+    color: #fff;
+    text-transform: none;
+}
+.faqs-content {
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+  
+}
+
+.faqs-title {
+    text-align: left;
+    width: 29%;
+    margin: 0 2%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.faqs-desc {
+    text-align: left;
+    width: 60%;
+    margin: 0 2.5%;
+    display: inline-block;
+    vertical-align: top;
+    border-top: 1px solid #ffffff;
+  
+}
+
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+input:checked+.terms-showMore {
+ /*   background-image: url('../img/crossed.png'); */
+}
+
+input+.terms-showMore {
+    font-size: 16px;
+    display: block;
+    cursor: pointer;
+    padding: 10px 0;
+    margin: 10px 0;
+    color: #fff;
+    font-weight: 600;
+    background-image: url(show.png);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+}
+
+input:checked+.terms-showMore+* {
+    max-height: 2000px;
+    overflow: hidden;
+    transition: max-height 500ms,overflow 500ms;
+}
+
+input+.terms-showMore+* {
+    font-size: 15px;
+    padding-left: 5px;
+    text-align: left;
+    color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 500ms,overflow 500ms;
+    border-bottom: 1px solid #fff;
+
+}
+
+input[type="checkbox"] + label, input[type="radio"] + label {
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 0;
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+    vertical-align: baseline;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+}
+input{
+	display: none;
+}
+
+label.terms-showMore i {
+    padding-left: 0em;
+    color:#00d2ff;
+}
+
+input:checked+.terms-showMore #add{
+	display:none;
+	color: #00d2ff!important;
+}
+
+input:checked+.terms-showMore #close{
+		display:none;
+}
+
+#close{
+		display:none;
+}
+
+input:checked+.terms-showMore #close{
+	display:inline-block;
+	color:#00d2ff;
+}
+
+.faqs-content > h4 {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.product-review-section.greenh2 > h2 {
+    color: #174567;
+    font-weight: 700;
+    text-transform: inherit;
+}
+.prodview-advantage.green-mattress-ques {
+    width: 90%;
+    padding: 50px 0;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.prodview-advantage.green-mattress-ques > div > h4 {
+    color: #174567;
+    font-weight: 700;
+    text-transform: inherit;
+    text-align: left;
+    font-size: 24px;
+}
+
+.prodview-advantage.green-mattress-ques div>img {
+    width: 100%;
+}
+.prodview-advantage.green-mattress-ques > div > p {
+    font-weight: 400;
+    text-align: left;
+}
+
+.prodview-sizechart-img.green-mattress-chart{
+    width: 80%;
+    padding: 50px 0;
+    display: block;
+    text-align: center;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+
+.prodview-sizechart.green-matt {
+    background: url("https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/is-parallax-pattern.png?t=1623642972&_ga=2.224919322.1496872644.1623634006-1835193253.1617777202");
+    background-repeat: no-repeat;
+    height: 650px;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 3%;
+    background-attachment: fixed;
+    transform-style: preserve-3d;
+    perspective: 1px;
+   
+}
+
+
+.prodview-anatomy.green-anatomy {
+    width: 100%;
+    padding: 0;
+    display: block;
+    background: #fff;
+    margin-bottom: 6%;
+}
+
+.prodview-anatomy.green-anatomy div ul li {
+    color: #000;
+    font-size: 18px;
+}
+
+.prodview-sizechart.green-matt h3 {
+    color: #fff;
+    font-weight: 700;
+
+}
+
+.prodview-sizechart.green-matt p {
+    color: #fff;
+}
+.prodview-anatomy.green-anatomy div img {
+    width: 95%;
+}
+
+.sub-prodview-podimg.green-matt-sub {
+    width: 90%;
+    padding: 50px 0;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+.green-matt-features{
+    background: #e2e8ed;
+    height: 450px;
+    width: 100%;
+}
+.heroCarousel {
+    margin-bottom: -0.5rem;
+    margin-top: -1.5rem;
+}
+
+.flex-mattrees-section.mt-4 {
+    margin-bottom: 4em;
+}
+
+
+.another-mattress-description.night-desc {
+    width: 40%;
+}
+
+/**********INNERPAGE RONCY**********/
+
+// IS-TRUTH
+    .categ-banner{
+        position: relative;
+    }
+    .categ-banner>img {
+        width: 100%;
+        position: relative;
+    }
+    .truth-banner-text {
+        position: absolute;
+        top: 24%;
+        left: 10%;
+        color: #fff;
+    }
+    .truth-banner-text h2 {
+        color: #fff;
+        text-transform: inherit;
+        font-weight: 600;
+        line-height: 1.2;
+        font-size: 36px;
+    }
+    .truth-banner-text h4 {
+        font-weight: 600;
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+    .truth-banner-text p {
+        width: 50%;
+        font-size: 18px;
+    }
+    .truth-behind{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .truth-behind {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        color: #132448;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .truth-behind h2 {
+        color: #132448;
+        font-size: 32px;
+        font-weight: 600;
+    }
+    .flexdiv100{
+        display: flex;
+        max-width: 100%;
+    }
+    .flexdiv100>div {
+        width: 50%;
+    }
+
+    .arrow-content {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+    .arrow-content p {
+        width: 65%;
+        color: #132448;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .arr-content-div {
+        top: 5%;
+        position: relative;
+    }
+    // REVIEW SECTION
+    .review-message-section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 25px;
+        position: relative;
+    }
+    .four-review-con {
+        width: 95%;
+        margin-inline: auto;
+        margin-top: 5%;
+        position: relative;
+    }
+
+    .review-message-section div>img {
+        width: 100%;
+        position: relative;
+    }
+    .review-msg-con {
+        position: absolute;
+        top: 25%;
+        left: 2%;
+        width: 20%;
+    }
+
+    .review-msg-con1 {
+        position: absolute;
+        top: 20%;
+        width: 20%;
+        margin-left: 2%;
+    }
+    .satisfaction-rev-con>img {
+        width: auto;
+        height: auto;
+        max-width: 2em;
+    }
+
+    .satisfaction-rev-con {
+        display: grid;
+        grid-template-columns: 2.7em 1fr;
+    }
+    .satisfaction-rev-con>p {
+        margin-top: 2px;
+    }
+    .review-quote-banner {
+        width: 95%;
+        margin-inline: auto;
+        background: #132448;
+        padding-top: 2%;
+        padding-bottom: 0.4%;
+        text-align: center;
+        color: #fff;
+        margin-top: 2%;
+    }
+    .review-msg-con1 p {
+        font-size: 18px;
+        color: #132448;
+    }
+
+    .satisfaction-rev-con p {
+        font-weight: 800;
+        color: #132448;
+    }
+    // REVIEW QUOTES
+    .customer-rev-con {
+        width: 48%;
+        text-align: center;
+        margin-inline: auto;
+        color: #132448;
+        font-weight: 600;
+        margin-top: 4%;
+    }
+
+    .right-img-rev>img {
+        margin: 40px;
+    }
+    .left-img-rev {
+        display: grid;
+        justify-content: flex-end;
+        place-items: center;
+        position: relative;
+    }
+    .left-img-rev > div > img {
+        position: relative;
+    }
+    .left-img-desc {
+        position: absolute;
+        top: 40%;
+        width: 50%;
+        color: #fff;
+        font-size: 18px;
+        margin-left: 3%;
+    }
+    .left-img-con {
+        width: 80%;
+    }
+
+    .ques-rev-con {
+
+        display: flex;
+        max-width: 100%;
+    }
+    
+    .ques-rev-con > div {
+        width: 50%;
+    }
+
+    .review-cen-text {
+        text-align: center;
+        color: #132448;
+        font-weight: 600;
+    }
+    .review-cen-text h2 {
+        color: #132448;
+        font-weight: 700;
+    }
+  
+    .cta-istruth {
+        background: url(https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/is-parallax-pattern.png?t=1623642972&_ga=2.224919322.1496872644.1623634006-1835193253.1617777202);
+        background-repeat: no-repeat;
+        height: 500px;
+        width: 100%;
+        background-size: cover;
+        position: relative;
+        margin-bottom: 3%;
+        text-align: center;
+        margin-top: -2em;
+        background-attachment: fixed;
+    }
+
+    div > a.reviewreal-button.is-truth {
+
+        position: absolute;
+        left: 43%;
+        text-align: center;
+    }
+
+    a.is-truth {
+        background: #fff;
+        color: #132448 !important;
+        text-transform: none;
+        text-decoration: none;
+        padding: 18px 25px;
+        border-radius: 5px;
+        font-weight: 700;
+    }
+
+    .reviews-real-con {
+        background: #e2e8ed;
+        padding: 15px;
+    }
+
+    .carousel-truth-con {
+        width: 43em !important;
+        margin-inline: auto;
+        padding: 40px;
+        color: #132448 !important;
+    }
+
+    .heroCarousel-slide.review-istruth {
+        background: #fff;
+        width: 52em !important;
+        margin: 0 18px;
+        height: 31em;
+        border-radius: 35px;
+        margin-bottom: 2em;
+    }
+    div#review-truthpage img {
+        width: auto;
+        height: 1.3em;
+        margin-top: 4px;
+    }
+
+    // IS FAQS PAGE
+    div#is-faqs-page {
+        background: #fff;
+        color: #132448;
+    }
+    .faqs-content.is-faqs-page > h4 {
+        text-align: center;
+        color: #132448;
+        font-weight: bold;
+    }
+    .faqs-content.is-faqs-page .faqs-desc > label {
+        color: #132448;
+        // border-bottom: 1px solid darkgray;
+    }
+
+    .faqs-content.is-faqs-page p {
+        color: #132448 !important;
+    }
+    img.is-faqs-plus {
+        height: 1em;
+        width: auto;
+    }
+    img.minus-icon {
+        height: 1.0em;
+        width: 1.0em;
+        background-color: #fff;
+    }
+    .faqs-content.is-faqs-page .faqs-desc {
+        border-top: 1px solid darkgray !important;
+    }
+    .faq-banner {
+        position: relative;
+        margin-bottom: 1% ;
+    }
+    .faq-banner>img {
+        width: 100%;
+        position: relative;
+    }
+
+    .faq-banner-con {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 24px;
+    }
+
+    .faq-banner-con h2 {
+        color: #fff;
+        font-size: 36px;
+        font-weight: 600;
+        text-transform: inherit;
+    }
+// NIGHT SLEEP TRIAL PAGE
+.night-sleep-banner {
+    background: url("https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/star-parallax-background.png?t=1624339954");
+    background-repeat: no-repeat;
+    height: 780px;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 20%;
+    background-attachment: fixed;
+    transform-style: preserve-3d;
+    perspective: 1px;
+    display: -ms-grid;
+    display: grid;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-grid-column-align: center;
+    justify-items: center;
+}
+
+    .night-sleep-banner h1 {
+        margin-top: 0;
+    }
+    .position-absolute.bed-night-img {
+        z-index: 1030;
+        top: 58%;
+        width: 90%;
+    }
+    .bed-night-text img {
+        width: 20%;
+        margin-inline: auto;
+    }
+
+    .bed-night-text {
+        top: 10%;
+    }
+
+    .flexdiv100.sleep-mattress-div {
+        background: #ebf0f4;
+        width: 90%;
+        margin-inline: auto;
+        height: 435px;
+        position: relative;
+        top: 7em;
+        margin-bottom: 19em;
+    }
+    .sleep-mattress-text {
+        width: 80%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        color: #132448;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .sleep-mattress-text h4 {
+        color: #132448;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .sleepm-div {
+        position: relative;
+    }
+    .mattress-left-img {
+        position: relative;
+        height: 907px;
+        width: 100%;
+    }
+
+    .mattress-left-img img {
+        position: relative;
+        object-fit: cover;
+        margin-top: -71px;
+        left: 18%;
+    }
+
+    .happy-div{
+        color: #132448 !important;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .happy-div h2{
+        font-weight: 700;
+        font-size: 28px;
+        color: #132448 !important;
+    }
+    .waking-woman-div img {
+        position: relative;
+        width: 100%;
+    }
+
+    .comparide-side-left img {
+        position: relative;
+        width: 100%;
+    }
+    .flexdiv100.comparison-flex-div {
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    .right-side-con h4 {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+        text-transform: inherit;
+    }
+    .is-features-div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 80%;
+        margin-inline: auto;
+        place-content: center;
+        place-items: flex-start;
+    }
+    .feature-box-div {
+        display: grid;
+        place-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .feature-box-div>div {
+        width: 80%;
+    }
+
+    .budget-div.row .col-lg-6.col-md-6.col-sm-12 .ftr-left-img {
+        height: 100%;
+    }
+    .budget-div.row .col-lg-6.col-md-6.col-sm-12 {
+        padding: 0;
+    }
+
+    .comparide-side-right {
+        background: #132448;
+        color: #fff;
+        font-size: 18px;
+        position: relative;
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        place-items: center;
+        text-align: center;
+    }
+    .budget-div.row {
+        max-width: 85%;
+        margin-inline: auto;
+    }
+
+    .masthead {
+      position: relative;
+    }
+
+    .banner-comparison.container{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+
+    .container.ftre-1 {
+        max-width: 75% !important;
+        margin-inline: auto;
+    }
+    .col-sm-6.ftr-left-img {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .col-sm-6.feature-right-div {
+        display: grid;
+        place-items: center;
+        height: 100% 100%;
+        justify-self: center;
+        place-content: center;
+    }
+    .feature-right-div.ftr-dv .right-side-con p {
+        font-size: 24px;
+        font-weight: 600;
+        color: #132448;
+        line-height: 1.3;
+    }
+
+    .sample.row .col-lg-6.col-md-6.col-sm-12 .ftr-left-img {
+        height: 100%;
+    }
+    .sample.row .col-lg-6.col-md-6.col-sm-12 {
+        padding: 0;
+    }
+
+    a.learn-comp{
+        background-color: #132448;
+        color: #fff;
+        text-transform: none;
+        text-decoration: none;
+        padding: 12px 40px;
+        border-radius: 5px;
+        font-weight: 700;
+    }
+
+.Chart-comparison-img img {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    max-width: auto;
+    image-rendering: -webkit-optimize-contrast;
+}
+    .Chart-comparison-img {
+        width: 85%;
+        margin-inline: auto;
+        margin-top: -3em;
+    }
+
+.FAQS-categ.green-faq-categ {
+    background: #132448;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 70px;
+}

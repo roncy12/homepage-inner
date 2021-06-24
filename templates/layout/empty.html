@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ head.title }}</title>
+    {{{ head.meta_tags }}}
+    {{{ head.config }}}
+
+    <link href="{{ head.favicon }}" rel="shortcut icon">
+    <meta name="google-site-verification" content="en_9BaePmnjiC1wa94L6I1Zq69WDierJ1_ZmbqCqnbk" />
+    {{#block "head"}}{{/block}}
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180255211-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'UA-180255211-1');
+        </script>
+    
+    
+</head>
+<body{{#if theme_settings.enable_gradients}} class="gradient"{{/if}}>
+    {{#block "page"}}{{/block}}
+</body>
+<style>
+     h2.checkoutHeader-heading {
+    background: url("https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/vector-smart-object1.png?t=1582162975&_ga=2.40243946.977186237.1582159027-2022119561.1571639426");
+    text-align: center;
+    background-color: #132448;
+}
+a.checkoutHeader-link > #logoImage {
+    width: 200px;
+    padding: 1% 0;
+}
+.checkoutHeader-content {
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+}
+.optimizedCheckout-checkoutStep {
+    border: none;
+}
+a.stepHeader.is-readonly {
+    background: #174567;
+    padding: 1% 0;
+}
+.stepHeader-figure.stepHeader-column {
+    background-color: #174567;
+    width: 100%;
+}
+.optimizedCheckout-step {
+    background-color: transparent;
+    color: #fff;
+}
+ .optimizedCheckout-step svg {
+    fill: #ffffff;
+}
+.optimizedCheckout-step::before, a:focus, a:hover {
+    color: #Ffffff;
+}
+.optimizedCheckout-headingPrimary {
+    color: #fffFFF;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+button#checkout-customer-continue {
+    background: #ff2a00;
+}
+.checkout-view-header {
+    margin-bottom: 3%;
+}
+button#checkout-shipping-continue {
+    background: #ff2a00;
+}
+
+section.cart-section.optimizedCheckout-orderSummary-cartSection:last-child .optimizedCheckout-contentPrimary {
+    color: #fff;
+    font-weight: 400;
+}
+section.cart-section.optimizedCheckout-orderSummary-cartSection:last-child {
+    background: #00d2ff;
+}
+article.cart.optimizedCheckout-orderSummary {
+    color: #666666;
+}
+h5.product-title.optimizedCheckout-contentPrimary {
+    color: #666666;
+}
+a.redeemable-label {
+    color: #666666;
+    font-weight: 600;
+    text-decoration: none;
+}
+.optimizedCheckout-headingSecondary {
+    color: #132448;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: "Open Sans",Arial,Helvetica,sans-serif;
+}
+a#cart-edit-link {
+    color: #132448;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+}
+.optimizedCheckout-contentPrimary {
+    color: #666666;
+    font-weight: 600;
+}
+article.cart.optimizedCheckout-orderSummary > .cart-header {
+    background: #eeeeee;
+}
+</style>
+</html>

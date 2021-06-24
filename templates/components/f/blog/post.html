@@ -1,0 +1,28 @@
+<li class="blogPost"{{> components/f/animations/aos delay=(multiply (add @index 1) 20) theme_settings=theme_settings}} data-equalizer-watch>
+    <article class="card">
+        {{#if post.thumbnail.data}}
+            <figure class="card-figure">
+                <a href="{{post.url}}">
+                    <div class="card-img-container">
+                        <img class="card-image blogPost-thumbnail lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage post.thumbnail theme_settings.blog_listing_size}}" alt="{{post.thumbnail.alt}}">
+                    </div>
+                </a>
+            </figure>
+        {{/if}}
+        <div class="card-body">
+            
+            <h3 class="card-title blogPost-title"><a href="{{url}}">{{post.title}}</a></h3>
+            <p class="card-text blogPost-publishedDate">{{post.date_published}}</p>
+            
+            {{#if theme_settings.show_blog_card_summary}}
+                <p class="card-text">{{{ellipsis post.summary}}}</p>
+            {{/if}}
+            {{#if theme_settings.show_blog_card_author}}
+                {{#if post.author}}
+                    <p class="card-text blogPost-author">{{lang 'blog.posted_by' name=post.author}}</p>
+                {{/if}}
+            {{/if}}
+            <a class="blogPost-link" href="{{url}}">READ POST<img src="https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/arrow.png?t=1599727737&_ga=2.47160295.1918111745.1599697146-2022119561.1571639426"></a>
+        </div>
+    </article>
+</li>

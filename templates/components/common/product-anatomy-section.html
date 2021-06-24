@@ -1,0 +1,179 @@
+<div class="anatomy product-section">
+     <div class="image-anatomy" >       
+	  <img id="ma-img" class="animation-element slide-left-long delay-1500" src="{{getImage image 'thumb_size' (cdn 'assets/img/product-page/Cool-Bed_anatomy.jpg')}}"> 
+	  
+	  <div id="p-imgMap">
+		<label class="map-item1" >
+			<div class="map-content">
+				<div class="flex-box" >
+					<span>1</span>
+					<div>
+						<h4>OUTER COVER</h4>
+						<p>Enhanced with a knitted fabric finish; green zipper and light grey bottom border for added convenience</p>
+						<img src="{{getImage image 'thumb_size' (cdn 'assets/img/product-page/ma-layer-1.png')}}" />
+					</div>
+				</div>
+			</div>
+		</label>
+		<label class="map-item2" >
+			<div class="map-content">		
+				<div class="flex-box" >
+					<span>2</span>	
+					<div>
+						<h4>INNER COVER</h4>
+						<p>CFR1633-sealed knitted inner cover that passed federal flammability tests</p>
+						<img src="{{getImage image 'thumb_size' (cdn 'assets/img/product-page/ma-layer-2.png')}}" />
+					</div>
+				</div>
+			</div>
+		</label>
+		<label class="map-item3" >
+			<div class="map-content">
+				<div class="flex-box" >
+					<span>3</span>
+					<div>
+						<h4>GEL-INFUSED MEMORY FOAM</h4>
+						<p>Designed to maintain cooler body temperature for a better, more rejuvenating sleep</p>
+						<img src="{{getImage image 'thumb_size' (cdn 'assets/img/product-page/ma-layer-3.png')}}" />
+					</div>
+				</div>
+			</div>
+		</label>
+		<label class="map-item4" >
+			<div class="map-content">
+				<div class="flex-box" >
+					<span>4</span>
+					<div>
+						<h4>COMFORT LAYER PU FOAM</h4>
+						<p>Effectively supports the heavier areas of the body like hips and shoulders for better comfort</p>
+						<img src="{{getImage image 'thumb_size' (cdn 'assets/img/product-page/ma-layer-4.png')}}" />
+					</div>
+				</div>
+			</div>
+		</label>
+		<label class="map-item5" >
+			<div class="map-content">
+				<div class="flex-box" >
+					<span>5</span>
+					<div>
+						<h4>TRANSITION LAYER PU FOAM</h4>
+						<p>Additional support to above layers and provides deep compression support; a must for heavy sleepers</p>
+						<img src="{{getImage image 'thumb_size' (cdn 'assets/img/product-page/ma-layer-5.png')}}" />
+					</div>
+				</div>
+			</div>
+		</label>
+		<label class="map-item6" >
+			<div class="map-content">
+				<div class="flex-box" >
+					<span>6</span>
+					<div>
+						<h4>PU FOAM</h4>
+						<p>Added for a ‘bouncy’ or ‘springy’ feel; serves as an effective base for the above PU foams</p>
+						<img src="{{getImage image 'thumb_size' (cdn 'assets/img/product-page/ma-layer-6.png')}}" />
+					</div>
+				</div>
+			</div>
+		</label>
+		<label class="map-item7" >
+			<div class="map-content">
+				<div class="flex-box" >
+					<span>7</span>
+					<div>
+						<h4>NON-WOVEN FABRIC BASE</h4>
+						<p>Stable foundation for upper layers; provides basic support</p>
+						<img src="{{getImage image 'thumb_size' (cdn 'assets/img/product-page/ma-layer-7.png')}}" />
+					</div>
+				</div>
+			</div>
+		</label>
+	</div>
+<script type="text/javascript">// <![CDATA[
+        $(document).ready(function() {
+			$('#p-imgMap label').click(function(){
+				$('#p-imgMap .map-content').hide();
+				$(this).children().show();
+			});
+			$('#p-imgMap .map-content').click(function(e){
+				// stop the event from bubbling.
+				e.stopPropagation();
+				$(this).hide();
+			});
+			
+		});
+		
+		
+		$.fn.isInViewport = function () {
+			let elementTop = $(this).offset().top;
+			let elementBottom = elementTop + $(this).outerHeight();
+
+			let viewportTop = $(window).scrollTop();
+			let viewportBottom = viewportTop + $(window).height();
+
+			return elementBottom > viewportTop && elementTop < viewportBottom;
+		};
+		
+		
+		$(window).scroll(function () {
+			 $.each($('.map-content'), function() {
+				if ($(this).isInViewport()) { 
+					//  Do Nothing
+				} else {
+					$(this).hide();
+				}
+			});
+		});
+		
+		
+		
+// ]]></script>
+
+		</div>
+	  
+	  
+	  
+	  <div class="anatomy-title  animation-element slide-right delay-1000">
+         <h4>Take a closer look.</h4>
+          <h3>Multiple Layers of Coolness And More.</h3>
+        
+          	<div class="perfect-mattress-architecture animation-element fade-in duration-2000 ">
+				<img src="{{getImage image 'thumb_size' (cdn 'assets/img/product-page/check.png')}}">
+					
+					<p>Impossibly soft outer material for comfort overload</p>
+				
+			</div>
+          
+			<div class="perfect-mattress-architecture animation-element fade-in duration-2000 delay-300">
+				<img src="{{getImage image 'thumb_size' (cdn 'assets/img/product-page/check.png')}}">
+				
+					
+					<p>Certified inner cover for protection against fires</p>
+				
+			</div>
+			<div class="perfect-mattress-architecture animation-element fade-in duration-2000 delay-600">
+				<img src="{{getImage image 'thumb_size' (cdn 'assets/img/product-page/check.png')}}">
+			
+					
+					<p>Gel-infused memory foam for cooling and airflow</p>
+				
+			</div>
+			<div class="perfect-mattress-architecture animation-element fade-in duration-2000 delay-900">
+				<img src="{{getImage image 'thumb_size' (cdn 'assets/img/product-page/check.png')}}">
+			
+				
+					<p>Dual layers of high-performance foams for pressure relief and weight absorption</p>
+				
+			</div>
+          
+            <div class="perfect-mattress-architecture animation-element fade-in duration-2000 delay-900">
+				<img src="{{getImage image 'thumb_size' (cdn 'assets/img/product-page/check.png')}}">
+			
+				
+					<p>Durable base for overall support and aesthetics</p>
+				
+			</div>
+          
+      </div>
+		
+	  
+</div>	

@@ -1,0 +1,75 @@
+<div class="RU-cool">
+<h2>Are you cool?</h2>
+    <span>COOL is the right mattress if you say yes to the following questions.</span>
+</div>
+<div class="feature-perfect-mattress">
+    <img src="{{getImage image 'thumb_size' (cdn 'assets/img/product-page/are-you-cool1.jpg')}}" />
+    <img src="{{getImage image 'thumb_size' (cdn 'assets/img/product-page/are-you-cool2.jpg')}}" />
+    <img src="{{getImage image 'thumb_size' (cdn 'assets/img/product-page/are-you-cool-3.jpg')}}" />
+    </div>
+
+
+
+<div class="product-review-section">
+      <h2>Join The COOL Squad</h2>
+    <span>See why customers love COOL or write a Review</span>
+<div class="review-stamped">        
+        <div id="stamped-main-widget" data-widget-style="standard" data-product-id="{{ product.id }}" data-title="Customer Reviews" data-style-color-title="#2f2f2b" data-style-color-text="#2f2f2b" data-style-color-link="#2f2f2b" data-fill-empty="true" data-random="? string:Customer Reviews ?" data-product-image="true"></div>
+    </div>
+</div>
+
+<div class="FAQS-categ">
+
+    <h3>Frequently Asked Questions</h3>
+    
+    
+    <div class="w3-container">
+  
+<a onclick="myFunction('Demo1')" class="accordion-text"><i class="fas fa-chevron-down"></i> What's the best mattress size for me?</a>       
+<div id="Demo1" class="w3-container w3-hide">
+  <span>Choosing the right mattress size depends on several factors. Are you sharing your bed with a partner or pets? Do you like having plenty of living space in your bedroom? How do you want your bed to be placed? Breaking down these details will help you pick the right size that fits your preferences.
+</span>
+</div>
+<a onclick="myFunction('Demo2')" class="accordion-text"><i class="fas fa-chevron-down"></i> What type of foundation should I use for my mattress?</a>
+<div id="Demo2" class="w3-container w3-hide">
+<span>Our mattresses can work with almost all standard foundations. The harder and sturdier the base, the better the mattress will perform, as with all foam beds. Platform bases offer the most support, but steel or wooden slatted foundations are also great options. If you want to improvise, adding a piece of plywood atop the base can give additional support.
+</span>
+</div>
+<a onclick="myFunction('Demo3')" class="accordion-text"><i class="fas fa-chevron-down"></i> How long should I wait before I can use my mattress?</a>
+<div id="Demo3" class="w3-container w3-hide">
+  <span>You may start using it right out of the box! Take note, however, that it would take 48 hours up to a week for your mattress to fully decompress. Sleeping on your mattress can help with the decompression. To know more about setting up and mattress care, read this [guide].
+</span>
+</div>
+
+</div>
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</div>
+
+<div class="iconic-collection">
+    <h3>Check Out Other Iconic Collections</h3>
+<div class="iconic row">
+    
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="iconic-collection-luxe" style="margin-left:5%;position:relative;">
+        <img class="icon-img" src="{{getImage image 'thumb_size' (cdn 'assets/img/product-page/Lux.jpg')}}" />
+        <a class="icon-button">VIEW MATTRESS</a>
+    </div> </div>
+    
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="iconic-collection-alpha" style="margin-right:5%;position:relative;">
+        <img src="{{getImage image 'thumb_size' (cdn 'assets/img/product-page/alpha.jpg')}}" />
+        <a class="icon-button">VIEW MATTRESS</a>
+    </div></div>
+     
+</div>
+</div>

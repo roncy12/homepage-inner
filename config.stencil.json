@@ -1,0 +1,23 @@
+{
+  "customLayouts": {
+    "product": {
+      "alternate-product.html":"/test-url/",
+      "product-alpha.html":"/alpha-gel-memory-foam-mattress/",
+      "customProd.html":"/customjs",
+      "product-new-mattress.html": "/8-in-green-tea-firm-memory-foam-bed-mattress/"
+
+    },
+    "brand": {},
+    "category": {},
+    "page": {
+      "custom-categ.html": "/custom-categ/",
+      "IS-Truth.html": "/the-truth/",
+      "IS-faqs.html": "/is-faqs/",
+      "night-sleep-trial.html": "/sleep-trial/",
+      "is-comparison.html": "/comparison/"
+    }
+
+  },
+  "normalStoreUrl": "https://icon-sleep.com",
+  "port": 3000
+}

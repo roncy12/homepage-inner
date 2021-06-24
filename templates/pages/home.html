@@ -1,0 +1,48 @@
+---
+products:
+    new:
+        limit: {{theme_settings.homepage_new_products_count}}
+    featured:
+        limit: {{theme_settings.homepage_featured_products_count}}
+    top_sellers:
+        limit: {{theme_settings.homepage_top_products_count}}
+carousel: {{theme_settings.homepage_show_carousel}}
+blog:
+    recent_posts:
+        limit: {{theme_settings.homepage_blog_posts_count}}
+---
+{{inject "enableSwatches" theme_settings.show_swatches_on_grid}}
+{{inject "enableSizes" theme_settings.show_sizes_on_grid}}
+{{inject "enableImageHoverSwitcher" theme_settings.enable_image_hover_switcher}}
+
+{{#partial "hero"}}
+    {{#if carousel}}
+        {{#or (if theme_settings.carousel-type '===' 'storyboard') theme_settings.conversion_optimization_mode}}
+            {{> components/f/hero/storyboard-top}}
+        {{else}}
+            {{> components/f/hero/carousel arrows=theme_settings.homepage_show_carousel_arrows}}
+        {{/or}}
+    {{/if}}
+    {{{snippet 'home_content'}}}
+{{/partial}}
+
+{{#partial "page"}}
+
+    {{#each shipping_messages}}
+        {{> components/common/alert-info message}}
+    {{/each}}
+
+<div class="main full">
+    
+     {{> components/common/custom-section-mattresses}}
+    <div class="blog-homepage">
+        {{> components/f/blog/home-articles-list posts=blog.recent_posts columns=theme_settings.homepage_blog_posts_column_count theme_settings=theme_settings}}
+    </div>
+    
+    
+     {{> components/common/custom-section-test-mattresses}}
+    
+</div>
+
+{{/partial}}
+{{> layout/custom-home-base}}

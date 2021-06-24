@@ -1,0 +1,71 @@
+
+    <section class="heroCarousel"
+        data-slick='{
+            "arrows": {{arrows}},
+            "mobileFirst": true,
+            "slidesToShow": 1,
+            "slidesToScroll": 1,
+            "autoplay": true,
+            "autoplaySpeed": {{carousel.swap_frequency}},
+            "lazyLoad": "anticipated"
+        }'>
+        
+       <a href="/custom-categ/">
+            <div class="heroCarousel-slide">
+                <div class="heroCarousel-image-wrapper">
+                    <img style="height: auto; width: 100% !important;" src="{{cdn 'https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/banner-head.png?t=1623904607'}}" >
+                </div>
+                    <div class="heroCarousel-content">
+                <h2 class="heroCarousel-title animation-element invi slide-left-long delay-1000">Experience the Iconic Treatment
+                    </h2>
+                <p class="heroCarousel-description animation-element invi slide-left-long delay-1300">Shop for affordable, eco-friendly, and 
+                    unbelievably comfortable mattresses.
+                    </p>
+                        <span class="heroCarousel-action animation-element invi bounce-in duration-1500">Shop Mattresses</span>
+                </div>
+
+
+            </div>
+        </a>      
+
+        <!-- {{#each carousel.slides}}
+        <a href="{{url}}">
+            <div class="heroCarousel-slide {{../theme_settings.hero_align}} {{#if ../theme_settings.homepage_stretch_carousel_images}}stretch{{/if}} {{#if @first}}heroCarousel-slide--first{{/if}}">
+                <div class="heroCarousel-image-wrapper" {{#and image_height image_width}}style="height: {{multiply (divide image_height image_width) 90}}vw"{{/and}}>
+                    <img class="heroCarousel-image" {{#if @first}}src{{else}}data-lazy{{/if}}="{{image}}" alt="{{alt_text}}" title="{{alt_text}}"
+                    {{#if image_width}}width="{{image_width}}"{{/if}} {{#if image_height}}height="{{image_height}}"{{/if}} />
+                </div>
+                {{#if heading}}
+                    {{> components/f/hero/carousel-content show_background=true theme_settings=../../theme_settings}}
+                {{else}}
+                    {{#if text}}
+                        {{> components/f/hero/carousel-content show_background=true theme_settings=../../../theme_settings}}
+                    {{else}}
+                        {{#if button_text}}
+                            {{> components/f/hero/carousel-content show_background=false theme_settings=../../../../theme_settings}}
+                        {{/if}}
+                    {{/if}}
+                {{/if}}
+            </div>
+        </a>
+        {{/each}} -->
+        <!-- <a href="/luxe-gel-memory-foam-mattress/">
+            <div class="heroCarousel-slide">
+                <div class="heroCarousel-image-wrapper">
+                   <video style="width:100%;height:100%"  autoplay loop>
+                    <source src="https://store-z2qdisybty.mybigcommerce.com/product_images/IS%20-%20Homepage%20Banner%202.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    <video>
+                </div>
+                    <div class="heroCarousel-content">
+   <h2 class="heroCarousel-title">Layered Luxury</h2>
+   <p class="heroCarousel-description">Indulge yourself in lavish sleep with our top-of-the-line spinal support and pressure relief.</p>
+        <span class="heroCarousel-action">Shop Luxe</span>
+</div>
+
+
+            </div>
+        </a>     -->
+
+    </section>
+

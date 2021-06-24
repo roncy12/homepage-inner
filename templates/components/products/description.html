@@ -1,0 +1,16 @@
+<div{{#unless is_ajax}}{{> components/f/animations/aos once=true}}{{/unless}}>
+    <h3 id="description_{{product.id}}" class="productView-title">{{lang 'products.description'}}</h3>
+    <div class="productView-description" {{#if settings.data_tag_enabled}} data-event-type="product" {{/if}}>
+        {{{product.description}}}
+        {{{snippet 'product_description'}}}
+    </div>
+</div>
+
+{{#if product.warranty}}
+<div{{#unless is_ajax}}{{> components/f/animations/aos once=true}}{{/unless}}>
+    <h3 class="productView-title">{{#if theme_settings.rename_warranty_field}}{{theme_settings.rename_warranty_field}}{{else}}{{lang 'products.warranty'}}{{/if}}</h3>
+    <div class="productView-description productView-extra">
+        {{{product.warranty}}}
+    </div>
+</div>
+{{/if}}

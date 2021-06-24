@@ -1,0 +1,111 @@
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <section class="footer-info">
+            
+            <article class="footer-info-col footer-info-col--small mobile" data-section-type="footer-webPages"{{> components/f/animations/aos delay=100 offset=20}}>
+                <h5 class="footer-info-heading">Company</h5>    
+                <p>Email:<br> <a class="email-footer-sec" href="mailto:support@icon-sleep.com">support@icon-sleep.com</a></p>
+                <p>Service Hours: <br> <span style="color: #132448; font-weight: bold;">Mon-Fri: 8am-5pm</span></p>
+                           
+            </article>
+            
+             <article class="footer-info-col footer-info-col--small mobile" data-section-type="footer-webPages"{{> components/f/animations/aos delay=100 offset=20}}>
+                <h5 class="footer-info-heading">Icon Sleep</h5>
+                <ul class="footer-info-list">
+                   
+                    <li>
+                        <a href="/custom-categ/">Mattress</a>
+                    </li>
+                    <li>
+                        <a href="/about-us/">About Us</a>
+                    </li>
+                    <li>
+                        <a href="/reviews/">Reviews</a>
+                    </li>
+					
+                     <li>
+                        <a href="/track-order/">Track Order</a>
+                    </li>
+                </ul>
+            </article>
+            
+            
+                 <article class="footer-info-col footer-info-col--small mobile" data-section-type="footer-webPages"{{> components/f/animations/aos delay=100 offset=20}}>
+                <h5 class="footer-info-heading">Support</h5>
+                <ul class="footer-info-list">
+                   
+                    <li>
+                        <a href="/blog/">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/support/">Support Center</a>
+                    </li>
+                    <li>
+                        <a href="/mattress-care-setup/">Setup & Care Instructions</a>
+                    </li>
+                    <li>
+                        <a href="/is-faqs/">FAQs</a>
+                    </li>
+                     <li>
+                        <a href="/shipping-transit-chart/">Shipping Transit Chart</a>
+                    </li>
+                     <li>
+                        <a href="/product-certification/">Product Certification</a>
+                    </li>
+                </ul>
+            </article>
+            
+
+
+
+
+            <article class="footer-info-col footer-info-col--small mobile" data-section-type="newsletterSubscription"{{> components/f/animations/aos delay=400 offset=20}}>
+           
+                {{#if theme_settings.social_icon_placement_bottom}}
+                    <h5 class="footer-info-heading">Connect</h5>
+                    <a class="like-us" href="https://www.facebook.com/IconSleepMattresses/">
+                    <img class="like-us-img" src="https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/fb.png?t=1623205504&_ga=2.146581108.1588106158.1623054117-1835193253.1617777202">
+                 Like us on Facebook
+                    </a>
+                    {{> components/common/social-links}}
+                {{/if}}
+             
+            </article>
+        </section>
+        
+    
+    </div>
+    
+</footer>
+
+<div class="footer-copyright-bottom">
+
+
+    {{#if theme_settings.show_copyright_footer}}
+            <div class="footer-copyright">
+                <p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} </p>
+            </div>
+        {{/if}}
+        
+            <div class="footer-copyright">
+             {{#if theme_settings.show_payment_methods}}
+                    {{> components/f/footer/payment-icons}}
+                {{/if}}
+
+        
+        
+            <!-- <div class="footer-copyright">
+                <p class="powered-by">
+                    {{#if theme_settings.show_powered_by}}
+                        <span>Powered by <a href="https://www.bigcommerce.com?utm_source=merchant&amp;utm_medium=poweredbyBC" rel="nofollow" target="_blank">BigCommerce</a>.</span>
+                    {{/if}}
+                </p>
+            </div> -->
+    
+        </div>
+
+</div>
+
+{{#if theme_settings.show_newsletter_popup}}
+    {{> components/f/newsletter-popup/popup}}
+{{/if}}

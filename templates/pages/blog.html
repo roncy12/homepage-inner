@@ -1,0 +1,59 @@
+---
+blog:
+    posts:
+        limit: 12
+        pages: 4
+        summary: 200
+---
+{{#partial "page"}}
+
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+<div class="pg-top-banner" style="position: relative;"><img class="__mce_add_custom__" title="faqs-banner-2.jpg" src="https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/blog-banner.jpg?t=1599722308&_ga=2.46110564.1918111745.1599697146-2022119561.1571639426" alt="" />
+    <div class="faqs-abs-content">
+        <h1>Blog</h1>
+    </div>
+</div>
+
+<main class="page blog-page">
+
+    <div class="blog-page-width"> 
+        <h2 class="blogpage-title">Recent Posts</h2>
+        <h1 class="page-heading"><span>{{ blog.name }}</span></h1>
+
+        <div class="blog-parent-div">
+            <ul class="blogPosts postColumns--4" data-equalizer data-equalizer-mq="medium-up">
+                {{#each blog.posts}}
+                    {{> components/f/blog/post post=this settings=../settings theme_settings=../theme_settings}}
+                {{/each}}
+            </ul>
+        
+        <div class="newsletter-blog"> 
+             <h5>Newsletter</h5>
+             <p>{{lang 'newsletter.subscribe_intro'}}</p>
+
+            <form class="form" action="{{urls.subscribe.action}}" method="post">
+                <fieldset class="form-fieldset">
+                    <input type="hidden" name="action" value="subscribe">
+                    <input type="hidden" name="nl_first_name" value="bc">
+                    <input type="hidden" name="check" value="1">
+                    <div class="form-field">
+                        <label class="form-label is-srOnly" for="nl_email">{{lang 'common.email_address'}}</label>
+                        <div class="form-prefixPostfix wrap">
+                            <input class="form-input" id="nl_email" name="nl_email" type="email" value="{{customer.email}}" placeholder="{{lang 'newsletter.email_placeholder'}}">
+                            <input class="button button--primary form-prefixPostfix-button--postfix" type="submit" value="Subscribe">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+         </div>
+    </div>
+    </div>  
+   {{> components/common/paginator pagination.blog}}   
+</main>
+<style>.pagination {
+    overflow: hidden;
+}</style>
+{{/partial}}
+{{> layout/base}}

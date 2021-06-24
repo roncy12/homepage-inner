@@ -1,0 +1,7 @@
+<div class="heroCarousel-content{{#unless show_background}} heroCarousel-content--empty{{/unless}}">
+    {{#if heading}}<h{{#if @index '===' 0}}1{{else}}2{{/if}} class="heroCarousel-title animation-element invi slide-left-long delay-1000">{{{heading}}}</h{{#if @index '===' 0}}1{{else}}2{{/if}}>{{/if}}
+    {{#if text}}<p class="heroCarousel-description animation-element invi slide-left-long delay-1300">{{{text}}}</p>{{/if}}
+    {{#if button_text}}
+        <span class="animation-element invi bounce-in duration-1500 {{#if show_background}}heroCarousel-action{{else}}button button--primary{{/if}} ">{{button_text}}</span>
+    {{/if}}
+</div>

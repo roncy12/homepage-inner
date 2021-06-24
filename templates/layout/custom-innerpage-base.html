@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ locale_name }}">
+    <head>
+        <title>{{ head.title }}</title>
+        {{{ resourceHints }}}
+        {{{ head.meta_tags }}}
+    <meta name="google-site-verification" content="en_9BaePmnjiC1wa94L6I1Zq69WDierJ1_ZmbqCqnbk" />
+        {{{ head.config }}}
+        {{#block "head"}} {{/block}}
+
+        <link href="{{ head.favicon }}" rel="shortcut icon">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+         <link href='https://fonts.googleapis.com/css?family=Almarai' rel='stylesheet'>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="ft-name" content="{{theme_settings.n}}">
+        <meta name="ft-version" content="{{theme_settings.v}}">
+        <meta name="ft-edition" content="{{theme_settings.e}}">
+
+        <script>
+            // Change document class from no-js to js so we can detect this in css
+            document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+        </script>
+        
+
+        {{ getFontsCollection }}
+        {{{stylesheet '/assets/css/theme.css'}}}
+
+        {{{head.scripts}}}
+        {{{head.rsslinks}}}
+
+        {{inject 'themeSettings' theme_settings}}
+        {{inject 'genericError' (lang 'common.generic_error')}}
+        {{inject 'maintenanceMode' settings.maintenance}}
+        {{inject 'urls' urls}}
+        {{inject 'secureBaseUrl' settings.secure_base_url}}
+        {{inject 'template' template}}
+        {{inject 'enableAnimations' theme_settings.enable_animations}}
+        {{{snippet 'htmlhead'}}}
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180255211-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'UA-180255211-1');
+        </script>
+    </head>
+    <body{{#or theme_settings.show_global_banner theme_settings.enable_gradients}} class="{{#if theme_settings.show_global_banner}}has-globalBanner{{/if}}{{#if theme_settings.enable_gradients}} gradient{{/if}}"{{/or}}>
+
+        
+        {{{snippet 'header'}}}
+        <svg data-src="{{cdn 'img/icon-sprite.svg'}}" class="icons-svg-sprite"></svg>
+
+        {{#and settings.privacy_cookie settings.is_eu_ip_address}}
+            {{> components/common/cookie}}
+        {{/and}}
+
+        {{> components/common/header }}
+        {{> components/common/categ-body }}
+        {{#if theme_settings.enable_simple_footer}}
+            {{> components/f/footer/simple-footer }}
+        {{else}}
+            {{> components/common/footer-custom }}
+        {{/if}}
+
+        <script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>
+        <script src="{{cdn 'assets/dist/theme-bundle.main.js'}}"></script>
+
+        <script>
+            // Exported in app.js
+            window.stencilBootstrap("{{page_type}}", {{jsContext}}).load();
+        </script>
+<script type="text/javascript">
+
+		var $animation_elements = $('.animation-element');
+		var $window = $(window);
+
+		function check_if_in_view() {
+		  var window_height = $window.height();
+		  var window_top_position = $window.scrollTop();
+		  var window_bottom_position = (window_top_position + window_height);
+		 
+		  $.each($animation_elements, function() {
+			var $element = $(this);
+			var element_height = $element.outerHeight();
+			var element_top_position = $element.offset().top;
+			var element_bottom_position = (element_top_position + element_height);
+		 
+			//check to see if this current container is within viewport
+			if ((element_bottom_position >= window_top_position) &&
+				((element_top_position+60) <= window_bottom_position)) {
+			  $element.addClass('in-view');
+			} else {
+//		  $element.removeClass('in-view');
+			}
+		  });
+		}
+
+		$window.on('scroll resize', check_if_in_view);
+		$window.trigger('scroll');
+
+
+		
+		
+		
+		
+		</script>
+        {{{footer.scripts}}}
+        {{{snippet 'footer'}}}
+    </body>
+</html>
