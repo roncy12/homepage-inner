@@ -3465,15 +3465,15 @@ form.grn-matt-form div.u-hiddenVisually {
 }
 
 .prodview-shipping-details.grn-matt-ship {
-
     background: #e2e8ed;
-    width: 59%;
+    width: 75%;
     padding: 11px 0;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     text-align: center;
 }
-
 .prodview-shipping-details.grn-matt-ship div p {
     color: #132448;
     font-weight: 700;
