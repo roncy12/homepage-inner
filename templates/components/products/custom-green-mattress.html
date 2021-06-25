@@ -1,4 +1,9 @@
-<div class="productView" {{#if settings.data_tag_enabled}} data-event-type="product" data-entity-id="{{product.id}}" data-name="{{product.title}}" data-product-category="{{#each product.category}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}" data-product-brand="{{product.brand.name}}" data-product-price="{{#if product.price.with_tax}}{{product.price.with_tax.value}}{{else}}{{product.price.without_tax.value}}{{/if}}" data-product-variant="single-product-option"{{/if}}>
+<style>
+    .productView.grn-matt-page .stamped-container {
+        display: none;
+    }
+</style>
+<div class="productView grn-matt-page" {{#if settings.data_tag_enabled}} data-event-type="product" data-entity-id="{{product.id}}" data-name="{{product.title}}" data-product-category="{{#each product.category}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}" data-product-brand="{{product.brand.name}}" data-product-price="{{#if product.price.with_tax}}{{product.price.with_tax.value}}{{else}}{{product.price.without_tax.value}}{{/if}}" data-product-variant="single-product-option"{{/if}}>
 
     {{#each product.reviews.messages}}
         {{#if error}}
@@ -28,12 +33,13 @@
             </div>
         </figure>
         {{#gt product.images.length 1}}
-        <ul class="productView-thumbs green-matt-thumb"{{#gt product.images.length 5}} data-slick='{
+        <ul class="productView-thumbs green-matt-thumb productCarousel" {{#gt product.images.length 5}} data-slick='{
                 "infinite": true,
                 "mobileFirst": true,
                 "slidesToShow": 4,
                 "slidesToScroll": 1,
                 "vertical": false,
+                "arrows": {{arrows}},
                 "responsive": [
                     {
                         "breakpoint": 801,
@@ -56,7 +62,7 @@
                         }
                     }
                 ]
-            }'{{/gt}}>
+            }' {{/gt}} >
             {{#each product.images}}
                 <li class="productView-thumb green-matt-li">
                     <a
@@ -68,9 +74,42 @@
                         <img class="lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage this (cdn ../theme_settings.default_image_product)}}" alt="{{this.alt}}" title="{{this.alt}}">
                     </a>
                 </li>
+                
             {{/each}}
+            
         </ul>
+    
+    <div class="prodview-shipping grn-mat-shp">
+        <div class="grid-ship-details">
+            <div>                   
+              
+                <img class="animation-element bounce-in invi duration-1500 delay-00" src="{{cdn '/assets/img/prodpage/Shipping_icon.png'}}"/>
+       
+                
+                <p class="text-capitalize">Free Shipping</p>
+            </div>
+            <div>                   
+                <img class="animation-element bounce-in invi duration-1500 delay-900" src="{{cdn '/assets/img/prodpage/Night-Icon.png'}}"/>
+                
+                <p class="text-capitalize">100 Night Sleep Trial</p>
+            </div>
+            <div>                   
+                <img class="animation-element bounce-in invi duration-1500 delay-600" src="{{cdn '/assets/img/prodpage/Certified_Icon.png'}}"/>
+           
+                <p class="text-capitalize">Certified Products</p>
+            </div>
+            <div>                   
+                <img class="animation-element bounce-in invi duration-1500 delay-300" src="{{cdn '/assets/img/prodpage/Warranty_icon.png'}}"/>
+         
+                <p class="text-capitalize">Long Term warranty</p>
+            </div>
+        </div>
+    </div>
+        
         {{/gt}}
+
+
+
     </section>
 	  <section class="productView-details green-matt-details">
         <div class="productView-product green-matt-prod">
@@ -97,7 +136,7 @@
             {{/if}}-->
 			<div class="custom-productTitle green-matt-title">
 				<h1 class="productView-title " {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
-        
+                
                 <div class="productView-description green-matt-desc" {{#if settings.data_tag_enabled}} data-event-type="product" {{/if}}>
                     {{{product.description}}}
                     {{{snippet 'product_description'}}}
@@ -105,27 +144,33 @@
 	            <!-- <div id="stamped-reviews-widget" style="display: inline-block;" data-widget-type="site-badge" data-badge-type="minimal" data-title="Verified Reviews" data-title-size="15" data-size-stars="12" data-element-id="2" data-lang="en">&nbsp;</div> -->
 			
             </div>
-            {{#if product.call_for_price}}
-                <p class="productView-price green-matt-price">
-                   Total Price:  <span>{{product.call_for_price}}</span>
+            <div id="stamped-reviews-widget" class="mx-auto grn-matt-stamp" style="display: inline-block;" data-widget-type="site-badge" data-badge-type="minimal" data-title="Verified Reviews" data-title-size="15" data-size-stars="12" data-element-id="2" data-lang="en">&nbsp;</div>
+           
+           <div class="d-flex align-items-center grn-matt-price">
+                <h4 class="productView-price">Total Price: &nbsp </h4>
+                {{#if product.call_for_price}}
+                <p class="productView-price">
+                    <span>{{product.call_for_price}}</span>
                 </p>
-            {{/if}}
-            <div class="productView-price green-matt-price">
-                {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-                    {{> components/products/price price=product.price schema_org=schema}}
-                {{else}}
-                    {{> components/common/login-for-pricing}}
-                {{/or}}
-            </div>
+                {{/if}}
+                <div class="productView-price">
+                    {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+                        {{> components/products/price price=product.price schema_org=schema}}
+                    {{else}}
+                        {{> components/common/login-for-pricing}}
+                    {{/or}}
+                </div>
+           </div>
+
             <!--{{{region name="product_below_price"}}}
 
             {{product.detail_messages}}-->
         </div>
-        <div class="productView-options {{#if settings.show_wishlist}}has-wishlist{{/if}}">
+        <div class="productView-options grn-matt-opt {{#if settings.show_wishlist}}has-wishlist{{/if}}">
             {{#if product.release_date }}
                 <p>{{product.release_date}}</p>
             {{/if}}
-            <form class="form {{#if theme_settings.enable_circular_swatches}}swatches--round{{/if}}" method="post" action="{{product.cart_url}}" enctype="multipart/form-data"
+            <form class="form grn-matt-form {{#if theme_settings.enable_circular_swatches}}swatches--round{{/if}}" method="post" action="{{product.cart_url}}" enctype="multipart/form-data"
                   data-cart-item-add>
                 <input type="hidden" name="action" value="add">
                 <input type="hidden" name="product_id" value="{{product.id}}"/>
@@ -135,12 +180,18 @@
                 <div class="cus-options" data-product-option-change style="display:none;">
                     {{#each product.options}}
                         {{{dynamicComponent 'components/products/options'}}}
+                        {{else}}
+                        {{{dynamicComponent 'components/products/options'}}}
                     {{/each}}
+
+                   
                 </div>
                 {{#if product.event_date}}
                     {{> components/products/event-date}}
                 {{/if}}
                 {{#if product.can_purchase}}
+                    {{> components/products/add-to-cart}}
+                    {{else}}
                     {{> components/products/add-to-cart}}
                 {{/if}}
                 {{#if product.out_of_stock}}
@@ -187,6 +238,25 @@
                     {{/if}}
                 </dl>
             {{/or}}
+
+
+            <div class="prodview-shipping-details grn-matt-ship">
+                <div>
+                    <p class="text-uppercase">Ships by:</p>
+                    <h4>{{moment "now" "MM/DD/YYYY"}}</h4>
+                </div>
+                <div>
+                    <p class="text-uppercase">Delivery by:</p>
+                    <h4 class="text-capitalize">Within 2-7 days*</h4>
+                </div>
+            </div>
+
+            <p><i>*To learn more about shipping, check out our <a href="/shipping-transit-chart/"> Shipment Transit Chart.</a></i></p>
+
+            <div class="d-flex justify-content-between align-items-center w-50 flexgrn-matt">
+                <div>SPECIFICATION</div>
+                <div><img src="{{cdn '/assets/img/prodpage/pllus-icon-img.png'}}" /></div>
+            </div>
         </div>
         {{#if theme_settings.show_product_description_below}}
             <div class="productView-scrollToDescription" id="description">
@@ -194,58 +264,39 @@
             </div>
         {{/if}}
     </section>
-<div class="empty">
-    
-</div>
+
 
 </div>
-<div class="prodview-shipping">
-	<div class="prodview-shipping-details">
-		<div>
-			<h4>Ships by:</h4>
-			<p>{{moment "now" "MM/DD/YYYY"}}</p>
-		</div>
-		<div>
-			<h4>Delivery by:</h4>
-			<p>Within 2-7 days*</p>
-		</div>
-		<p><i>*To learn more about shipping, check out our <a> Shipment Transit Chart.</a></i></p>
-	
-	</div>
-	<div class="prodview-shipping-other-details">
-		<div>
-			<img class="animation-element bounce-in invi duration-1500 delay-00" src="{{cdn '/assets/img/prodpage/shipping.png'}}"/>
-			<p>
-				FREE <br>SHIPPING
-			</p>
-		</div>
-		<div>
-			<img class="animation-element bounce-in invi duration-1500 delay-300" src="{{cdn '/assets/img/prodpage/warranty.png'}}"/>
-			<p>
-				LONG-TERM <br>WARRANTY
-			</p>
-		</div>
-		<div>
-			<img class="animation-element bounce-in invi duration-1500 delay-600" src="{{cdn '/assets/img/prodpage/certificate.png'}}"/>
-			<p>
-				CERTIFIED <br>PRODUCTS
-			</p>
-		</div>
-		<div>
-			<img class="animation-element bounce-in invi duration-1500 delay-900" src="{{cdn '/assets/img/prodpage/trial.png'}}"/>
-			<p>
-				100 NIGHT <br>SLEEP TRIAL
-			</p>
-		</div>
-	</div>
 
-	
-</div>
 
 <div class="green-matt-features">
-    
+    <div>
+        <div class="grn-ftr-text">
+            <h2 class="font-weight-bold text-capitalize">Lorem Ipsum Dolor Sit Amet</h2>
+            <p>Experience the comfiest and most refreshing sleep with Icon Sleep's Green tea-infused memory foam mattress With ActivCharcoal&#8482; that neutralizes bad odor combined with BioFoam&reg; technology for contoured spinal support. It's definitely an investment for an improved sleep you deserve.  </p>    
+        </div>
+
+        <div class="matt-ftr-div ">
+            <div class="grn-matt-img">
+                <img src="{{cdn '/assets/img/prodpage/active-charcoal.png'}}" />
+            </div>
+            <div class="grn-matt-img">
+                <img src="{{cdn '/assets/img/prodpage/Compression-tech_icon.png'}}" />
+            </div>
+            <div class="grn-matt-img">
+                <img src="{{cdn '/assets/img/prodpage/Bio-Foam_icon.png'}}" />
+            </div>
+             <div class="grn-matt-img">
+                 <img src="{{cdn '/assets/img/prodpage/Evergreen_icon.png'}}" />
+            </div>
+             <div class="grn-matt-img">
+                 <img src="{{cdn '/assets/img/prodpage/SGS_icon.png'}}" />
+            </div>
+        </div>
+    </div>
 </div>
 
+<!--
 <div class="prodview-prodimg">
 	<div>
 		<h2>It's Lavishly <span>LUXE</span></h2>
@@ -254,6 +305,7 @@
 		<img src="{{cdn '/assets/img/prodpage/Luxe.png'}}"/>
 	</div>
 </div>
+-->
 <div class="sub-prodview-podimg green-matt-sub">
 	<div class="animation-element bounce-in invi duration-1500">
 		<img src="{{cdn '/assets/img/prodpage/cooling.png'}}"/>
@@ -384,11 +436,12 @@
 
 <div class="FAQS-categ green-faq-categ">
     <div class="faqs-content">
+        
         <h4 style="">Frequently Asked Questions</h4>
         <p style="text-align: center; color: #fff;">See why customers love LUXE or write a Review</p>
 		<div class="faqs-desc">
 			<input id="_1" type="checkbox">
-			<label class="terms-showMore" for="_1">  What's the best mattress size for me? <i class="fas fa-plus" id="add"></i><i class="fas fa-times" id="close"></i>
+			<label class="terms-showMore" for="_1">  What's the best mattress size for me? <i class="fas fa-plus" id="add"></i><img class="fas fa-times" id="close" src="{{cdn 'https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/minus-sign-icon.png?t=1624521698'}}" />
 			</label>
         	<div>
 	        	<p>Choosing the right mattress size depends on several factors. Are you sharing your bed with a partner or pets? Do you like having plenty of living space in your bedroom? How do you want your bed to be placed? Breaking down these details will help you pick the right size that fits your preferences.</p>
@@ -396,7 +449,8 @@
     
 	        <input id="_2" type="checkbox"> <label class="terms-showMore" for="_2"> What type of foundation should I use for my mattress? 
 		    	<i class="fas fa-plus" id="add"></i>
-			    <i class="fas fa-times" id="close"></i>
+<!--			    <i class="fas fa-times" id="close"></i>-->
+            <img class="fas fa-times" id="close" src="{{cdn 'https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/minus-sign-icon.png?t=1624521698'}}" />
 			</label>
             <div>
                 <p>Our mattresses can work with almost all standard foundations. The harder and sturdier the base, the better the mattress will perform, as with all foam beds. Platform bases offer the most support, but steel or wooden slatted foundations are also great options. If you want to improvise, adding a piece of plywood atop the base can give additional support.</p>
@@ -404,11 +458,10 @@
 
             <input id="_3" type="checkbox"> <label class="terms-showMore" for="_3"> How long should I wait before I can use my mattress?
                 <i class="fas fa-plus" id="add"></i>
-                <i class="fas fa-times" id="close"></i></label>
+                <img class="fas fa-times" id="close" src="{{cdn 'https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/minus-sign-icon.png?t=1624521698'}}" /></label>
             <div>
                <p>You may start using it right out of the box! Take note, however, that it would take 48 hours up to a week for your mattress to fully decompress. Sleeping on your mattress can help with the decompression. To know more about setting up and mattress care, read this <a href="/mattress-care-setup/" style="text-align: center; color: #00d2ff;">Guide</a>.</p>
 	        </div>
     	</div>
 	</div>
 </div>
-

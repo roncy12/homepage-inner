@@ -1,1 +1,1024 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{317:function(e,t){e.exports=function(e){return e}},318:function(e,t,n){"use strict";t.a={email:function(e){return/^.+@.+\..+/.test(e)},password:function(e){return this.notEmpty(e)},notEmpty:function(e){return e.length>0}}},319:function(e,t,n){"use strict";n.d(t,"b",(function(){return h})),n.d(t,"a",(function(){return w})),n.d(t,"c",(function(){return x}));var r=n(320),i=n.n(r),o=n(324),a=n.n(o),u=n(322),s=n.n(u),c=n(0),f=n.n(c),d=n(97),l=n(318),p=["input","select","textarea"];function v(e,t){var n=f()(e),r=n.parent("."+t),o=n.prop("tagName").toLowerCase(),u=t+"--"+o,c=void 0;if("input"===o){var d=n.prop("type");s()(["radio","checkbox","submit"],d)?u=t+"--"+a()(d):c=""+u+i()(d)}return r.addClass(u).addClass(c)}function h(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=f()(e),r=n.find(p.join(", ")),i=t.formFieldClass,o=void 0===i?"form-field":i;return r.each((function(e,t){v(t,o)})),n}function x(e){var t={type:"hidden",name:"FormFieldIsText"+function(e){var t=e.prop("name").match(/(\[.*\])/);return t&&0!==t.length?t[0]:""}(e),value:"1"};e.after(f()("<input />",t))}var w={setEmailValidation:function(e,t){t&&e.add({selector:t,validate:function(e,t){e(l.a.email(t))},errorMessage:"You must enter a valid email."})},setPasswordValidation:function(e,t,n,r,i){var o=f()(t),a=[{selector:t,validate:function(e,t){var n=t.length;if(i)return e(!0);e(n)},errorMessage:"You must enter a password."},{selector:t,validate:function(e,t){var n=t.match(new RegExp(r.alpha))&&t.match(new RegExp(r.numeric))&&t.length>=r.minlength;if(i&&0===t.length)return e(!0);e(n)},errorMessage:r.error},{selector:n,validate:function(e,t){var n=t.length;if(i)return e(!0);e(n)},errorMessage:"You must enter a password."},{selector:n,validate:function(e,t){e(t===o.val())},errorMessage:"Your passwords do not match."}];e.add(a)},setMinMaxPriceValidation:function(e,t){var n=t.errorSelector,r=t.fieldsetSelector,i=t.formSelector,o=t.maxPriceSelector,a=t.minPriceSelector;e.configure({form:i,preventSubmit:!0,successClass:"_"}),e.add({errorMessage:"Min price must be less than max. price.",selector:a,validate:"min-max:"+a+":"+o}),e.add({errorMessage:"Min price must be less than max. price.",selector:o,validate:"min-max:"+a+":"+o}),e.add({errorMessage:"Max. price is required.",selector:o,validate:"presence"}),e.add({errorMessage:"Min. price is required.",selector:a,validate:"presence"}),e.add({errorMessage:"Input must be greater than 0.",selector:[a,o],validate:"min-number:0"}),e.setMessageOptions({selector:[a,o],parent:r,errorSpan:n})},setStateCountryValidation:function(e,t){t&&e.add({selector:t,validate:"presence",errorMessage:"The 'State/Province' field cannot be blank."})},cleanUpStateValidation:function(e){var t=f()('[data-type="'+e.data("fieldType")+'"]');Object.keys(d.a.classes).forEach((function(e){t.hasClass(d.a.classes[e])&&t.removeClass(d.a.classes[e])}))}}},320:function(e,t,n){var r=n(317),i=n(327);e.exports=function(e){return i(r(e).toLowerCase())}},321:function(e,t){var n=RegExp("[\\u200d\\ud800-\\udfff\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff\\ufe0e\\ufe0f]");e.exports=function(e){return n.test(e)}},322:function(e,t,n){var r=n(325);e.exports=function(e,t){return!!(null==e?0:e.length)&&r(e,t,0)>-1}},324:function(e,t,n){var r=n(320),i=n(334)((function(e,t,n){return t=t.toLowerCase(),e+(n?r(t):t)}));e.exports=i},325:function(e,t){e.exports=function(e,t,n){for(var r=n-1,i=e.length;++r<i;)if(e[r]===t)return r;return-1}},327:function(e,t,n){var r=n(328)("toUpperCase");e.exports=r},328:function(e,t,n){var r=n(329),i=n(321),o=n(331),a=n(317);e.exports=function(e){return function(t){t=a(t);var n=i(t)?o(t):void 0,u=n?n[0]:t.charAt(0),s=n?r(n,1).join(""):t.slice(1);return u[e]()+s}}},329:function(e,t,n){var r=n(330);e.exports=function(e,t,n){var i=e.length;return n=void 0===n?i:n,!t&&n>=i?e:r(e,t,n)}},330:function(e,t){e.exports=function(e,t,n){var r=-1,i=e.length;t<0&&(t=-t>i?0:i+t),(n=n>i?i:n)<0&&(n+=i),i=t>n?0:n-t>>>0,t>>>=0;for(var o=Array(i);++r<i;)o[r]=e[r+t];return o}},331:function(e,t,n){var r=n(332),i=n(321),o=n(333);e.exports=function(e){return i(e)?o(e):r(e)}},332:function(e,t){e.exports=function(e){return e.split("")}},333:function(e,t){var n="[\\ud800-\\udfff]",r="[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]",i="\\ud83c[\\udffb-\\udfff]",o="[^\\ud800-\\udfff]",a="(?:\\ud83c[\\udde6-\\uddff]){2}",u="[\\ud800-\\udbff][\\udc00-\\udfff]",s="(?:"+r+"|"+i+")"+"?",c="[\\ufe0e\\ufe0f]?"+s+("(?:\\u200d(?:"+[o,a,u].join("|")+")[\\ufe0e\\ufe0f]?"+s+")*"),f="(?:"+[o+r+"?",r,a,u,n].join("|")+")",d=RegExp(i+"(?="+i+")|"+f+c,"g");e.exports=function(e){return e.match(d)||[]}},334:function(e,t,n){var r=n(335),i=n(336),o=n(338),a=RegExp("['’]","g");e.exports=function(e){return function(t){return r(o(i(t).replace(a,"")),e,"")}}},335:function(e,t){e.exports=function(e,t,n,r){var i=-1,o=null==e?0:e.length;for(r&&o&&(n=e[++i]);++i<o;)n=t(n,e[i],i,e);return n}},336:function(e,t,n){var r=n(337);e.exports=function(e){return null==e?"":r(e)}},337:function(e,t){e.exports=function(e){return e}},338:function(e,t,n){var r=n(339),i=n(340),o=n(317),a=n(341);e.exports=function(e,t,n){return e=o(e),void 0===(t=n?void 0:t)?i(e)?a(e):r(e):e.match(t)||[]}},339:function(e,t){var n=/[^\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f]+/g;e.exports=function(e){return e.match(n)||[]}},340:function(e,t){var n=/[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;e.exports=function(e){return n.test(e)}},341:function(e,t){var n="\\xac\\xb1\\xd7\\xf7\\x00-\\x2f\\x3a-\\x40\\x5b-\\x60\\x7b-\\xbf\\u2000-\\u206f \\t\\x0b\\f\\xa0\\ufeff\\n\\r\\u2028\\u2029\\u1680\\u180e\\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200a\\u202f\\u205f\\u3000",r="["+n+"]",i="\\d+",o="[\\u2700-\\u27bf]",a="[a-z\\xdf-\\xf6\\xf8-\\xff]",u="[^\\ud800-\\udfff"+n+i+"\\u2700-\\u27bfa-z\\xdf-\\xf6\\xf8-\\xffA-Z\\xc0-\\xd6\\xd8-\\xde]",s="(?:\\ud83c[\\udde6-\\uddff]){2}",c="[\\ud800-\\udbff][\\udc00-\\udfff]",f="[A-Z\\xc0-\\xd6\\xd8-\\xde]",d="(?:"+a+"|"+u+")",l="(?:"+f+"|"+u+")",p="(?:[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]|\\ud83c[\\udffb-\\udfff])?",v="[\\ufe0e\\ufe0f]?"+p+("(?:\\u200d(?:"+["[^\\ud800-\\udfff]",s,c].join("|")+")[\\ufe0e\\ufe0f]?"+p+")*"),h="(?:"+[o,s,c].join("|")+")"+v,x=RegExp([f+"?"+a+"+(?:['’](?:d|ll|m|re|s|t|ve))?(?="+[r,f,"$"].join("|")+")",l+"+(?:['’](?:D|LL|M|RE|S|T|VE))?(?="+[r,f+d,"$"].join("|")+")",f+"?"+d+"+(?:['’](?:d|ll|m|re|s|t|ve))?",f+"+(?:['’](?:D|LL|M|RE|S|T|VE))?","\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])","\\d*(?:1st|2nd|3rd|(?![123])\\dth)(?=\\b|[A-Z_])",i,h].join("|"),"g");e.exports=function(e){return e.match(x)||[]}},343:function(e,t,n){"use strict";var r=n(0),i=n.n(r),o=n(5);n(44),n(149);t.a=function(){i()(".card-swatches").each((function(){var e=this,t=i()(this).attr("data-id");o.b.api.product.getById(t,{template:"f/swatches/product-swatches"},(function(t,n){var r=i.a.parseHTML(n);i()(e).html(r),i()(document).foundation("equalizer","reflow")}))}))}},344:function(e,t,n){"use strict";var r=n(0),i=n.n(r),o=n(5);n(44),n(149);t.a=function(){i()(".card-sizes").each((function(){var e=this,t=i()(this).attr("data-id");o.b.api.product.getById(t,{template:"f/swatches/product-sizes"},(function(t,n){var r=i.a.parseHTML(n);i()(e).html(r),i()(document).foundation("equalizer","reflow")}))}))}},450:function(e,t,n){"use strict";n.r(t);var r=n(0),i=n.n(r),o=n(51),a=n(97),u=n(25),s=n(318);var c=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.validator=Object(a.a)({submit:t.find('input[type="submit"]')}),this.$reviewsContent=i()("#product-reviews"),this.$collapsible=i()("[data-collapsible]",this.$reviewsContent),this.initLinkBind(),this.injectPaginationLink(),this.collapseReviews()}return e.prototype.initLinkBind=function(){var e=this,t=i()("#productReviews-content",this.$reviewsContent);i()(".productView-reviewLink").on("click",(function(){t.hasClass("is-open")||e.$collapsible.trigger(u.a.click)}))},e.prototype.collapseReviews=function(){window.location.hash&&0===window.location.hash.indexOf("#product-reviews")||this.$collapsible.trigger(u.a.click)},e.prototype.injectPaginationLink=function(){var e=i()(".pagination-item--next .pagination-link",this.$reviewsContent),t=i()(".pagination-item--previous .pagination-link",this.$reviewsContent);e.length&&e.attr("href",e.attr("href")+" #product-reviews"),t.length&&t.attr("href",t.attr("href")+" #product-reviews")},e.prototype.registerValidation=function(e){return this.context=e,this.validator.add([{selector:'[name="revrating"]',validate:"presence",errorMessage:this.context.reviewRating},{selector:'[name="revtitle"]',validate:"presence",errorMessage:this.context.reviewSubject},{selector:'[name="revtext"]',validate:"presence",errorMessage:this.context.reviewComment},{selector:'[name="email"]',validate:function(e,t){e(s.a.email(t))},errorMessage:this.context.reviewEmail}]),this.validator},e.prototype.validate=function(){return this.validator.performCheck()},e}(),f=n(141);var d=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.$player=t.find("[data-video-player]"),this.$videos=t.find("[data-video-item]"),this.currentVideo={},this.bindEvents()}return e.prototype.selectNewVideo=function(e){e.preventDefault();var t=i()(e.currentTarget);this.currentVideo={id:t.data("videoId"),$selectedThumb:t},this.setMainVideo(),this.setActiveThumb()},e.prototype.setMainVideo=function(){this.$player.attr("src","//www.youtube.com/embed/"+this.currentVideo.id)},e.prototype.setActiveThumb=function(){this.$videos.removeClass("is-active"),this.currentVideo.$selectedThumb.addClass("is-active")},e.prototype.bindEvents=function(){this.$videos.on("click",this.selectNewVideo.bind(this))},e}();var l=n(319),p=n(343),v=n(344),h=n(5);var x=function(e){function t(n){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t);var r=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,e.call(this,n));return r.url=window.location.href,r.$reviewLink=i()('[data-reveal-id="modal-review-form"]'),r}return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(t,e),t.prototype.onReady=function(){var e,t,n=this;i()(document).on("close.fndtn.reveal",(function(){-1!==n.url.indexOf("#write_review")&&"function"==typeof window.history.replaceState&&window.history.replaceState(null,document.title,window.location.pathname)})),this.context.relatedContent&&(e=this.context.relatedContent,t=e,h.b.api.getPage(t,{template:"f/blog/related-article"},(function(e,t){if(e)throw new Error(e);i()(".relatedContent").append(t)})),i()(".relatedContent").show());var r=void 0;Object(u.b)(),this.productDetails=new f.a(i()(".productView"),this.context,window.BCData.product_attributes),this.productDetails.setProductVariant(),i()("[data-video-gallery]").each((function(e,t){var n=i()(t);n.data("video-gallery")instanceof d||n.data("video-gallery",new d(n))}));var o=Object(l.b)(".writeReview-form"),a=new c(o);i()("body").on("click",'[data-reveal-id="modal-review-form"]',(function(){r=a.registerValidation(n.context)})),o.on("submit",(function(){return!!r&&(r.performCheck(),r.areAll("valid"))})),this.context.enableSwatches&&Object(p.a)(),this.context.enableSizes&&Object(v.a)(),this.context.enableSelectedOptionLabel&&function(){var e=i()(".show-selected-option input"),t=i()(".show-selected-option input[checked]"),n=void 0,r=void 0;function o(){n=i()(this).siblings().children("span[data-option-value]"),r=i()(this).attr("data-option-label"),n.text(r)}t.each(o),e.on("click",o)}(),this.productReviewHandler()},t.prototype.productReviewHandler=function(){-1!==this.url.indexOf("#write_review")&&this.$reviewLink.trigger("click")},t}(o.a);t.default=x}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
+
+/***/ "./assets/js/theme/catalog.js":
+/*!************************************!*\
+  !*** ./assets/js/theme/catalog.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _page_manager__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page-manager */ "./assets/js/theme/page-manager.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _common_url_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./common/url-utils */ "./assets/js/theme/common/url-utils.js");
+/* harmony import */ var url__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! url */ "./node_modules/url/url.js");
+/* harmony import */ var url__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(url__WEBPACK_IMPORTED_MODULE_3__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+var CatalogPage = function (_PageManager) {
+    _inherits(CatalogPage, _PageManager);
+
+    function CatalogPage() {
+        _classCallCheck(this, CatalogPage);
+
+        return _possibleConstructorReturn(this, _PageManager.apply(this, arguments));
+    }
+
+    CatalogPage.prototype.onSortBySubmit = function onSortBySubmit(event) {
+        var url = url__WEBPACK_IMPORTED_MODULE_3___default.a.parse(window.location.href, true);
+        var queryParams = jquery__WEBPACK_IMPORTED_MODULE_1___default()(event.currentTarget).serialize().split('=');
+
+        url.query[queryParams[0]] = queryParams[1];
+        delete url.query.page;
+
+        event.preventDefault();
+        window.location = url__WEBPACK_IMPORTED_MODULE_3___default.a.format({ pathname: url.pathname, search: _common_url_utils__WEBPACK_IMPORTED_MODULE_2__["default"].buildQueryString(url.query) });
+    };
+
+    return CatalogPage;
+}(_page_manager__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (CatalogPage);
+
+/***/ }),
+
+/***/ "./assets/js/theme/common/faceted-search.js":
+/*!**************************************************!*\
+  !*** ./assets/js/theme/common/faceted-search.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var lodash_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash/includes */ "./node_modules/lodash/includes.js");
+/* harmony import */ var lodash_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_includes__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash_union__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/union */ "./node_modules/lodash/union.js");
+/* harmony import */ var lodash_union__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_union__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash_without__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/without */ "./node_modules/lodash/without.js");
+/* harmony import */ var lodash_without__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_without__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var lodash_extend__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash/extend */ "./node_modules/lodash/extend.js");
+/* harmony import */ var lodash_extend__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_extend__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @bigcommerce/stencil-utils */ "./node_modules/@bigcommerce/stencil-utils/src/main.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var url__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! url */ "./node_modules/url/url.js");
+/* harmony import */ var url__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(url__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _url_utils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./url-utils */ "./assets/js/theme/common/url-utils.js");
+/* harmony import */ var _global_modal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../global/modal */ "./assets/js/theme/global/modal.js");
+/* harmony import */ var _collapsible__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./collapsible */ "./assets/js/theme/common/collapsible.js");
+/* harmony import */ var _form_utils__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./form-utils */ "./assets/js/theme/common/form-utils.js");
+/* harmony import */ var _nod__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./nod */ "./assets/js/theme/common/nod.js");
+
+
+
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Faceted search view component
+ */
+
+var FacetedSearch = function () {
+    /**
+     * @param {object} requestOptions - Object with options for the ajax requests
+     * @param {function} callback - Function to execute after fetching templates
+     * @param {object} options - Configurable options
+     * @example
+     *
+     * let requestOptions = {
+     *      templates: {
+     *          productListing: 'category/product-listing',
+     *          sidebar: 'category/sidebar'
+     *     }
+     * };
+     *
+     * let templatesDidLoad = function(content) {
+     *     $productListingContainer.html(content.productListing);
+     *     $facetedSearchContainer.html(content.sidebar);
+     * };
+     *
+     * let facetedSearch = new FacetedSearch(requestOptions, templatesDidLoad);
+     */
+    function FacetedSearch(requestOptions, callback, options) {
+        var _this = this;
+
+        _classCallCheck(this, FacetedSearch);
+
+        var defaultOptions = {
+            accordionToggleSelector: '#facetedSearch .accordion-navigation, #facetedSearch .facetedSearch-toggle',
+            blockerSelector: '#facetedSearch .blocker',
+            clearFacetSelector: '#facetedSearch .facetedSearch-clearLink',
+            componentSelector: '#facetedSearch-navList',
+            facetNavListSelector: '#facetedSearch .navList',
+            priceRangeErrorSelector: '#facet-range-form .form-inlineMessage',
+            priceRangeFieldsetSelector: '#facet-range-form .form-fieldset',
+            priceRangeFormSelector: '#facet-range-form',
+            priceRangeMaxPriceSelector: '#facet-range-form [name=max_price]',
+            priceRangeMinPriceSelector: '#facet-range-form [name=min_price]',
+            showMoreToggleSelector: '#facetedSearch .accordion-content .toggleLink',
+            facetedSearchFilterItems: '#facetedSearch-filterItems .form-input',
+            modal: Object(_global_modal__WEBPACK_IMPORTED_MODULE_8__["default"])('#modal')[0],
+            modalOpen: false
+        };
+
+        // Private properties
+        this.requestOptions = requestOptions;
+        this.callback = callback;
+        this.options = lodash_extend__WEBPACK_IMPORTED_MODULE_3___default()({}, defaultOptions, options);
+        this.collapsedFacets = [];
+        this.collapsedFacetItems = [];
+
+        // Init collapsibles
+        Object(_collapsible__WEBPACK_IMPORTED_MODULE_9__["default"])();
+
+        // Init price validator
+        this.initPriceValidator();
+
+        // Show limited items by default
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()(this.options.facetNavListSelector).each(function (index, navList) {
+            _this.collapseFacetItems(jquery__WEBPACK_IMPORTED_MODULE_5___default()(navList));
+        });
+
+        // Mark initially collapsed accordions
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()(this.options.accordionToggleSelector).each(function (index, accordionToggle) {
+            var $accordionToggle = jquery__WEBPACK_IMPORTED_MODULE_5___default()(accordionToggle);
+            var collapsible = $accordionToggle.data('collapsibleInstance');
+
+            if (collapsible.isCollapsed) {
+                _this.collapsedFacets.push(collapsible.targetId);
+            }
+        });
+
+        // Collapse all facets if initially hidden
+        // NOTE: Need to execute after Collapsible gets bootstrapped
+        setTimeout(function () {
+            if (jquery__WEBPACK_IMPORTED_MODULE_5___default()(_this.options.componentSelector).is(':hidden')) {
+                _this.collapseAllFacets();
+            }
+        });
+
+        // Observe user events
+        this.onStateChange = this.onStateChange.bind(this);
+        this.onToggleClick = this.onToggleClick.bind(this);
+        this.onAccordionToggle = this.onAccordionToggle.bind(this);
+        this.onClearFacet = this.onClearFacet.bind(this);
+        this.onFacetClick = this.onFacetClick.bind(this);
+        this.onRangeSubmit = this.onRangeSubmit.bind(this);
+        this.onSortBySubmit = this.onSortBySubmit.bind(this);
+        this.filterFacetItems = this.filterFacetItems.bind(this);
+
+        this.bindEvents();
+    }
+
+    // Public methods
+
+
+    FacetedSearch.prototype.refreshView = function refreshView(content) {
+        if (content) {
+            this.callback(content);
+        }
+
+        // Init collapsibles
+        Object(_collapsible__WEBPACK_IMPORTED_MODULE_9__["default"])();
+
+        // Init price validator
+        this.initPriceValidator();
+
+        // Restore view state
+        this.restoreCollapsedFacets();
+        this.restoreCollapsedFacetItems();
+
+        // Bind events
+        this.bindEvents();
+    };
+
+    FacetedSearch.prototype.updateView = function updateView() {
+        var _this2 = this;
+
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()(this.options.blockerSelector).show();
+
+        _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_4__["api"].getPage(_url_utils__WEBPACK_IMPORTED_MODULE_7__["default"].getUrl(), this.requestOptions, function (err, content) {
+            jquery__WEBPACK_IMPORTED_MODULE_5___default()(_this2.options.blockerSelector).hide();
+
+            if (err) {
+                throw new Error(err);
+            }
+
+            // Refresh view with new content
+            _this2.refreshView(content);
+        });
+    };
+
+    FacetedSearch.prototype.expandFacetItems = function expandFacetItems($navList) {
+        var id = $navList.attr('id');
+
+        // Remove
+        this.collapsedFacetItems = lodash_without__WEBPACK_IMPORTED_MODULE_2___default()(this.collapsedFacetItems, id);
+    };
+
+    FacetedSearch.prototype.collapseFacetItems = function collapseFacetItems($navList) {
+        var id = $navList.attr('id');
+        var hasMoreResults = $navList.data('hasMoreResults');
+
+        if (hasMoreResults) {
+            this.collapsedFacetItems = lodash_union__WEBPACK_IMPORTED_MODULE_1___default()(this.collapsedFacetItems, [id]);
+        } else {
+            this.collapsedFacetItems = lodash_without__WEBPACK_IMPORTED_MODULE_2___default()(this.collapsedFacetItems, id);
+        }
+    };
+
+    FacetedSearch.prototype.toggleFacetItems = function toggleFacetItems($navList) {
+        var id = $navList.attr('id');
+
+        // Toggle depending on `collapsed` flag
+        if (lodash_includes__WEBPACK_IMPORTED_MODULE_0___default()(this.collapsedFacetItems, id)) {
+            this.getMoreFacetResults($navList);
+
+            return true;
+        }
+
+        this.collapseFacetItems($navList);
+
+        return false;
+    };
+
+    FacetedSearch.prototype.getMoreFacetResults = function getMoreFacetResults($navList) {
+        var _this3 = this;
+
+        var facet = $navList.data('facet');
+        var facetUrl = _url_utils__WEBPACK_IMPORTED_MODULE_7__["default"].getUrl();
+
+        if (this.requestOptions.showMore) {
+            _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_4__["api"].getPage(facetUrl, {
+                template: this.requestOptions.showMore,
+                params: {
+                    list_all: facet
+                }
+            }, function (err, response) {
+                if (err) {
+                    throw new Error(err);
+                }
+
+                _this3.options.modal.open();
+                _this3.options.modalOpen = true;
+                _this3.options.modal.updateContent(response);
+            });
+        }
+
+        this.collapseFacetItems($navList);
+
+        return false;
+    };
+
+    FacetedSearch.prototype.filterFacetItems = function filterFacetItems(event) {
+        var $items = jquery__WEBPACK_IMPORTED_MODULE_5___default()('.navList-item');
+        var query = jquery__WEBPACK_IMPORTED_MODULE_5___default()(event.currentTarget).val().toLowerCase();
+
+        $items.each(function (index, element) {
+            var text = jquery__WEBPACK_IMPORTED_MODULE_5___default()(element).text().toLowerCase();
+            if (text.indexOf(query) !== -1) {
+                jquery__WEBPACK_IMPORTED_MODULE_5___default()(element).show();
+            } else {
+                jquery__WEBPACK_IMPORTED_MODULE_5___default()(element).hide();
+            }
+        });
+    };
+
+    FacetedSearch.prototype.expandFacet = function expandFacet($accordionToggle) {
+        var collapsible = $accordionToggle.data('collapsibleInstance');
+
+        collapsible.open();
+    };
+
+    FacetedSearch.prototype.collapseFacet = function collapseFacet($accordionToggle) {
+        var collapsible = $accordionToggle.data('collapsibleInstance');
+
+        collapsible.close();
+    };
+
+    FacetedSearch.prototype.collapseAllFacets = function collapseAllFacets() {
+        var _this4 = this;
+
+        var $accordionToggles = jquery__WEBPACK_IMPORTED_MODULE_5___default()(this.options.accordionToggleSelector);
+
+        $accordionToggles.each(function (index, accordionToggle) {
+            var $accordionToggle = jquery__WEBPACK_IMPORTED_MODULE_5___default()(accordionToggle);
+
+            _this4.collapseFacet($accordionToggle);
+        });
+    };
+
+    FacetedSearch.prototype.expandAllFacets = function expandAllFacets() {
+        var _this5 = this;
+
+        var $accordionToggles = jquery__WEBPACK_IMPORTED_MODULE_5___default()(this.options.accordionToggleSelector);
+
+        $accordionToggles.each(function (index, accordionToggle) {
+            var $accordionToggle = jquery__WEBPACK_IMPORTED_MODULE_5___default()(accordionToggle);
+
+            _this5.expandFacet($accordionToggle);
+        });
+    };
+
+    // Private methods
+
+
+    FacetedSearch.prototype.initPriceValidator = function initPriceValidator() {
+        if (jquery__WEBPACK_IMPORTED_MODULE_5___default()(this.options.priceRangeFormSelector).length === 0) {
+            return;
+        }
+
+        var validator = Object(_nod__WEBPACK_IMPORTED_MODULE_11__["default"])();
+        var selectors = {
+            errorSelector: this.options.priceRangeErrorSelector,
+            fieldsetSelector: this.options.priceRangeFieldsetSelector,
+            formSelector: this.options.priceRangeFormSelector,
+            maxPriceSelector: this.options.priceRangeMaxPriceSelector,
+            minPriceSelector: this.options.priceRangeMinPriceSelector
+        };
+
+        _form_utils__WEBPACK_IMPORTED_MODULE_10__["Validators"].setMinMaxPriceValidation(validator, selectors);
+
+        this.priceRangeValidator = validator;
+    };
+
+    FacetedSearch.prototype.restoreCollapsedFacetItems = function restoreCollapsedFacetItems() {
+        var _this6 = this;
+
+        var $navLists = jquery__WEBPACK_IMPORTED_MODULE_5___default()(this.options.facetNavListSelector);
+
+        // Restore collapsed state for each facet
+        $navLists.each(function (index, navList) {
+            var $navList = jquery__WEBPACK_IMPORTED_MODULE_5___default()(navList);
+            var id = $navList.attr('id');
+            var shouldCollapse = lodash_includes__WEBPACK_IMPORTED_MODULE_0___default()(_this6.collapsedFacetItems, id);
+
+            if (shouldCollapse) {
+                _this6.collapseFacetItems($navList);
+            } else {
+                _this6.expandFacetItems($navList);
+            }
+        });
+    };
+
+    FacetedSearch.prototype.restoreCollapsedFacets = function restoreCollapsedFacets() {
+        var _this7 = this;
+
+        var $accordionToggles = jquery__WEBPACK_IMPORTED_MODULE_5___default()(this.options.accordionToggleSelector);
+
+        $accordionToggles.each(function (index, accordionToggle) {
+            var $accordionToggle = jquery__WEBPACK_IMPORTED_MODULE_5___default()(accordionToggle);
+            var collapsible = $accordionToggle.data('collapsibleInstance');
+            var id = collapsible.targetId;
+            var shouldCollapse = lodash_includes__WEBPACK_IMPORTED_MODULE_0___default()(_this7.collapsedFacets, id);
+
+            if (shouldCollapse) {
+                _this7.collapseFacet($accordionToggle);
+            } else {
+                _this7.expandFacet($accordionToggle);
+            }
+        });
+    };
+
+    FacetedSearch.prototype.bindEvents = function bindEvents() {
+        // Clean-up
+        this.unbindEvents();
+
+        // DOM events
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()(window).on('statechange', this.onStateChange);
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()(document).on('click', this.options.showMoreToggleSelector, this.onToggleClick);
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()(document).on('toggle.collapsible', this.options.accordionToggleSelector, this.onAccordionToggle);
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()(document).on('keyup', this.options.facetedSearchFilterItems, this.filterFacetItems);
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()(this.options.clearFacetSelector).on('click', this.onClearFacet);
+
+        // Hooks
+        _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_4__["hooks"].on('facetedSearch-facet-clicked', this.onFacetClick);
+        _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_4__["hooks"].on('facetedSearch-range-submitted', this.onRangeSubmit);
+        _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_4__["hooks"].on('sortBy-submitted', this.onSortBySubmit);
+    };
+
+    FacetedSearch.prototype.unbindEvents = function unbindEvents() {
+        // DOM events
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()(window).off('statechange', this.onStateChange);
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()(document).off('click', this.options.showMoreToggleSelector, this.onToggleClick);
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()(document).off('toggle.collapsible', this.options.accordionToggleSelector, this.onAccordionToggle);
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()(document).off('keyup', this.options.facetedSearchFilterItems, this.filterFacetItems);
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()(this.options.clearFacetSelector).off('click', this.onClearFacet);
+
+        // Hooks
+        _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_4__["hooks"].off('facetedSearch-facet-clicked', this.onFacetClick);
+        _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_4__["hooks"].off('facetedSearch-range-submitted', this.onRangeSubmit);
+        _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_4__["hooks"].off('sortBy-submitted', this.onSortBySubmit);
+    };
+
+    FacetedSearch.prototype.onClearFacet = function onClearFacet(event) {
+        var $link = jquery__WEBPACK_IMPORTED_MODULE_5___default()(event.currentTarget);
+        var url = $link.attr('href');
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        // Update URL
+        _url_utils__WEBPACK_IMPORTED_MODULE_7__["default"].goToUrl(url);
+    };
+
+    FacetedSearch.prototype.onToggleClick = function onToggleClick(event) {
+        var $toggle = jquery__WEBPACK_IMPORTED_MODULE_5___default()(event.currentTarget);
+        var $navList = jquery__WEBPACK_IMPORTED_MODULE_5___default()($toggle.attr('href'));
+
+        // Prevent default
+        event.preventDefault();
+
+        // Toggle visible items
+        this.toggleFacetItems($navList);
+    };
+
+    FacetedSearch.prototype.onFacetClick = function onFacetClick(event) {
+        var $link = jquery__WEBPACK_IMPORTED_MODULE_5___default()(event.currentTarget);
+        var url = $link.attr('href');
+
+        event.preventDefault();
+
+        $link.toggleClass('is-selected');
+
+        // Update URL
+        _url_utils__WEBPACK_IMPORTED_MODULE_7__["default"].goToUrl(url);
+
+        if (this.options.modalOpen) {
+            this.options.modal.close();
+        }
+    };
+
+    FacetedSearch.prototype.onSortBySubmit = function onSortBySubmit(event) {
+        var url = url__WEBPACK_IMPORTED_MODULE_6___default.a.parse(window.location.href, true);
+        var queryParams = jquery__WEBPACK_IMPORTED_MODULE_5___default()(event.currentTarget).serialize().split('=');
+
+        url.query[queryParams[0]] = queryParams[1];
+        delete url.query.page;
+
+        event.preventDefault();
+
+        _url_utils__WEBPACK_IMPORTED_MODULE_7__["default"].goToUrl(url__WEBPACK_IMPORTED_MODULE_6___default.a.format({ pathname: url.pathname, search: _url_utils__WEBPACK_IMPORTED_MODULE_7__["default"].buildQueryString(url.query) }));
+    };
+
+    FacetedSearch.prototype.onRangeSubmit = function onRangeSubmit(event) {
+        event.preventDefault();
+
+        if (!this.priceRangeValidator.areAll(_nod__WEBPACK_IMPORTED_MODULE_11__["default"].constants.VALID)) {
+            return;
+        }
+
+        var url = url__WEBPACK_IMPORTED_MODULE_6___default.a.parse(window.location.href);
+        var queryParams = decodeURI(jquery__WEBPACK_IMPORTED_MODULE_5___default()(event.currentTarget).serialize());
+
+        _url_utils__WEBPACK_IMPORTED_MODULE_7__["default"].goToUrl(url__WEBPACK_IMPORTED_MODULE_6___default.a.format({ pathname: url.pathname, search: '?' + queryParams }));
+    };
+
+    FacetedSearch.prototype.onStateChange = function onStateChange() {
+        this.updateView();
+    };
+
+    FacetedSearch.prototype.onAccordionToggle = function onAccordionToggle(event) {
+        var $accordionToggle = jquery__WEBPACK_IMPORTED_MODULE_5___default()(event.currentTarget);
+        var collapsible = $accordionToggle.data('collapsibleInstance');
+        var id = collapsible.targetId;
+
+        if (collapsible.isCollapsed) {
+            this.collapsedFacets = lodash_union__WEBPACK_IMPORTED_MODULE_1___default()(this.collapsedFacets, [id]);
+        } else {
+            this.collapsedFacets = lodash_without__WEBPACK_IMPORTED_MODULE_2___default()(this.collapsedFacets, id);
+        }
+    };
+
+    return FacetedSearch;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (FacetedSearch);
+
+/***/ }),
+
+/***/ "./assets/js/theme/common/form-utils.js":
+/*!**********************************************!*\
+  !*** ./assets/js/theme/common/form-utils.js ***!
+  \**********************************************/
+/*! exports provided: classifyForm, Validators, insertStateHiddenField */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "classifyForm", function() { return classifyForm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Validators", function() { return Validators; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "insertStateHiddenField", function() { return insertStateHiddenField; });
+/* harmony import */ var lodash_capitalize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash/capitalize */ "./node_modules/lodash/capitalize.js");
+/* harmony import */ var lodash_capitalize__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_capitalize__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash_camelCase__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/camelCase */ "./node_modules/lodash/camelCase.js");
+/* harmony import */ var lodash_camelCase__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_camelCase__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash_includes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/includes */ "./node_modules/lodash/includes.js");
+/* harmony import */ var lodash_includes__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_includes__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _nod__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./nod */ "./assets/js/theme/common/nod.js");
+/* harmony import */ var _models_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./models/forms */ "./assets/js/theme/common/models/forms.js");
+
+
+
+
+
+
+
+
+var inputTagNames = ['input', 'select', 'textarea'];
+
+/**
+ * Apply class name to an input element on its type
+ * @param {object} input
+ * @param {string} formFieldClass
+ * @return {object} Element itself
+ */
+function classifyInput(input, formFieldClass) {
+    var $input = jquery__WEBPACK_IMPORTED_MODULE_3___default()(input);
+    var $formField = $input.parent('.' + formFieldClass);
+    var tagName = $input.prop('tagName').toLowerCase();
+
+    var className = formFieldClass + '--' + tagName;
+    var specificClassName = void 0;
+
+    // Input can be text/checkbox/radio etc...
+    if (tagName === 'input') {
+        var inputType = $input.prop('type');
+
+        if (lodash_includes__WEBPACK_IMPORTED_MODULE_2___default()(['radio', 'checkbox', 'submit'], inputType)) {
+            // ie: .form-field--checkbox, .form-field--radio
+            className = formFieldClass + '--' + lodash_camelCase__WEBPACK_IMPORTED_MODULE_1___default()(inputType);
+        } else {
+            // ie: .form-field--input .form-field--inputText
+            specificClassName = '' + className + lodash_capitalize__WEBPACK_IMPORTED_MODULE_0___default()(inputType);
+        }
+    }
+
+    // Apply class modifier
+    return $formField.addClass(className).addClass(specificClassName);
+}
+
+/**
+ * Apply class name to each input element in a form based on its type
+ * @example
+ * // Before
+ * <form id="form">
+ *     <div class="form-field">
+ *         <input type="text">
+ *     </div>
+ *     <div class="form-field">
+ *         <select>...</select>
+ *     </div>
+ * </form>
+ *
+ * classifyForm('#form', { formFieldClass: 'form-field' });
+ *
+ * // After
+ * <div class="form-field form-field--input form-field--inputText">...</div>
+ * <div class="form-field form-field--select">...</div>
+ *
+ * @param {string|object} formSelector - selector or element
+ * @param {object} options
+ * @return {jQuery} Element itself
+ */
+function classifyForm(formSelector) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    var $form = jquery__WEBPACK_IMPORTED_MODULE_3___default()(formSelector);
+    var $inputs = $form.find(inputTagNames.join(', '));
+
+    // Obtain options
+    var _options$formFieldCla = options.formFieldClass,
+        formFieldClass = _options$formFieldCla === undefined ? 'form-field' : _options$formFieldCla;
+
+    // Classify each input in a form
+
+    $inputs.each(function (__, input) {
+        classifyInput(input, formFieldClass);
+    });
+
+    return $form;
+}
+
+/**
+ * Get id from given field
+ * @param {object} $field JQuery field object
+ * @return {string}
+ */
+function getFieldId($field) {
+    var fieldId = $field.prop('name').match(/(\[.*\])/);
+
+    if (fieldId && fieldId.length !== 0) {
+        return fieldId[0];
+    }
+
+    return '';
+}
+
+/**
+ * Insert hidden field after State/Province field
+ * @param {object} $stateField JQuery field object
+ */
+function insertStateHiddenField($stateField) {
+    var fieldId = getFieldId($stateField);
+    var stateFieldAttrs = {
+        type: 'hidden',
+        name: 'FormFieldIsText' + fieldId,
+        value: '1'
+    };
+
+    $stateField.after(jquery__WEBPACK_IMPORTED_MODULE_3___default()('<input />', stateFieldAttrs));
+}
+
+var Validators = {
+    /**
+     * Sets up a new validation when the form is dirty
+     * @param validator
+     * @param field
+     */
+    setEmailValidation: function setEmailValidation(validator, field) {
+        if (field) {
+            validator.add({
+                selector: field,
+                validate: function validate(cb, val) {
+                    var result = _models_forms__WEBPACK_IMPORTED_MODULE_5__["default"].email(val);
+
+                    cb(result);
+                },
+                errorMessage: 'You must enter a valid email.'
+            });
+        }
+    },
+
+    /**
+     * Validate password fields
+     * @param validator
+     * @param passwordSelector
+     * @param password2Selector
+     * @param requirements
+     * @param isOptional
+     */
+    setPasswordValidation: function setPasswordValidation(validator, passwordSelector, password2Selector, requirements, isOptional) {
+        var $password = jquery__WEBPACK_IMPORTED_MODULE_3___default()(passwordSelector);
+        var passwordValidations = [{
+            selector: passwordSelector,
+            validate: function validate(cb, val) {
+                var result = val.length;
+
+                if (isOptional) {
+                    return cb(true);
+                }
+
+                cb(result);
+            },
+            errorMessage: 'You must enter a password.'
+        }, {
+            selector: passwordSelector,
+            validate: function validate(cb, val) {
+                var result = val.match(new RegExp(requirements.alpha)) && val.match(new RegExp(requirements.numeric)) && val.length >= requirements.minlength;
+
+                // If optional and nothing entered, it is valid
+                if (isOptional && val.length === 0) {
+                    return cb(true);
+                }
+
+                cb(result);
+            },
+            errorMessage: requirements.error
+        }, {
+            selector: password2Selector,
+            validate: function validate(cb, val) {
+                var result = val.length;
+
+                if (isOptional) {
+                    return cb(true);
+                }
+
+                cb(result);
+            },
+            errorMessage: 'You must enter a password.'
+        }, {
+            selector: password2Selector,
+            validate: function validate(cb, val) {
+                var result = val === $password.val();
+
+                cb(result);
+            },
+            errorMessage: 'Your passwords do not match.'
+        }];
+
+        validator.add(passwordValidations);
+    },
+
+    /**
+     * Validate password fields
+     * @param {Nod} validator
+     * @param {Object} selectors
+     * @param {string} selectors.errorSelector
+     * @param {string} selectors.fieldsetSelector
+     * @param {string} selectors.formSelector
+     * @param {string} selectors.maxPriceSelector
+     * @param {string} selectors.minPriceSelector
+     */
+    setMinMaxPriceValidation: function setMinMaxPriceValidation(validator, selectors) {
+        var errorSelector = selectors.errorSelector,
+            fieldsetSelector = selectors.fieldsetSelector,
+            formSelector = selectors.formSelector,
+            maxPriceSelector = selectors.maxPriceSelector,
+            minPriceSelector = selectors.minPriceSelector;
+
+
+        validator.configure({
+            form: formSelector,
+            preventSubmit: true,
+            successClass: '_' // KLUDGE: Don't apply success class
+        });
+
+        validator.add({
+            errorMessage: 'Min price must be less than max. price.',
+            selector: minPriceSelector,
+            validate: 'min-max:' + minPriceSelector + ':' + maxPriceSelector
+        });
+
+        validator.add({
+            errorMessage: 'Min price must be less than max. price.',
+            selector: maxPriceSelector,
+            validate: 'min-max:' + minPriceSelector + ':' + maxPriceSelector
+        });
+
+        validator.add({
+            errorMessage: 'Max. price is required.',
+            selector: maxPriceSelector,
+            validate: 'presence'
+        });
+
+        validator.add({
+            errorMessage: 'Min. price is required.',
+            selector: minPriceSelector,
+            validate: 'presence'
+        });
+
+        validator.add({
+            errorMessage: 'Input must be greater than 0.',
+            selector: [minPriceSelector, maxPriceSelector],
+            validate: 'min-number:0'
+        });
+
+        validator.setMessageOptions({
+            selector: [minPriceSelector, maxPriceSelector],
+            parent: fieldsetSelector,
+            errorSpan: errorSelector
+        });
+    },
+
+    /**
+     * Sets up a new validation when the form is dirty
+     * @param validator
+     * @param field
+     */
+    setStateCountryValidation: function setStateCountryValidation(validator, field) {
+        if (field) {
+            validator.add({
+                selector: field,
+                validate: 'presence',
+                errorMessage: 'The \'State/Province\' field cannot be blank.'
+            });
+        }
+    },
+
+    /**
+     * Removes classes from dirty form if previously checked
+     * @param field
+     */
+    cleanUpStateValidation: function cleanUpStateValidation(field) {
+        var $fieldClassElement = jquery__WEBPACK_IMPORTED_MODULE_3___default()('[data-type="' + field.data('fieldType') + '"]');
+
+        Object.keys(_nod__WEBPACK_IMPORTED_MODULE_4__["default"].classes).forEach(function (value) {
+            if ($fieldClassElement.hasClass(_nod__WEBPACK_IMPORTED_MODULE_4__["default"].classes[value])) {
+                $fieldClassElement.removeClass(_nod__WEBPACK_IMPORTED_MODULE_4__["default"].classes[value]);
+            }
+        });
+    }
+};
+
+
+
+/***/ }),
+
+/***/ "./assets/js/theme/common/models/forms.js":
+/*!************************************************!*\
+  !*** ./assets/js/theme/common/models/forms.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var forms = {
+    email: function email(value) {
+        var re = /^.+@.+\..+/;
+        return re.test(value);
+    },
+
+
+    /**
+     * Validates a password field
+     * @param value
+     * @returns {boolean}
+     */
+    password: function password(value) {
+        return this.notEmpty(value);
+    },
+
+
+    /**
+     * validates if a field is empty
+     * @param value
+     * @returns {boolean}
+     *
+     */
+    notEmpty: function notEmpty(value) {
+        return value.length > 0;
+    }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (forms);
+
+/***/ }),
+
+/***/ "./assets/js/theme/common/url-utils.js":
+/*!*********************************************!*\
+  !*** ./assets/js/theme/common/url-utils.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var url__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! url */ "./node_modules/url/url.js");
+/* harmony import */ var url__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(url__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var urlUtils = {
+    getUrl: function getUrl() {
+        return '' + window.location.pathname + window.location.search;
+    },
+
+    goToUrl: function goToUrl(url) {
+        window.history.pushState({}, document.title, url);
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).trigger('statechange');
+    },
+
+    replaceParams: function replaceParams(url, params) {
+        var parsed = url__WEBPACK_IMPORTED_MODULE_1___default.a.parse(url, true);
+        var param = void 0;
+
+        // Let the formatter use the query object to build the new url
+        parsed.search = null;
+
+        for (param in params) {
+            if (params.hasOwnProperty(param)) {
+                parsed.query[param] = params[param];
+            }
+        }
+
+        return url__WEBPACK_IMPORTED_MODULE_1___default.a.format(parsed);
+    },
+
+    buildQueryString: function buildQueryString(queryData) {
+        var out = '';
+        var key = void 0;
+        for (key in queryData) {
+            if (queryData.hasOwnProperty(key)) {
+                if (Array.isArray(queryData[key])) {
+                    var ndx = void 0;
+
+                    for (ndx in queryData[key]) {
+                        if (queryData[key].hasOwnProperty(ndx)) {
+                            out += '&' + key + '=' + queryData[key][ndx];
+                        }
+                    }
+                } else {
+                    out += '&' + key + '=' + queryData[key];
+                }
+            }
+        }
+
+        return out.substring(1);
+    }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (urlUtils);
+
+/***/ }),
+
+/***/ "./assets/js/theme/f/size-preview.js":
+/*!*******************************************!*\
+  !*** ./assets/js/theme/f/size-preview.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @bigcommerce/stencil-utils */ "./node_modules/@bigcommerce/stencil-utils/src/main.js");
+/* harmony import */ var foundation_sites_js_foundation_foundation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! foundation-sites/js/foundation/foundation */ "./node_modules/foundation-sites/js/foundation/foundation.js");
+/* harmony import */ var foundation_sites_js_foundation_foundation__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(foundation_sites_js_foundation_foundation__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var foundation_sites_js_foundation_foundation_equalizer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! foundation-sites/js/foundation/foundation.equalizer */ "./node_modules/foundation-sites/js/foundation/foundation.equalizer.js");
+/* harmony import */ var foundation_sites_js_foundation_foundation_equalizer__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(foundation_sites_js_foundation_foundation_equalizer__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+    var $src = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.card-sizes');
+
+    function showSizePreview() {
+        var _this = this;
+
+        var productId = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-id');
+        _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_1__["default"].api.product.getById(productId, { template: 'f/swatches/product-sizes' }, function (err, resp) {
+            var sizeContent = jquery__WEBPACK_IMPORTED_MODULE_0___default.a.parseHTML(resp);
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()(_this).html(sizeContent);
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation('equalizer', 'reflow');
+        });
+    }
+
+    $src.each(showSizePreview);
+});
+
+/***/ }),
+
+/***/ "./assets/js/theme/f/swatch-preview.js":
+/*!*********************************************!*\
+  !*** ./assets/js/theme/f/swatch-preview.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @bigcommerce/stencil-utils */ "./node_modules/@bigcommerce/stencil-utils/src/main.js");
+/* harmony import */ var foundation_sites_js_foundation_foundation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! foundation-sites/js/foundation/foundation */ "./node_modules/foundation-sites/js/foundation/foundation.js");
+/* harmony import */ var foundation_sites_js_foundation_foundation__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(foundation_sites_js_foundation_foundation__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var foundation_sites_js_foundation_foundation_equalizer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! foundation-sites/js/foundation/foundation.equalizer */ "./node_modules/foundation-sites/js/foundation/foundation.equalizer.js");
+/* harmony import */ var foundation_sites_js_foundation_foundation_equalizer__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(foundation_sites_js_foundation_foundation_equalizer__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+    var $src = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.card-swatches');
+
+    function showSwatchPreview() {
+        var _this = this;
+
+        var productId = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-id');
+        _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_1__["default"].api.product.getById(productId, { template: 'f/swatches/product-swatches' }, function (err, resp) {
+            var swatchContent = jquery__WEBPACK_IMPORTED_MODULE_0___default.a.parseHTML(resp);
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()(_this).html(swatchContent);
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation('equalizer', 'reflow');
+        });
+    }
+
+    $src.each(showSwatchPreview);
+});
+
+/***/ })
+
+}]);
+//# sourceMappingURL=theme-bundle.chunk.2.js.map

@@ -3032,7 +3032,22 @@ div > a.reviewreal-button {
 .faq-banner-con {
     font-size: 12px;
 }
-
+.prodview-sizechart.green-matt {
+    background: url("https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/is-parallax-pattern.png?t=1623642972&_ga=2.224919322.1496872644.1623634006-1835193253.1617777202");
+    background-repeat: no-repeat;
+    height: 140rem;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 3%;
+    background-attachment: fixed;
+    transform-style: preserve-3d;
+    perspective: 1px;
+}
+.prodview-sizechart-img.green-mattress-chart {
+    padding: 0;
+    display: block;
+}
 }
 
 @media only screen and (max-width: 375px) {
