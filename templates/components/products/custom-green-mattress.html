@@ -1,486 +1,526 @@
 <style>
-.productView.grn-matt-page .stamped-badge {
-    display: none !important;
-}
-.productView.grn-matt-page .stamped-reviews {
-    display: none !important;
-}
-.productView.grn-matt-page .summary-overview {
-    display: none !important;
-}
-.productView.grn-matt-page div#stamped-reviews-filter {
-    display: none !important;
-}
-.productView.grn-matt-page .stamped-tab-container {
-    display: none !important;
-}
-.productView.grn-matt-page .new-review-form.stamped-visible {
-    border-bottom: 1px solid #eee;
-    background: #e2e8ed;
-    width: 30rem;
-}
-</style>
-<div class="productView grn-matt-page" {{#if settings.data_tag_enabled}} data-event-type="product" data-entity-id="{{product.id}}" data-name="{{product.title}}" data-product-category="{{#each product.category}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}" data-product-brand="{{product.brand.name}}" data-product-price="{{#if product.price.with_tax}}{{product.price.with_tax.value}}{{else}}{{product.price.without_tax.value}}{{/if}}" data-product-variant="single-product-option"{{/if}}>
-
-    {{#each product.reviews.messages}}
-        {{#if error}}
-            {{> components/common/alert-error error}}
-        {{/if}}
-        {{#if success}}
-            {{> components/common/alert-success success}}
-        {{/if}}
-    {{/each}}
- 
-
-
-    <section class="productView-images green-matt-imgs" data-image-gallery>
-        <figure class="productView-image green-matt-prodimg {{#gt product.images.length 1}}has-thumbs{{/gt}}"
-                data-image-gallery-main
-                data-zoom-image="{{getImage product.main_image 'zoom_size' (cdn theme_settings.default_image_product)}}"
-                >
-            <div class="productView-img-container green-matt-prodcon">
-                <a href="{{getImage product.main_image 'zoom_size' (cdn theme_settings.default_image_product)}}">
-                    <img class="productView-image--default lazyload"
-                         data-sizes="auto"
-                         src="{{cdn 'img/loading.svg'}}"
-                         data-src="{{getImage product.main_image (cdn theme_settings.default_image_product)}}"
-                         data-zoom-target="{{getImage product.main_image 'zoom_size' (cdn theme_settings.default_image_product)}}"
-                         alt="{{product.main_image.alt}}" title="{{product.main_image.alt}}" data-main-image>
-                </a>
-            </div>
-        </figure>
-        {{#gt product.images.length 1}}
-        <ul class="productView-thumbs green-matt-thumb productCarousel" {{#gt product.images.length 5}} data-slick='{
-                "infinite": true,
-                "mobileFirst": true,
-                "slidesToShow": 4,
-                "slidesToScroll": 1,
-                "vertical": false,
-                "arrows": {{arrows}},
-                "responsive": [
-                    {
-                        "breakpoint": 801,
-                        "settings": {
-                            "dots": false,
-                            "slidesToShow": 5,
-                            "vertical": true
-                        }
-                    },
-                    {
-                        "breakpoint": 620,
-                        "settings": {
-                            "slidesToShow": 6
-                        }
-                    },
-                    {
-                        "breakpoint": 520,
-                        "settings": {
-                            "slidesToShow": 5
-                        }
-                    }
-                ]
-            }' {{/gt}} >
-            {{#each product.images}}
-                <li class="productView-thumb green-matt-li">
-                    <a
-                        class="productView-thumbnail-link"
-                        href="{{getImage this (cdn ../theme_settings.default_image_product)}}"
-                        data-image-gallery-item
-                        data-image-gallery-new-image-url="{{getImage this (cdn ../theme_settings.default_image_product)}}"
-                        data-image-gallery-zoom-image-url="{{getImage this 'zoom_size' (cdn ../theme_settings.default_image_product)}}">
-                        <img class="lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage this (cdn ../theme_settings.default_image_product)}}" alt="{{this.alt}}" title="{{this.alt}}">
-                    </a>
-                </li>
-                
-            {{/each}}
-            
-        </ul>
+    .productView.grn-matt-page .stamped-badge {
+        display: none !important;
+    }
+    .productView.grn-matt-page .stamped-reviews {
+        display: none !important;
+    }
+    .productView.grn-matt-page .summary-overview {
+        display: none !important;
+    }
+    .productView.grn-matt-page div#stamped-reviews-filter {
+        display: none !important;
+    }
+    .productView.grn-matt-page .stamped-tab-container {
+        display: none !important;
+    }
+    .productView.grn-matt-page .new-review-form.stamped-visible {
+        border-bottom: 1px solid #eee;
+        background: #e2e8ed;
+        width: 30rem;
+    }
+    .productView.grn-matt-page .new-review-form.stamped-visible {
+        border-bottom: 1px solid #eee;
+        background: #e2e8ed;
+        width: 39rem;
+        margin-top: -16px !important;
+        padding: 20px;
+    }
     
-    <div class="prodview-shipping grn-mat-shp">
-        <div class="grid-ship-details">
-            <div>                   
-              
-                <img class="animation-element bounce-in invi duration-1500 delay-00" src="{{cdn '/assets/img/prodpage/Shipping_icon.png'}}"/>
-       
-                
-                <p class="text-capitalize">Free Shipping</p>
-            </div>
-            <div>                   
-                <img class="animation-element bounce-in invi duration-1500 delay-900" src="{{cdn '/assets/img/prodpage/Night-Icon.png'}}"/>
-                
-                <p class="text-capitalize">100 Night Sleep Trial</p>
-            </div>
-            <div>                   
-                <img class="animation-element bounce-in invi duration-1500 delay-600" src="{{cdn '/assets/img/prodpage/Certified_Icon.png'}}"/>
-           
-                <p class="text-capitalize">Certified Products</p>
-            </div>
-            <div>                   
-                <img class="animation-element bounce-in invi duration-1500 delay-300" src="{{cdn '/assets/img/prodpage/Warranty_icon.png'}}"/>
-         
-                <p class="text-capitalize">Long Term warranty</p>
-            </div>
-        </div>
-    </div>
-        
-        {{/gt}}
-
-
-
-    </section>
-	  <section class="productView-details green-matt-details">
-        <div class="productView-product green-matt-prod">
-            <!--{{#or theme_settings.show_sale_tags theme_settings.show_custom_product_labels theme_settings.show_selling_fast_tags}}
-                <div class="card-tags">
-                    {{#or product.price.non_sale_price_with_tax product.price.non_sale_price_without_tax}}
-                        {{#if theme_settings.show_sale_tags}}
-                            {{> components/f/tags/sale-tag price=product.price}}
-                        {{/if}}
-                    {{/or}}
-                    {{#if theme_settings.show_custom_product_labels}}
-                        {{#each product.custom_fields}}
-                            {{#or (if this.name '===' 'Promotion Label') (if name '===' 'GridTag')}}
-                                {{> components/f/tags/custom-tag}}
-                            {{/or}}
-                        {{/each}}
-                    {{/if}}
-                </div>
-            {{/or}}
-            {{#if product.brand}}
-                <h2 class="productView-brand"{{#if schema}} itemprop="brand" itemscope itemtype="http://schema.org/Brand"{{/if}}>
-                    <a href="{{product.brand.url}}"{{#if schema}} itemprop="url"{{/if}}><span{{#if schema}} itemprop="name"{{/if}}>{{product.brand.name}}</span></a>
-                </h2>
-            {{/if}}-->
-			<div class="custom-productTitle green-matt-title">
-				<h1 class="productView-title " {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
-                
-                <div class="productView-description green-matt-desc" {{#if settings.data_tag_enabled}} data-event-type="product" {{/if}}>
-                    {{{product.description}}}
-                    {{{snippet 'product_description'}}}
-                </div>
-	            <!-- <div id="stamped-reviews-widget" style="display: inline-block;" data-widget-type="site-badge" data-badge-type="minimal" data-title="Verified Reviews" data-title-size="15" data-size-stars="12" data-element-id="2" data-lang="en">&nbsp;</div> -->
-			
-            </div>
-            <div id="stamped-reviews-widget" class="mx-auto grn-matt-stamp" style="display: inline-block;" data-widget-type="site-badge" data-badge-type="minimal" data-title="Verified Reviews" data-title-size="15" data-size-stars="12" data-element-id="2" data-lang="en">&nbsp;</div>
-           
-           <div class="d-flex align-items-center grn-matt-price">
-                <h4 class="productView-price">Total Price: &nbsp </h4>
-                {{#if product.call_for_price}}
-                <p class="productView-price">
-                    <span>{{product.call_for_price}}</span>
-                </p>
-                {{/if}}
-                <div class="productView-price">
-                    {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-                        {{> components/products/price price=product.price schema_org=schema}}
-                    {{else}}
-                        {{> components/common/login-for-pricing}}
-                    {{/or}}
-                </div>
-           </div>
-
-            <!--{{{region name="product_below_price"}}}
-
-            {{product.detail_messages}}-->
-        </div>
-        <div class="productView-options grn-matt-opt {{#if settings.show_wishlist}}has-wishlist{{/if}}">
-            <div class="grn-matt-opt-div">
-            {{#if product.release_date }}
-                <p>{{product.release_date}}</p>
+    .productView.grn-matt-page #stamped-main-widget {
+        display: block;
+        overflow: hidden;
+        margin: 1em 5px;
+        font-style: normal;
+        position: absolute;
+        top: 43%;
+        right: 7%;
+    }
+    
+    .productView.grn-matt-page .stamped-summary-actions-newquestion:before, .stamped-summary-actions-newreview:before {
+        display: none !important;
+    }
+    .productView.grn-matt-page span.stamped-summary-actions-newreview {
+        border: 1px solid transparent;
+        border: 1px solid transparent;
+        border-left: 1px solid;
+        text-decoration: underline;
+    }
+    .productView.grn-matt-page .fa-star, .fa-star-half-o, .fa-star-o, .stamped-fa-star, .stamped-fa-star-half-o, .stamped-fa-star-o {
+        color: gold;
+        margin-left: 4px;
+        font-size: 18px !important;
+    }
+    .productView.grn-matt-page span#stamped-badge-title {
+        font-size: 18px !important;
+    }
+    .productView.grn-matt-page span#stamped-badge-total {
+        font-size: 18px !important;
+    }
+    
+    </style>
+    <div class="productView grn-matt-page" {{#if settings.data_tag_enabled}} data-event-type="product" data-entity-id="{{product.id}}" data-name="{{product.title}}" data-product-category="{{#each product.category}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}" data-product-brand="{{product.brand.name}}" data-product-price="{{#if product.price.with_tax}}{{product.price.with_tax.value}}{{else}}{{product.price.without_tax.value}}{{/if}}" data-product-variant="single-product-option"{{/if}}>
+    
+        {{#each product.reviews.messages}}
+            {{#if error}}
+                {{> components/common/alert-error error}}
             {{/if}}
-            <form class="form grn-matt-form {{#if theme_settings.enable_circular_swatches}}swatches--round{{/if}}" method="post" action="{{product.cart_url}}" enctype="multipart/form-data"
-                  data-cart-item-add>
-                <input type="hidden" name="action" value="add">
-                <input type="hidden" name="product_id" value="{{product.id}}"/>
-                {{#each product.customizations}}	
-                    {{{dynamicComponent 'components/products/customizations'}}}
+            {{#if success}}
+                {{> components/common/alert-success success}}
+            {{/if}}
+        {{/each}}
+     
+    
+    
+        <section class="productView-images green-matt-imgs" data-image-gallery>
+            <figure class="productView-image green-matt-prodimg {{#gt product.images.length 1}}has-thumbs{{/gt}}"
+                    data-image-gallery-main
+                    data-zoom-image="{{getImage product.main_image 'zoom_size' (cdn theme_settings.default_image_product)}}"
+                    >
+                <div class="productView-img-container green-matt-prodcon">
+                    <a href="{{getImage product.main_image 'zoom_size' (cdn theme_settings.default_image_product)}}">
+                        <img class="productView-image--default lazyload"
+                             data-sizes="auto"
+                             src="{{cdn 'img/loading.svg'}}"
+                             data-src="{{getImage product.main_image (cdn theme_settings.default_image_product)}}"
+                             data-zoom-target="{{getImage product.main_image 'zoom_size' (cdn theme_settings.default_image_product)}}"
+                             alt="{{product.main_image.alt}}" title="{{product.main_image.alt}}" data-main-image>
+                    </a>
+                </div>
+            </figure>
+            {{#gt product.images.length 1}}
+            <ul class="productView-thumbs green-matt-thumb productCarousel" {{#gt product.images.length 5}} data-slick='{
+                    "infinite": true,
+                    "mobileFirst": true,
+                    "slidesToShow": 4,
+                    "slidesToScroll": 1,
+                    "vertical": false,
+                    "arrows": {{arrows}},
+                    "responsive": [
+                        {
+                            "breakpoint": 801,
+                            "settings": {
+                                "dots": false,
+                                "slidesToShow": 5,
+                                "vertical": true
+                            }
+                        },
+                        {
+                            "breakpoint": 620,
+                            "settings": {
+                                "slidesToShow": 6
+                            }
+                        },
+                        {
+                            "breakpoint": 520,
+                            "settings": {
+                                "slidesToShow": 5
+                            }
+                        }
+                    ]
+                }' {{/gt}} >
+                {{#each product.images}}
+                    <li class="productView-thumb green-matt-li">
+                        <a
+                            class="productView-thumbnail-link"
+                            href="{{getImage this (cdn ../theme_settings.default_image_product)}}"
+                            data-image-gallery-item
+                            data-image-gallery-new-image-url="{{getImage this (cdn ../theme_settings.default_image_product)}}"
+                            data-image-gallery-zoom-image-url="{{getImage this 'zoom_size' (cdn ../theme_settings.default_image_product)}}">
+                            <img class="lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage this (cdn ../theme_settings.default_image_product)}}" alt="{{this.alt}}" title="{{this.alt}}">
+                        </a>
+                    </li>
+                    
                 {{/each}}
-                <div class="cus-options" data-product-option-change style="display:none;">
-                    {{#each product.options}}
-                        {{{dynamicComponent 'components/products/options'}}}
+                
+            </ul>
+        
+        <div class="prodview-shipping grn-mat-shp">
+            <div class="grid-ship-details">
+                <div>                   
+                  
+                    <img class="animation-element bounce-in invi duration-1500 delay-00" src="{{cdn '/assets/img/prodpage/Shipping_icon.png'}}"/>
+           
+                    
+                    <p class="text-capitalize">Free Shipping</p>
+                </div>
+                <div>                   
+                    <img class="animation-element bounce-in invi duration-1500 delay-900" src="{{cdn '/assets/img/prodpage/Night-Icon.png'}}"/>
+                    
+                    <p class="text-capitalize">100 Night Sleep Trial</p>
+                </div>
+                <div>                   
+                    <img class="animation-element bounce-in invi duration-1500 delay-600" src="{{cdn '/assets/img/prodpage/Certified_Icon.png'}}"/>
+               
+                    <p class="text-capitalize">Certified Products</p>
+                </div>
+                <div>                   
+                    <img class="animation-element bounce-in invi duration-1500 delay-300" src="{{cdn '/assets/img/prodpage/Warranty_icon.png'}}"/>
+             
+                    <p class="text-capitalize">Long Term warranty</p>
+                </div>
+            </div>
+        </div>
+            
+            {{/gt}}
+    
+    
+    
+        </section>
+          <section class="productView-details green-matt-details">
+            <div class="productView-product green-matt-prod">
+                <!--{{#or theme_settings.show_sale_tags theme_settings.show_custom_product_labels theme_settings.show_selling_fast_tags}}
+                    <div class="card-tags">
+                        {{#or product.price.non_sale_price_with_tax product.price.non_sale_price_without_tax}}
+                            {{#if theme_settings.show_sale_tags}}
+                                {{> components/f/tags/sale-tag price=product.price}}
+                            {{/if}}
+                        {{/or}}
+                        {{#if theme_settings.show_custom_product_labels}}
+                            {{#each product.custom_fields}}
+                                {{#or (if this.name '===' 'Promotion Label') (if name '===' 'GridTag')}}
+                                    {{> components/f/tags/custom-tag}}
+                                {{/or}}
+                            {{/each}}
+                        {{/if}}
+                    </div>
+                {{/or}}
+                {{#if product.brand}}
+                    <h2 class="productView-brand"{{#if schema}} itemprop="brand" itemscope itemtype="http://schema.org/Brand"{{/if}}>
+                        <a href="{{product.brand.url}}"{{#if schema}} itemprop="url"{{/if}}><span{{#if schema}} itemprop="name"{{/if}}>{{product.brand.name}}</span></a>
+                    </h2>
+                {{/if}}-->
+                <div class="custom-productTitle green-matt-title">
+                    <h1 class="productView-title " {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
+                    
+                    <div class="productView-description green-matt-desc" {{#if settings.data_tag_enabled}} data-event-type="product" {{/if}}>
+                        {{{product.description}}}
+                        {{{snippet 'product_description'}}}
+                    </div>
+                    <!-- <div id="stamped-reviews-widget" style="display: inline-block;" data-widget-type="site-badge" data-badge-type="minimal" data-title="Verified Reviews" data-title-size="15" data-size-stars="12" data-element-id="2" data-lang="en">&nbsp;</div> -->
+                
+                </div>
+                <div id="stamped-reviews-widget" class="mx-auto grn-matt-stamp" style="display: inline-block;" data-widget-type="site-badge" data-badge-type="minimal" data-title="Verified Reviews" data-title-size="15" data-size-stars="12" data-element-id="2" data-lang="en">&nbsp;</div>
+               
+               <div class="d-flex align-items-center grn-matt-price">
+                    <h4 class="productView-price">Total Price: &nbsp </h4>
+                    {{#if product.call_for_price}}
+                    <p class="productView-price">
+                        <span>{{product.call_for_price}}</span>
+                    </p>
+                    {{/if}}
+                    <div class="productView-price">
+                        {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+                            {{> components/products/price price=product.price schema_org=schema}}
                         {{else}}
-                        {{{dynamicComponent 'components/products/options'}}}
+                            {{> components/common/login-for-pricing}}
+                        {{/or}}
+                    </div>
+               </div>
+    
+                <!--{{{region name="product_below_price"}}}
+    
+                {{product.detail_messages}}-->
+            </div>
+            <div class="productView-options grn-matt-opt {{#if settings.show_wishlist}}has-wishlist{{/if}}">
+                <div class="grn-matt-opt-div">
+                {{#if product.release_date }}
+                    <p>{{product.release_date}}</p>
+                {{/if}}
+                <form class="form grn-matt-form {{#if theme_settings.enable_circular_swatches}}swatches--round{{/if}}" method="post" action="{{product.cart_url}}" enctype="multipart/form-data"
+                      data-cart-item-add>
+                    <input type="hidden" name="action" value="add">
+                    <input type="hidden" name="product_id" value="{{product.id}}"/>
+                    {{#each product.customizations}}	
+                        {{{dynamicComponent 'components/products/customizations'}}}
                     {{/each}}
-                </div>
-                <div class="form-qty-cart">
-                {{#if product.event_date}}
-                    {{> components/products/event-date}}
-                {{/if}}
-                {{#if product.can_purchase}}
-                    {{> components/products/add-to-cart}}
-                    {{else}}
-                    {{> components/products/add-to-cart}}
-                {{/if}}
-                {{#if product.out_of_stock}}
-                    {{#if product.out_of_stock_message}}
-                        {{> components/common/alert-error product.out_of_stock_message}}
-                    {{else}}
-                        {{> components/common/alert-error (lang 'products.sold_out')}}
-                    {{/if}}
-                {{/if}}
-                </div>
-            </form>
-
-            {{#if settings.show_wishlist}}
-                {{> components/common/wishlist-dropdown}}
-            {{/if}}
-            {{#if product.availability}}<div class="productView-availability"><i class="icon" aria-hidden="true"><svg><use xlink:href="#icon-delivery-van" /></svg></i> {{product.availability}}</div>{{/if}}
-
-            {{#or product.min_purchase_quantity product.max_purchase_quantity product.gift_wrapping_available product.shipping}}
-                <dl class="productView-info">
-                    {{#if product.min_purchase_quantity}}
-                        <dt class="productView-info-name">{{lang 'products.min_purchase_quantity'}}</dt>
-                        <dd class="productView-info-value">{{lang 'products.purchase_units' quantity=product.min_purchase_quantity}}</dd>
-                    {{/if}}
-                    {{#if product.max_purchase_quantity}}
-                        <dt class="productView-info-name">{{lang 'products.max_purchase_quantity'}}</dt>
-                        <dd class="productView-info-value">{{lang 'products.purchase_units' quantity=product.max_purchase_quantity}}</dd>
-                    {{/if}}
-                    {{#if product.gift_wrapping_available}}
-                        <dt class="productView-info-name">{{lang 'products.gift_wrapping'}}</dt>
-                        <dd class="productView-info-value">{{lang 'products.gift_wrapping_available'}}</dd>
-                    {{/if}}
-                    {{#if product.shipping}}
-                        {{#if product.shipping.calculated}}
-                            <dt class="productView-info-name">{{lang 'products.shipping'}}</dt>
-                            <dd class="productView-info-value">{{lang 'products.shipping_calculated'}}</dd>
-                        {{else}}
-                            {{#if product.shipping.price.value '===' 0}}
-                                <dt class="productView-info-name">{{lang 'products.shipping'}}</dt>
-                                <dd class="productView-info-value">{{lang 'products.shipping_free'}}</dd>
+                    <div class="cus-options" data-product-option-change style="display:none;">
+                        {{#each product.options}}
+                            {{{dynamicComponent 'components/products/options'}}}
                             {{else}}
+                            {{{dynamicComponent 'components/products/options'}}}
+                        {{/each}}
+                    </div>
+                    <div class="form-qty-cart">
+                    {{#if product.event_date}}
+                        {{> components/products/event-date}}
+                    {{/if}}
+                    {{#if product.can_purchase}}
+                        {{> components/products/add-to-cart}}
+                        {{else}}
+                        {{> components/products/add-to-cart}}
+                    {{/if}}
+                    {{#if product.out_of_stock}}
+                        {{#if product.out_of_stock_message}}
+                            {{> components/common/alert-error product.out_of_stock_message}}
+                        {{else}}
+                            {{> components/common/alert-error (lang 'products.sold_out')}}
+                        {{/if}}
+                    {{/if}}
+                    </div>
+                </form>
+    
+                {{#if settings.show_wishlist}}
+                    {{> components/common/wishlist-dropdown}}
+                {{/if}}
+                {{#if product.availability}}<div class="productView-availability"><i class="icon" aria-hidden="true"><svg><use xlink:href="#icon-delivery-van" /></svg></i> {{product.availability}}</div>{{/if}}
+    
+                {{#or product.min_purchase_quantity product.max_purchase_quantity product.gift_wrapping_available product.shipping}}
+                    <dl class="productView-info">
+                        {{#if product.min_purchase_quantity}}
+                            <dt class="productView-info-name">{{lang 'products.min_purchase_quantity'}}</dt>
+                            <dd class="productView-info-value">{{lang 'products.purchase_units' quantity=product.min_purchase_quantity}}</dd>
+                        {{/if}}
+                        {{#if product.max_purchase_quantity}}
+                            <dt class="productView-info-name">{{lang 'products.max_purchase_quantity'}}</dt>
+                            <dd class="productView-info-value">{{lang 'products.purchase_units' quantity=product.max_purchase_quantity}}</dd>
+                        {{/if}}
+                        {{#if product.gift_wrapping_available}}
+                            <dt class="productView-info-name">{{lang 'products.gift_wrapping'}}</dt>
+                            <dd class="productView-info-value">{{lang 'products.gift_wrapping_available'}}</dd>
+                        {{/if}}
+                        {{#if product.shipping}}
+                            {{#if product.shipping.calculated}}
                                 <dt class="productView-info-name">{{lang 'products.shipping'}}</dt>
-                                <dd class="productView-info-value">{{lang 'products.shipping_fixed' amount=product.shipping.price.formatted}}</dd>
+                                <dd class="productView-info-value">{{lang 'products.shipping_calculated'}}</dd>
+                            {{else}}
+                                {{#if product.shipping.price.value '===' 0}}
+                                    <dt class="productView-info-name">{{lang 'products.shipping'}}</dt>
+                                    <dd class="productView-info-value">{{lang 'products.shipping_free'}}</dd>
+                                {{else}}
+                                    <dt class="productView-info-name">{{lang 'products.shipping'}}</dt>
+                                    <dd class="productView-info-value">{{lang 'products.shipping_fixed' amount=product.shipping.price.formatted}}</dd>
+                                {{/if}}
                             {{/if}}
                         {{/if}}
-                    {{/if}}
-                </dl>
-            {{/or}}
-
-
-            <div class="prodview-shipping-details grn-matt-ship">
-                <div>
-                    <p class="text-uppercase font-weight-normal">Ships by:</p>
-                    <h4>{{moment "now" "MM/DD/YYYY"}}</h4>
-                </div>
-                <div>
-                    <p class="text-uppercase font-weight-normal">Delivery by:</p>
-                    <h4 class="text-capitalize">Within 2-7 days*</h4>
-                </div>
-            </div>
-            <div class="learnmore-div">
-                <p class="learn-p-i"><i style="font-size: 12px;">*To learn more about shipping, check out our <a href="/shipping-transit-chart/" style="color:#00d2ff;"> Shipment Transit Chart.</a></i></p>
-            </div>
-            <div class="d-flex justify-content-between align-items-center flexgrn-matt">
-                <div class="font-weight-bold" style="color: #132448;">SPECIFICATIONS</div>
-                <div><img src="{{cdn '/assets/img/prodpage/pllus-icon-img.png'}}" /></div>
-            </div>
-        </div>
-        {{#if theme_settings.show_product_description_below}}
-            <div class="productView-scrollToDescription" id="description">
-                <a href="#description{{#if is_ajax}}_{{product.id}}{{/if}}">{{lang 'products.product_details'}} <span class="icon"><svg><use xlink:href="#icon-arrow-down"></use></svg></span></a>
-            </div>
-          {{/if}}
-        </div>
-    </section>
-
-
-</div>
-
-
-<div class="green-matt-features">
-    <div>
-        <div class="grn-ftr-text">
-            <h2 class="font-weight-bold text-capitalize">Lorem Ipsum Dolor Sit Amet</h2>
-            <p>Experience the comfiest and most refreshing sleep with Icon Sleep's Green tea-infused memory foam mattress With ActivCharcoal&#8482; that neutralizes bad odor combined with BioFoam&reg; technology for contoured spinal support. It's definitely an investment for an improved sleep you deserve.  </p>    
-        </div>
-
-        <div class="matt-ftr-div ">
-            <div class="grn-matt-img">
-                <img src="{{cdn '/assets/img/prodpage/active-charcoal.png'}}" />
-            </div>
-            <div class="grn-matt-img">
-                <img src="{{cdn '/assets/img/prodpage/Compression-tech_icon.png'}}" />
-            </div>
-            <div class="grn-matt-img">
-                <img src="{{cdn '/assets/img/prodpage/Bio-Foam_icon.png'}}" />
-            </div>
-             <div class="grn-matt-img">
-                 <img src="{{cdn '/assets/img/prodpage/Evergreen_icon.png'}}" />
-            </div>
-             <div class="grn-matt-img">
-                 <img src="{{cdn '/assets/img/prodpage/SGS_icon.png'}}" />
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--
-<div class="prodview-prodimg">
-	<div>
-		<h2>It's Lavishly <span>LUXE</span></h2>
-		<p>You're looking at our most sophisticated mattress to date. A staggering 7-layer architecture assures that "extra" feel you're looking for, right at the first touch. With Luxe, sleep has never been this good.
-		</p>
-		<img src="{{cdn '/assets/img/prodpage/Luxe.png'}}"/>
-	</div>
-</div>
--->
-<div class="sub-prodview-podimg green-matt-sub">
-	<div class="animation-element bounce-in invi duration-1500">
-		<img src="{{cdn '/assets/img/prodpage/cooling.png'}}"/>
-		<h5>Cooling & Breathability</h5>
-		<p>The most advanced cooling and heat management technology we've ever put on a mattress.</p>
-	</div>
-	<div class="animation-element bounce-in invi duration-1500 delay-300">
-		<img src="{{cdn '/assets/img/prodpage/spinal.png'}}"/>
-		<h5>Top-notch Spinal Support</h5>
-		<p>Engineered to provide outstanding durability, support, and pressure relief for sleepers of all sizes.</p>
-	</div>
-	<div class="animation-element bounce-in invi duration-1500 delay-600">
-		<img src="{{cdn '/assets/img/prodpage/absorb.png'}}"/>
-		<h5>Motion Absorption & Isolation</h5>
-		<p>Say goodbye to motion-related sleep interruptions and enjoy greater sleep and better mornings.</p>
-	</div>
-</div>
-
-
-<div class="prodview-anatomy green-anatomy">
-	<div style="width:49%;" class="animation-element slide-left" >
-		<img src="{{cdn '/assets/img/product-page/green-mattress-anatomy.png'}}" />
-	</div>
-	<div style="padding:0 5%;" class="animation-element slide-right" >
-		<h4 style="color:#18253f; font-weight: 400; font-size: 28px; text-transform: inherit;" >Take A Closer Look.</h4>
-		<h4 style="color:#18253f; font-weight: bold; font-size: 28px; text-transform: inherit;" >An architecture that assures luxury.</h4>
-		<br>
-		<ul>
-			<li class="animation-element invi fade-in duration-1500 delay-00">Impossibly soft outer material for comfort overload</li>
-			<li class="animation-element invi fade-in duration-1500 delay-300">Certified inner cover for protection against fires</li>
-			<li class="animation-element invi fade-in duration-1500 delay-600">Gel-infused memory foam for cooling and airflow</li>
-			<li class="animation-element invi fade-in duration-1500 delay-900">Dual layers of high-performance foams for pressure relief and weight absorption</li>
-            <li class="animation-element invi fade-in duration-1500 delay-1200">Dedicated comfort layer for that distinct lavish feel</li>
-			<li class="animation-element invi fade-in duration-1500 delay-1500">Durable base for overall support and aesthetics</li>
-		</ul>
-	</div>
-
-
-</div>
-
-<!--
-<div class="prodview-comorftlevel">
-	<h3>FEEL YOUR COMFORT ZONES</h3>
-	<div>
-		<img src="{{cdn '/assets/img/prodpage/medium.png'}}" />
-		<h4>Medium</h4>
-		<p>Perfect for lightweight and side sleepers, these mattresses make great companions for kids and teens.</p>
-	</div>	
-	<div>
-		<img src="{{cdn '/assets/img/prodpage/medium-firm.png'}}" />
-		<h4>Medium Firm</h4>
-		<p>Most couples will surely take great pleasure in sleeping on our medium-firm mattresses. Designed for back sleepers.</p>
-	</div>
-	<div>
-		<img src="{{cdn '/assets/img/prodpage/firm.png'}}" />
-		<h4>Firm</h4>
-		<p>Stomach sleepers will greatly benefit from sleeping on firm mattresses. Also created for people with back pain. </p>
-	</div>
-</div>
--->
-
-    <div class="prodview-sizechart green-matt">
-        <h3>Size Comparison</h3>
-        <p>Worried your bed won't fit? Check out our size chart.</p>
-        <div class="prodview-sizechart-img green-mattress-chart">
-            <div>
-                <img class="animation-element slide-up duration-1500 delay-00" src="{{cdn '/assets/img/prodpage/green-matt-twin.png'}}" />
-            </div>
-            <div>
-                <img class="animation-element slide-up duration-1500 delay-300" src="{{cdn '/assets/img/prodpage/green-matt-twin-xl.png'}}" />
-            </div>
-            <div>
-                <img class="animation-element slide-up duration-1500 delay-600" src="{{cdn '/assets/img/prodpage/green-matt-full.png'}}" />
-            </div>
-            <div>
-                <img class="animation-element slide-up duration-1500 delay-900" src="{{cdn '/assets/img/prodpage/gm-short-queen.png'}}" />
-            </div>
-            <div>
-                <img class="animation-element slide-up duration-1500 delay-1200" src="{{cdn '/assets/img/prodpage/gm-queen.png'}}" />
-            </div>
-            <div>
-                <img class="animation-element slide-up duration-1500 delay-1500" src="{{cdn '/assets/img/prodpage/gm-king.png'}}" />
-            </div>
-            <div>
-                <img class="animation-element slide-up duration-1500 delay-1800" src="{{cdn '/assets/img/prodpage/gm-cal-king.png'}}" />
-            </div>
-        </div>
-    </div>
-
-
-<div class="prodview-advantage green-mattress-ques">
-	<h3>You Think Green Tea Mattress Is For You?</h3>
-	<p>Green Tea Mattress is the right mattress for you if you say yes to the following questions.</p>
-		<div>
-			<img src="{{cdn '/assets/img/prodpage/mattress-ques-img.png'}}" />
-            <h4>Do you want to sleep without interruptions?</h4>
-            <p>LUXE's No Motion Transfer tech makes this bed perfectly comfortable.</p>
-		</div>
-		<div>
-			<img src="{{cdn '/assets/img/prodpage/mattress-ques-img1.png'}}" />
-            <h4>Want to spend your day resting on a lavish bed?</h4>
-            <p>With a 7 layer architecture, luze is the mattress for the pro sleeper.</p>
-        </div>
-		<div>
-			<img src="{{cdn '/assets/img/prodpage/mattress-ques-img2.png'}}" />
-            <h4>Looking for a long lasting mattress?</h4>
-            <p>Excellent design makes LUXE a durable bed to have for all shapes and sizes.</p>
-		</div>
-</div>
-
-
-<div id="previewModal" class="modal modal--large" data-reveal>
-    <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button">
-        <span aria-hidden="true">&#215;</span>
-    </a>
-    <div class="modal-content"></div>
-    <div class="loadingOverlay"></div>
-</div>
-
-<div class="product-review-section greenh2">
-      <h2>Share Your Green Tea Mattress Story</h2>
-    <span>See why customers love LUXE or write a Review</span>
-    <div class="review-stamped">        
-        <div id="stamped-reviews-widget" data-widget-type="carousel" data-product-id="{{ product.id }}" data-auto-play="true" data-auto-play-speed="10000" data-fill-empty="true" data-title="Authentic Reviews From Real Customers" data-random="? string:Authentic reviews from real customers. ?"></div>
-            </div>
-    </div>    
-</div>
-
-<div class="FAQS-categ green-faq-categ">
-    <div class="faqs-content">
-        
-        <h4 style="">Frequently Asked Questions</h4>
-        <p style="text-align: center; color: #fff;">See why customers love LUXE or write a Review</p>
-		<div class="faqs-desc">
-			<input id="_1" type="checkbox">
-			<label class="terms-showMore" for="_1">  What's the best mattress size for me? <i class="fas fa-plus" id="add"></i><img class="fas fa-times" id="close" src="{{cdn 'https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/minus-sign-icon.png?t=1624521698'}}" />
-			</label>
-        	<div>
-	        	<p>Choosing the right mattress size depends on several factors. Are you sharing your bed with a partner or pets? Do you like having plenty of living space in your bedroom? How do you want your bed to be placed? Breaking down these details will help you pick the right size that fits your preferences.</p>
-	        </div>
+                    </dl>
+                {{/or}}
     
-	        <input id="_2" type="checkbox"> <label class="terms-showMore" for="_2"> What type of foundation should I use for my mattress? 
-		    	<i class="fas fa-plus" id="add"></i>
-<!--			    <i class="fas fa-times" id="close"></i>-->
-            <img class="fas fa-times" id="close" src="{{cdn 'https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/minus-sign-icon.png?t=1624521698'}}" />
-			</label>
-            <div>
-                <p>Our mattresses can work with almost all standard foundations. The harder and sturdier the base, the better the mattress will perform, as with all foam beds. Platform bases offer the most support, but steel or wooden slatted foundations are also great options. If you want to improvise, adding a piece of plywood atop the base can give additional support.</p>
+    
+                <div class="prodview-shipping-details grn-matt-ship">
+                    <div>
+                        <p class="text-uppercase font-weight-normal">Ships by:</p>
+                        <h4>{{moment "now" "MM/DD/YYYY"}}</h4>
+                    </div>
+                    <div>
+                        <p class="text-uppercase font-weight-normal">Delivery by:</p>
+                        <h4 class="text-capitalize">Within 2-7 days*</h4>
+                    </div>
+                </div>
+                <div class="learnmore-div">
+                    <p class="learn-p-i"><i style="font-size: 12px;">*To learn more about shipping, check out our <a href="/shipping-transit-chart/" style="color:#00d2ff;"> Shipment Transit Chart.</a></i></p>
+                </div>
+                <div class="d-flex justify-content-between align-items-center flexgrn-matt">
+                    <div class="font-weight-bold" style="color: #132448;">SPECIFICATIONS</div>
+                    <div><img src="{{cdn '/assets/img/prodpage/pllus-icon-img.png'}}" /></div>
+                </div>
             </div>
-
-            <input id="_3" type="checkbox"> <label class="terms-showMore" for="_3"> How long should I wait before I can use my mattress?
-                <i class="fas fa-plus" id="add"></i>
-                <img class="fas fa-times" id="close" src="{{cdn 'https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/minus-sign-icon.png?t=1624521698'}}" /></label>
+            {{#if theme_settings.show_product_description_below}}
+                <div class="productView-scrollToDescription" id="description">
+                    <a href="#description{{#if is_ajax}}_{{product.id}}{{/if}}">{{lang 'products.product_details'}} <span class="icon"><svg><use xlink:href="#icon-arrow-down"></use></svg></span></a>
+                </div>
+              {{/if}}
+            </div>
+        </section>
+    
+    
+    </div>
+    
+    
+    <div class="green-matt-features">
+        <div>
+            <div class="grn-ftr-text">
+                <h2 class="font-weight-bold text-capitalize">Lorem Ipsum Dolor Sit Amet</h2>
+                <p>Experience the comfiest and most refreshing sleep with Icon Sleep's Green tea-infused memory foam mattress With ActivCharcoal&#8482; that neutralizes bad odor combined with BioFoam&reg; technology for contoured spinal support. It's definitely an investment for an improved sleep you deserve.  </p>    
+            </div>
+    
+            <div class="matt-ftr-div ">
+                <div class="grn-matt-img">
+                    <img src="{{cdn '/assets/img/prodpage/active-charcoal.png'}}" />
+                </div>
+                <div class="grn-matt-img">
+                    <img src="{{cdn '/assets/img/prodpage/Compression-tech_icon.png'}}" />
+                </div>
+                <div class="grn-matt-img">
+                    <img src="{{cdn '/assets/img/prodpage/Bio-Foam_icon.png'}}" />
+                </div>
+                 <div class="grn-matt-img">
+                     <img src="{{cdn '/assets/img/prodpage/Evergreen_icon.png'}}" />
+                </div>
+                 <div class="grn-matt-img">
+                     <img src="{{cdn '/assets/img/prodpage/SGS_icon.png'}}" />
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--
+    <div class="prodview-prodimg">
+        <div>
+            <h2>It's Lavishly <span>LUXE</span></h2>
+            <p>You're looking at our most sophisticated mattress to date. A staggering 7-layer architecture assures that "extra" feel you're looking for, right at the first touch. With Luxe, sleep has never been this good.
+            </p>
+            <img src="{{cdn '/assets/img/prodpage/Luxe.png'}}"/>
+        </div>
+    </div>
+    -->
+    <div class="sub-prodview-podimg green-matt-sub">
+        <div class="animation-element bounce-in invi duration-1500">
+            <img src="{{cdn '/assets/img/prodpage/cooling.png'}}"/>
+            <h5>Cooling & Breathability</h5>
+            <p>The most advanced cooling and heat management technology we've ever put on a mattress.</p>
+        </div>
+        <div class="animation-element bounce-in invi duration-1500 delay-300">
+            <img src="{{cdn '/assets/img/prodpage/spinal.png'}}"/>
+            <h5>Top-notch Spinal Support</h5>
+            <p>Engineered to provide outstanding durability, support, and pressure relief for sleepers of all sizes.</p>
+        </div>
+        <div class="animation-element bounce-in invi duration-1500 delay-600">
+            <img src="{{cdn '/assets/img/prodpage/absorb.png'}}"/>
+            <h5>Motion Absorption & Isolation</h5>
+            <p>Say goodbye to motion-related sleep interruptions and enjoy greater sleep and better mornings.</p>
+        </div>
+    </div>
+    
+    
+    <div class="prodview-anatomy green-anatomy">
+        <div style="width:49%;" class="animation-element slide-left" >
+            <img src="{{cdn '/assets/img/product-page/green-mattress-anatomy.png'}}" />
+        </div>
+        <div style="padding:0 5%;" class="animation-element slide-right" >
+            <h4 style="color:#18253f; font-weight: 400; font-size: 28px; text-transform: inherit;" >Take A Closer Look.</h4>
+            <h4 style="color:#18253f; font-weight: bold; font-size: 28px; text-transform: inherit;" >An architecture that assures luxury.</h4>
+            <br>
+            <ul>
+                <li class="animation-element invi fade-in duration-1500 delay-00">Impossibly soft outer material for comfort overload</li>
+                <li class="animation-element invi fade-in duration-1500 delay-300">Certified inner cover for protection against fires</li>
+                <li class="animation-element invi fade-in duration-1500 delay-600">Gel-infused memory foam for cooling and airflow</li>
+                <li class="animation-element invi fade-in duration-1500 delay-900">Dual layers of high-performance foams for pressure relief and weight absorption</li>
+                <li class="animation-element invi fade-in duration-1500 delay-1200">Dedicated comfort layer for that distinct lavish feel</li>
+                <li class="animation-element invi fade-in duration-1500 delay-1500">Durable base for overall support and aesthetics</li>
+            </ul>
+        </div>
+    
+    
+    </div>
+    
+    <!--
+    <div class="prodview-comorftlevel">
+        <h3>FEEL YOUR COMFORT ZONES</h3>
+        <div>
+            <img src="{{cdn '/assets/img/prodpage/medium.png'}}" />
+            <h4>Medium</h4>
+            <p>Perfect for lightweight and side sleepers, these mattresses make great companions for kids and teens.</p>
+        </div>	
+        <div>
+            <img src="{{cdn '/assets/img/prodpage/medium-firm.png'}}" />
+            <h4>Medium Firm</h4>
+            <p>Most couples will surely take great pleasure in sleeping on our medium-firm mattresses. Designed for back sleepers.</p>
+        </div>
+        <div>
+            <img src="{{cdn '/assets/img/prodpage/firm.png'}}" />
+            <h4>Firm</h4>
+            <p>Stomach sleepers will greatly benefit from sleeping on firm mattresses. Also created for people with back pain. </p>
+        </div>
+    </div>
+    -->
+    
+        <div class="prodview-sizechart green-matt">
+            <h3>Size Comparison</h3>
+            <p>Worried your bed won't fit? Check out our size chart.</p>
+            <div class="prodview-sizechart-img green-mattress-chart">
+                <div>
+                    <img class="animation-element slide-up duration-1500 delay-00" src="{{cdn '/assets/img/prodpage/green-matt-twin.png'}}" />
+                </div>
+                <div>
+                    <img class="animation-element slide-up duration-1500 delay-300" src="{{cdn '/assets/img/prodpage/green-matt-twin-xl.png'}}" />
+                </div>
+                <div>
+                    <img class="animation-element slide-up duration-1500 delay-600" src="{{cdn '/assets/img/prodpage/green-matt-full.png'}}" />
+                </div>
+                <div>
+                    <img class="animation-element slide-up duration-1500 delay-900" src="{{cdn '/assets/img/prodpage/gm-short-queen.png'}}" />
+                </div>
+                <div>
+                    <img class="animation-element slide-up duration-1500 delay-1200" src="{{cdn '/assets/img/prodpage/gm-queen.png'}}" />
+                </div>
+                <div>
+                    <img class="animation-element slide-up duration-1500 delay-1500" src="{{cdn '/assets/img/prodpage/gm-king.png'}}" />
+                </div>
+                <div>
+                    <img class="animation-element slide-up duration-1500 delay-1800" src="{{cdn '/assets/img/prodpage/gm-cal-king.png'}}" />
+                </div>
+            </div>
+        </div>
+    
+    
+    <div class="prodview-advantage green-mattress-ques">
+        <h3>You Think Green Tea Mattress Is For You?</h3>
+        <p>Green Tea Mattress is the right mattress for you if you say yes to the following questions.</p>
             <div>
-               <p>You may start using it right out of the box! Take note, however, that it would take 48 hours up to a week for your mattress to fully decompress. Sleeping on your mattress can help with the decompression. To know more about setting up and mattress care, read this <a href="/mattress-care-setup/" style="text-align: center; color: #00d2ff;">Guide</a>.</p>
-	        </div>
-    	</div>
-	</div>
-</div>
+                <img src="{{cdn '/assets/img/prodpage/mattress-ques-img.png'}}" />
+                <h4>Do you want to sleep without interruptions?</h4>
+                <p>LUXE's No Motion Transfer tech makes this bed perfectly comfortable.</p>
+            </div>
+            <div>
+                <img src="{{cdn '/assets/img/prodpage/mattress-ques-img1.png'}}" />
+                <h4>Want to spend your day resting on a lavish bed?</h4>
+                <p>With a 7 layer architecture, luze is the mattress for the pro sleeper.</p>
+            </div>
+            <div>
+                <img src="{{cdn '/assets/img/prodpage/mattress-ques-img2.png'}}" />
+                <h4>Looking for a long lasting mattress?</h4>
+                <p>Excellent design makes LUXE a durable bed to have for all shapes and sizes.</p>
+            </div>
+    </div>
+    
+    
+    <div id="previewModal" class="modal modal--large" data-reveal>
+        <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button">
+            <span aria-hidden="true">&#215;</span>
+        </a>
+        <div class="modal-content"></div>
+        <div class="loadingOverlay"></div>
+    </div>
+    
+    <div class="product-review-section greenh2">
+          <h2>Share Your Green Tea Mattress Story</h2>
+        <span>See why customers love LUXE or write a Review</span>
+        <div class="review-stamped">        
+            <div id="stamped-reviews-widget" data-widget-type="carousel" data-product-id="{{ product.id }}" data-auto-play="true" data-auto-play-speed="10000" data-fill-empty="true" data-title="Authentic Reviews From Real Customers" data-random="? string:Authentic reviews from real customers. ?"></div>
+                </div>
+        </div>    
+    </div>
+    
+    <div class="FAQS-categ green-faq-categ">
+        <div class="faqs-content">
+            
+            <h4 style="">Frequently Asked Questions</h4>
+            <p style="text-align: center; color: #fff;">See why customers love LUXE or write a Review</p>
+            <div class="faqs-desc">
+                <input id="_1" type="checkbox">
+                <label class="terms-showMore" for="_1">  What's the best mattress size for me? <i class="fas fa-plus" id="add"></i><img class="fas fa-times" id="close" src="{{cdn 'https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/minus-sign-icon.png?t=1624521698'}}" />
+                </label>
+                <div>
+                    <p>Choosing the right mattress size depends on several factors. Are you sharing your bed with a partner or pets? Do you like having plenty of living space in your bedroom? How do you want your bed to be placed? Breaking down these details will help you pick the right size that fits your preferences.</p>
+                </div>
+        
+                <input id="_2" type="checkbox"> <label class="terms-showMore" for="_2"> What type of foundation should I use for my mattress? 
+                    <i class="fas fa-plus" id="add"></i>
+    <!--			    <i class="fas fa-times" id="close"></i>-->
+                <img class="fas fa-times" id="close" src="{{cdn 'https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/minus-sign-icon.png?t=1624521698'}}" />
+                </label>
+                <div>
+                    <p>Our mattresses can work with almost all standard foundations. The harder and sturdier the base, the better the mattress will perform, as with all foam beds. Platform bases offer the most support, but steel or wooden slatted foundations are also great options. If you want to improvise, adding a piece of plywood atop the base can give additional support.</p>
+                </div>
+    
+                <input id="_3" type="checkbox"> <label class="terms-showMore" for="_3"> How long should I wait before I can use my mattress?
+                    <i class="fas fa-plus" id="add"></i>
+                    <img class="fas fa-times" id="close" src="{{cdn 'https://cdn11.bigcommerce.com/s-z2qdisybty/product_images/uploaded_images/minus-sign-icon.png?t=1624521698'}}" /></label>
+                <div>
+                   <p>You may start using it right out of the box! Take note, however, that it would take 48 hours up to a week for your mattress to fully decompress. Sleeping on your mattress can help with the decompression. To know more about setting up and mattress care, read this <a href="/mattress-care-setup/" style="text-align: center; color: #00d2ff;">Guide</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 8-in-green-tea-firm-memory-foam-bed-mattress/ -->
