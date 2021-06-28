@@ -1,7 +1,24 @@
 <style>
-    .productView.grn-matt-page .stamped-container {
-        display: none;
-    }
+.productView.grn-matt-page .stamped-badge {
+    display: none !important;
+}
+.productView.grn-matt-page .stamped-reviews {
+    display: none !important;
+}
+.productView.grn-matt-page .summary-overview {
+    display: none !important;
+}
+.productView.grn-matt-page div#stamped-reviews-filter {
+    display: none !important;
+}
+.productView.grn-matt-page .stamped-tab-container {
+    display: none !important;
+}
+.productView.grn-matt-page .new-review-form.stamped-visible {
+    border-bottom: 1px solid #eee;
+    background: #e2e8ed;
+    width: 30rem;
+}
 </style>
 <div class="productView grn-matt-page" {{#if settings.data_tag_enabled}} data-event-type="product" data-entity-id="{{product.id}}" data-name="{{product.title}}" data-product-category="{{#each product.category}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}" data-product-brand="{{product.brand.name}}" data-product-price="{{#if product.price.with_tax}}{{product.price.with_tax.value}}{{else}}{{product.price.without_tax.value}}{{/if}}" data-product-variant="single-product-option"{{/if}}>
 
