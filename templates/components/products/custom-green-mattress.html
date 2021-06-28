@@ -167,6 +167,7 @@
             {{product.detail_messages}}-->
         </div>
         <div class="productView-options grn-matt-opt {{#if settings.show_wishlist}}has-wishlist{{/if}}">
+            <div class="grn-matt-opt-div">
             {{#if product.release_date }}
                 <p>{{product.release_date}}</p>
             {{/if}}
@@ -183,9 +184,8 @@
                         {{else}}
                         {{{dynamicComponent 'components/products/options'}}}
                     {{/each}}
-
-                   
                 </div>
+                <div class="form-qty-cart">
                 {{#if product.event_date}}
                     {{> components/products/event-date}}
                 {{/if}}
@@ -201,6 +201,7 @@
                         {{> components/common/alert-error (lang 'products.sold_out')}}
                     {{/if}}
                 {{/if}}
+                </div>
             </form>
 
             {{#if settings.show_wishlist}}
@@ -250,10 +251,10 @@
                     <h4 class="text-capitalize">Within 2-7 days*</h4>
                 </div>
             </div>
-
-            <p><i>*To learn more about shipping, check out our <a href="/shipping-transit-chart/"> Shipment Transit Chart.</a></i></p>
-
-            <div class="d-flex justify-content-between align-items-center w-75 flexgrn-matt">
+            <div class="learnmore-div">
+                <p class="learn-p-i"><i style="font-size: 12px;">*To learn more about shipping, check out our <a href="/shipping-transit-chart/" style="color:#00d2ff;"> Shipment Transit Chart.</a></i></p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center flexgrn-matt">
                 <div class="font-weight-bold" style="color: #132448;">SPECIFICATIONS</div>
                 <div><img src="{{cdn '/assets/img/prodpage/pllus-icon-img.png'}}" /></div>
             </div>
@@ -262,7 +263,8 @@
             <div class="productView-scrollToDescription" id="description">
                 <a href="#description{{#if is_ajax}}_{{product.id}}{{/if}}">{{lang 'products.product_details'}} <span class="icon"><svg><use xlink:href="#icon-arrow-down"></use></svg></span></a>
             </div>
-        {{/if}}
+          {{/if}}
+        </div>
     </section>
 
 
