@@ -3575,3 +3575,176 @@ form.grn-matt-form div.u-hiddenVisually {
 li.productView-thumb.green-matt-li {
     margin-left: 3em;
 }
+// MATTRESS CARE SETUP
+.instruction-steps {
+    width: 75%;
+    margin: 0 auto;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 3em;
+    display: flex;
+    flex-wrap: wrap;
+}
+.instruction-steps > div {
+    text-align: center;
+    /* width: 25%; */
+    flex: 50%;
+    margin-bottom: 4em;
+}
+.instruction-steps>div>h3{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    color: #174567;	
+    text-transform: uppercase;
+}
+
+.instruction-steps>div>p {
+    color: #444;
+    margin-top: 0;
+    width: 80%;
+        font-size: 16px;
+    margin: 0 auto;
+}
+
+.steps h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 15px 0;
+    font-family: Montserrat,sans-serif!important;
+}
+.steps.s1, .steps.s3 {
+    border-right: 1px solid #dadada;
+}
+
+.steps.s1, .steps.s2 {
+    position: relative;
+}
+
+.steps.s1 hr {
+    width: 95%;
+    margin-top: 2em;
+    position: absolute;
+}
+.steps.s2>hr {
+    width: 95%;
+    margin-left: 2em;
+    margin-top: 2em;
+    position: absolute;
+}
+
+// SUPPORT
+.support-text {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+    margin-top: -14px;
+}
+
+
+.support-text div a {
+    color: #132448!important;
+    padding: 10px 20px;
+    background: #fff;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.support-text div {
+    width: 25%;
+    margin: 0 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.cta-istruth.support {
+    height: 380px;
+}
+.support-form div {
+    width: 40%;
+    margin: 0 5%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+.support-form div:last-child {
+    width: 30%;
+}
+
+.support-form div a {
+    color: #1a4769;
+    display: block;
+    cursor: pointer;
+    margin: 5px 0;
+    font-weight: 600;
+    padding-left: 25px;
+    text-decoration: none;
+}
+
+.support-form div h2 {
+    line-height: 1.5;
+    color: #1a4769;
+    /* font-size: 25px; */
+    font-size: 32px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+.test-mattresses-title.suprt {
+    padding-top: 5%;
+}
+.support-form div h2.transform {
+    text-transform: inherit;
+}
+.support-form.support-is {
+    height: 43rem;
+}
+.track-order-div-pg {
+    background: #fff;
+    width: 35%;
+    margin: 0 auto;
+    padding-top: 4em;
+    padding-bottom: 2em;
+}
+
+.trackorder-container {
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    background: #1fc0fb;
+    color: #fff;
+}
+.trackorder-container h2{
+    color: #fff;
+}
+
+.trackorder-container p a {
+    color: #fff;
+    font-weight: 600;
+}
+.trackorder-container h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+ 
+.transit-chart img {
+    position: relative;
+    width: 100%;
+}
+
+.flexdiv100.sleep-mattress-div.sleep-story {
+    width: 85%;
+    background: #fff;
+    height: auto;
+    margin-bottom: 4em;
+}
+.flexdiv100.sleep-mattress-div.sleep-story.ss-1 {
+    width: 85%;
+    background: #fff;
+    height: auto;
+    margin-bottom: 12em;
+}

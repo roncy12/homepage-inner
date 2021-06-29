@@ -1,12 +1,818 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{317:function(t,e){t.exports=function(t){return t}},320:function(t,e,i){var n=i(317),r=i(327);t.exports=function(t){return r(n(t).toLowerCase())}},321:function(t,e){var i=RegExp("[\\u200d\\ud800-\\udfff\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff\\ufe0e\\ufe0f]");t.exports=function(t){return i.test(t)}},322:function(t,e,i){var n=i(325);t.exports=function(t,e){return!!(null==t?0:t.length)&&n(t,e,0)>-1}},324:function(t,e,i){var n=i(320),r=i(334)((function(t,e,i){return e=e.toLowerCase(),t+(i?n(e):e)}));t.exports=r},325:function(t,e){t.exports=function(t,e,i){for(var n=i-1,r=t.length;++n<r;)if(t[n]===e)return n;return-1}},327:function(t,e,i){var n=i(328)("toUpperCase");t.exports=n},328:function(t,e,i){var n=i(329),r=i(321),s=i(331),o=i(317);t.exports=function(t){return function(e){e=o(e);var i=r(e)?s(e):void 0,c=i?i[0]:e.charAt(0),u=i?n(i,1).join(""):e.slice(1);return c[t]()+u}}},329:function(t,e,i){var n=i(330);t.exports=function(t,e,i){var r=t.length;return i=void 0===i?r:i,!e&&i>=r?t:n(t,e,i)}},330:function(t,e){t.exports=function(t,e,i){var n=-1,r=t.length;e<0&&(e=-e>r?0:r+e),(i=i>r?r:i)<0&&(i+=r),r=e>i?0:i-e>>>0,e>>>=0;for(var s=Array(r);++n<r;)s[n]=t[n+e];return s}},331:function(t,e,i){var n=i(332),r=i(321),s=i(333);t.exports=function(t){return r(t)?s(t):n(t)}},332:function(t,e){t.exports=function(t){return t.split("")}},333:function(t,e){var i="[\\ud800-\\udfff]",n="[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]",r="\\ud83c[\\udffb-\\udfff]",s="[^\\ud800-\\udfff]",o="(?:\\ud83c[\\udde6-\\uddff]){2}",c="[\\ud800-\\udbff][\\udc00-\\udfff]",u="(?:"+n+"|"+r+")"+"?",a="[\\ufe0e\\ufe0f]?"+u+("(?:\\u200d(?:"+[s,o,c].join("|")+")[\\ufe0e\\ufe0f]?"+u+")*"),f="(?:"+[s+n+"?",n,o,c,i].join("|")+")",l=RegExp(r+"(?="+r+")|"+f+a,"g");t.exports=function(t){return t.match(l)||[]}},334:function(t,e,i){var n=i(335),r=i(336),s=i(338),o=RegExp("['’]","g");t.exports=function(t){return function(e){return n(s(r(e).replace(o,"")),t,"")}}},335:function(t,e){t.exports=function(t,e,i,n){var r=-1,s=null==t?0:t.length;for(n&&s&&(i=t[++r]);++r<s;)i=e(i,t[r],r,t);return i}},336:function(t,e,i){var n=i(337);t.exports=function(t){return null==t?"":n(t)}},337:function(t,e){t.exports=function(t){return t}},338:function(t,e,i){var n=i(339),r=i(340),s=i(317),o=i(341);t.exports=function(t,e,i){return t=s(t),void 0===(e=i?void 0:e)?r(t)?o(t):n(t):t.match(e)||[]}},339:function(t,e){var i=/[^\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f]+/g;t.exports=function(t){return t.match(i)||[]}},340:function(t,e){var i=/[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;t.exports=function(t){return i.test(t)}},341:function(t,e){var i="\\xac\\xb1\\xd7\\xf7\\x00-\\x2f\\x3a-\\x40\\x5b-\\x60\\x7b-\\xbf\\u2000-\\u206f \\t\\x0b\\f\\xa0\\ufeff\\n\\r\\u2028\\u2029\\u1680\\u180e\\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200a\\u202f\\u205f\\u3000",n="["+i+"]",r="\\d+",s="[\\u2700-\\u27bf]",o="[a-z\\xdf-\\xf6\\xf8-\\xff]",c="[^\\ud800-\\udfff"+i+r+"\\u2700-\\u27bfa-z\\xdf-\\xf6\\xf8-\\xffA-Z\\xc0-\\xd6\\xd8-\\xde]",u="(?:\\ud83c[\\udde6-\\uddff]){2}",a="[\\ud800-\\udbff][\\udc00-\\udfff]",f="[A-Z\\xc0-\\xd6\\xd8-\\xde]",l="(?:"+o+"|"+c+")",h="(?:"+f+"|"+c+")",p="(?:[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]|\\ud83c[\\udffb-\\udfff])?",d="[\\ufe0e\\ufe0f]?"+p+("(?:\\u200d(?:"+["[^\\ud800-\\udfff]",u,a].join("|")+")[\\ufe0e\\ufe0f]?"+p+")*"),y="(?:"+[s,u,a].join("|")+")"+d,k=RegExp([f+"?"+o+"+(?:['’](?:d|ll|m|re|s|t|ve))?(?="+[n,f,"$"].join("|")+")",h+"+(?:['’](?:D|LL|M|RE|S|T|VE))?(?="+[n,f+l,"$"].join("|")+")",f+"?"+l+"+(?:['’](?:d|ll|m|re|s|t|ve))?",f+"+(?:['’](?:D|LL|M|RE|S|T|VE))?","\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])","\\d*(?:1st|2nd|3rd|(?![123])\\dth)(?=\\b|[A-Z_])",r,y].join("|"),"g");t.exports=function(t){return t.match(k)||[]}},345:function(t,e){t.exports=function(t){return t}},348:function(t,e){t.exports=function(t,e){for(var i=-1,n=null==t?0:t.length;++i<n&&!1!==e(t[i],i,t););return t}},349:function(t,e,i){var n=i(154),r=i(150),s=i(350),o=i(345),c=i(100),u=i(98),a=i(101),f=i(152),l=i(26),h=i(153);t.exports=function(t,e,i){var p=u(t),d=p||a(t)||h(t);if(e=o(e,4),null==i){var y=t&&t.constructor;i=d?p?new y:[]:l(t)&&f(y)?r(c(t)):{}}return(d?n:s)(t,(function(t,n,r){return e(i,t,n,r)})),i}},350:function(t,e,i){var n=i(351),r=i(99);t.exports=function(t,e){return t&&n(t,e,r)}},351:function(t,e,i){var n=i(352)();t.exports=n},352:function(t,e){t.exports=function(t){return function(e,i,n){for(var r=-1,s=Object(e),o=n(e),c=o.length;c--;){var u=o[t?c:++r];if(!1===i(s[u],u,s))break}return e}}},417:function(t,e,i){var n=i(151),r=i(418),s=i(420),o=i(421),c=n((function(t,e,i){var n=1;if(i.length){var u=o(i,s(c));n|=32}return r(t,n,e,i,u)}));c.placeholder={},t.exports=c},418:function(t,e,i){var n=i(157),r=i(419),s=i(102);t.exports=function(t,e,i,o){var c=1&e,u=r(t);return function e(){for(var r=-1,a=arguments.length,f=-1,l=o.length,h=Array(l+a),p=this&&this!==s&&this instanceof e?u:t;++f<l;)h[f]=o[f];for(;a--;)h[f++]=arguments[++r];return n(p,c?i:this,h)}}},419:function(t,e,i){var n=i(150),r=i(26);t.exports=function(t){return function(){var e=arguments;switch(e.length){case 0:return new t;case 1:return new t(e[0]);case 2:return new t(e[0],e[1]);case 3:return new t(e[0],e[1],e[2]);case 4:return new t(e[0],e[1],e[2],e[3]);case 5:return new t(e[0],e[1],e[2],e[3],e[4]);case 6:return new t(e[0],e[1],e[2],e[3],e[4],e[5]);case 7:return new t(e[0],e[1],e[2],e[3],e[4],e[5],e[6])}var i=n(t.prototype),s=t.apply(i,e);return r(s)?s:i}}},420:function(t,e){t.exports=function(){}},421:function(t,e){t.exports=function(){return[]}},422:function(t,e,i){var n=i(423);t.exports=n},423:function(t,e,i){function n(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function r(t,e){for(var i=0;i<e.length;i++){var n=e[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[5],{
+
+/***/ "./assets/js/theme/common/form-utils.js":
+/*!**********************************************!*\
+  !*** ./assets/js/theme/common/form-utils.js ***!
+  \**********************************************/
+/*! exports provided: classifyForm, Validators, insertStateHiddenField */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "classifyForm", function() { return classifyForm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Validators", function() { return Validators; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "insertStateHiddenField", function() { return insertStateHiddenField; });
+/* harmony import */ var lodash_capitalize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash/capitalize */ "./node_modules/lodash/capitalize.js");
+/* harmony import */ var lodash_capitalize__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_capitalize__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash_camelCase__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/camelCase */ "./node_modules/lodash/camelCase.js");
+/* harmony import */ var lodash_camelCase__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_camelCase__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash_includes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/includes */ "./node_modules/lodash/includes.js");
+/* harmony import */ var lodash_includes__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_includes__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _nod__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./nod */ "./assets/js/theme/common/nod.js");
+/* harmony import */ var _models_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./models/forms */ "./assets/js/theme/common/models/forms.js");
+
+
+
+
+
+
+
+
+var inputTagNames = ['input', 'select', 'textarea'];
+
 /**
- * Sticky.js
- * Library for sticky elements written in vanilla javascript. With this library you can easily set sticky elements on your website. It's also responsive.
- *
- * @version 1.3.0
- * @author Rafal Galus <biuro@rafalgalus.pl>
- * @website https://rgalus.github.io/sticky-js/
- * @repo https://github.com/rgalus/sticky-js
- * @license https://github.com/rgalus/sticky-js/blob/master/LICENSE
+ * Apply class name to an input element on its type
+ * @param {object} input
+ * @param {string} formFieldClass
+ * @return {object} Element itself
  */
-var s;s=function(){function t(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",i=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};n(this,t),this.selector=e,this.elements=[],this.version="1.3.0",this.vp=this.getViewportSize(),this.body=document.querySelector("body"),this.options={wrap:i.wrap||!1,wrapWith:i.wrapWith||"<span></span>",marginTop:i.marginTop||0,marginBottom:i.marginBottom||0,stickyFor:i.stickyFor||0,stickyClass:i.stickyClass||null,stickyContainer:i.stickyContainer||"body"},this.updateScrollTopPosition=this.updateScrollTopPosition.bind(this),this.updateScrollTopPosition(),window.addEventListener("load",this.updateScrollTopPosition),window.addEventListener("scroll",this.updateScrollTopPosition),this.run()}var e,i,s;return e=t,(i=[{key:"run",value:function(){var t=this,e=setInterval((function(){if("complete"===document.readyState){clearInterval(e);var i=document.querySelectorAll(t.selector);t.forEach(i,(function(e){return t.renderElement(e)}))}}),10)}},{key:"renderElement",value:function(t){var e=this;t.sticky={},t.sticky.active=!1,t.sticky.marginTop=parseInt(t.getAttribute("data-margin-top"))||this.options.marginTop,t.sticky.marginBottom=parseInt(t.getAttribute("data-margin-bottom"))||this.options.marginBottom,t.sticky.stickyFor=parseInt(t.getAttribute("data-sticky-for"))||this.options.stickyFor,t.sticky.stickyClass=t.getAttribute("data-sticky-class")||this.options.stickyClass,t.sticky.wrap=!!t.hasAttribute("data-sticky-wrap")||this.options.wrap,t.sticky.stickyContainer=this.options.stickyContainer,t.sticky.container=this.getStickyContainer(t),t.sticky.container.rect=this.getRectangle(t.sticky.container),t.sticky.rect=this.getRectangle(t),"img"===t.tagName.toLowerCase()&&(t.onload=function(){return t.sticky.rect=e.getRectangle(t)}),t.sticky.wrap&&this.wrapElement(t),this.activate(t)}},{key:"wrapElement",value:function(t){t.insertAdjacentHTML("beforebegin",t.getAttribute("data-sticky-wrapWith")||this.options.wrapWith),t.previousSibling.appendChild(t)}},{key:"activate",value:function(t){t.sticky.rect.top+t.sticky.rect.height<t.sticky.container.rect.top+t.sticky.container.rect.height&&t.sticky.stickyFor<this.vp.width&&!t.sticky.active&&(t.sticky.active=!0),this.elements.indexOf(t)<0&&this.elements.push(t),t.sticky.resizeEvent||(this.initResizeEvents(t),t.sticky.resizeEvent=!0),t.sticky.scrollEvent||(this.initScrollEvents(t),t.sticky.scrollEvent=!0),this.setPosition(t)}},{key:"initResizeEvents",value:function(t){var e=this;t.sticky.resizeListener=function(){return e.onResizeEvents(t)},window.addEventListener("resize",t.sticky.resizeListener)}},{key:"destroyResizeEvents",value:function(t){window.removeEventListener("resize",t.sticky.resizeListener)}},{key:"onResizeEvents",value:function(t){this.vp=this.getViewportSize(),t.sticky.rect=this.getRectangle(t),t.sticky.container.rect=this.getRectangle(t.sticky.container),t.sticky.rect.top+t.sticky.rect.height<t.sticky.container.rect.top+t.sticky.container.rect.height&&t.sticky.stickyFor<this.vp.width&&!t.sticky.active?t.sticky.active=!0:(t.sticky.rect.top+t.sticky.rect.height>=t.sticky.container.rect.top+t.sticky.container.rect.height||t.sticky.stickyFor>=this.vp.width&&t.sticky.active)&&(t.sticky.active=!1),this.setPosition(t)}},{key:"initScrollEvents",value:function(t){var e=this;t.sticky.scrollListener=function(){return e.onScrollEvents(t)},window.addEventListener("scroll",t.sticky.scrollListener)}},{key:"destroyScrollEvents",value:function(t){window.removeEventListener("scroll",t.sticky.scrollListener)}},{key:"onScrollEvents",value:function(t){t.sticky&&t.sticky.active&&this.setPosition(t)}},{key:"setPosition",value:function(t){this.css(t,{position:"",width:"",top:"",left:""}),this.vp.height<t.sticky.rect.height||!t.sticky.active||(t.sticky.rect.width||(t.sticky.rect=this.getRectangle(t)),t.sticky.wrap&&this.css(t.parentNode,{display:"block",width:t.sticky.rect.width+"px",height:t.sticky.rect.height+"px"}),0===t.sticky.rect.top&&t.sticky.container===this.body?(this.css(t,{position:"fixed",top:t.sticky.rect.top+"px",left:t.sticky.rect.left+"px",width:t.sticky.rect.width+"px"}),t.sticky.stickyClass&&t.classList.add(t.sticky.stickyClass)):this.scrollTop>t.sticky.rect.top-t.sticky.marginTop?(this.css(t,{position:"fixed",width:t.sticky.rect.width+"px",left:t.sticky.rect.left+"px"}),this.scrollTop+t.sticky.rect.height+t.sticky.marginTop>t.sticky.container.rect.top+t.sticky.container.offsetHeight-t.sticky.marginBottom?(t.sticky.stickyClass&&t.classList.remove(t.sticky.stickyClass),this.css(t,{top:t.sticky.container.rect.top+t.sticky.container.offsetHeight-(this.scrollTop+t.sticky.rect.height+t.sticky.marginBottom)+"px"})):(t.sticky.stickyClass&&t.classList.add(t.sticky.stickyClass),this.css(t,{top:t.sticky.marginTop+"px"}))):(t.sticky.stickyClass&&t.classList.remove(t.sticky.stickyClass),this.css(t,{position:"",width:"",top:"",left:""}),t.sticky.wrap&&this.css(t.parentNode,{display:"",width:"",height:""})))}},{key:"update",value:function(){var t=this;this.forEach(this.elements,(function(e){e.sticky.rect=t.getRectangle(e),e.sticky.container.rect=t.getRectangle(e.sticky.container),t.activate(e),t.setPosition(e)}))}},{key:"destroy",value:function(){var t=this;window.removeEventListener("load",this.updateScrollTopPosition),window.removeEventListener("scroll",this.updateScrollTopPosition),this.forEach(this.elements,(function(e){t.destroyResizeEvents(e),t.destroyScrollEvents(e),delete e.sticky}))}},{key:"getStickyContainer",value:function(t){for(var e=t.parentNode;!e.hasAttribute("data-sticky-container")&&!e.parentNode.querySelector(t.sticky.stickyContainer)&&e!==this.body;)e=e.parentNode;return e}},{key:"getRectangle",value:function(t){this.css(t,{position:"",width:"",top:"",left:""});var e=Math.max(t.offsetWidth,t.clientWidth,t.scrollWidth),i=Math.max(t.offsetHeight,t.clientHeight,t.scrollHeight),n=0,r=0;do{n+=t.offsetTop||0,r+=t.offsetLeft||0,t=t.offsetParent}while(t);return{top:n,left:r,width:e,height:i}}},{key:"getViewportSize",value:function(){return{width:Math.max(document.documentElement.clientWidth,window.innerWidth||0),height:Math.max(document.documentElement.clientHeight,window.innerHeight||0)}}},{key:"updateScrollTopPosition",value:function(){this.scrollTop=(window.pageYOffset||document.scrollTop)-(document.clientTop||0)||0}},{key:"forEach",value:function(t,e){for(var i=0,n=t.length;i<n;i++)e(t[i])}},{key:"css",value:function(t,e){for(var i in e)e.hasOwnProperty(i)&&(t.style[i]=e[i])}}])&&r(e.prototype,i),s&&r(e,s),t}(),t.exports=s}}]);
+function classifyInput(input, formFieldClass) {
+    var $input = jquery__WEBPACK_IMPORTED_MODULE_3___default()(input);
+    var $formField = $input.parent('.' + formFieldClass);
+    var tagName = $input.prop('tagName').toLowerCase();
+
+    var className = formFieldClass + '--' + tagName;
+    var specificClassName = void 0;
+
+    // Input can be text/checkbox/radio etc...
+    if (tagName === 'input') {
+        var inputType = $input.prop('type');
+
+        if (lodash_includes__WEBPACK_IMPORTED_MODULE_2___default()(['radio', 'checkbox', 'submit'], inputType)) {
+            // ie: .form-field--checkbox, .form-field--radio
+            className = formFieldClass + '--' + lodash_camelCase__WEBPACK_IMPORTED_MODULE_1___default()(inputType);
+        } else {
+            // ie: .form-field--input .form-field--inputText
+            specificClassName = '' + className + lodash_capitalize__WEBPACK_IMPORTED_MODULE_0___default()(inputType);
+        }
+    }
+
+    // Apply class modifier
+    return $formField.addClass(className).addClass(specificClassName);
+}
+
+/**
+ * Apply class name to each input element in a form based on its type
+ * @example
+ * // Before
+ * <form id="form">
+ *     <div class="form-field">
+ *         <input type="text">
+ *     </div>
+ *     <div class="form-field">
+ *         <select>...</select>
+ *     </div>
+ * </form>
+ *
+ * classifyForm('#form', { formFieldClass: 'form-field' });
+ *
+ * // After
+ * <div class="form-field form-field--input form-field--inputText">...</div>
+ * <div class="form-field form-field--select">...</div>
+ *
+ * @param {string|object} formSelector - selector or element
+ * @param {object} options
+ * @return {jQuery} Element itself
+ */
+function classifyForm(formSelector) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    var $form = jquery__WEBPACK_IMPORTED_MODULE_3___default()(formSelector);
+    var $inputs = $form.find(inputTagNames.join(', '));
+
+    // Obtain options
+    var _options$formFieldCla = options.formFieldClass,
+        formFieldClass = _options$formFieldCla === undefined ? 'form-field' : _options$formFieldCla;
+
+    // Classify each input in a form
+
+    $inputs.each(function (__, input) {
+        classifyInput(input, formFieldClass);
+    });
+
+    return $form;
+}
+
+/**
+ * Get id from given field
+ * @param {object} $field JQuery field object
+ * @return {string}
+ */
+function getFieldId($field) {
+    var fieldId = $field.prop('name').match(/(\[.*\])/);
+
+    if (fieldId && fieldId.length !== 0) {
+        return fieldId[0];
+    }
+
+    return '';
+}
+
+/**
+ * Insert hidden field after State/Province field
+ * @param {object} $stateField JQuery field object
+ */
+function insertStateHiddenField($stateField) {
+    var fieldId = getFieldId($stateField);
+    var stateFieldAttrs = {
+        type: 'hidden',
+        name: 'FormFieldIsText' + fieldId,
+        value: '1'
+    };
+
+    $stateField.after(jquery__WEBPACK_IMPORTED_MODULE_3___default()('<input />', stateFieldAttrs));
+}
+
+var Validators = {
+    /**
+     * Sets up a new validation when the form is dirty
+     * @param validator
+     * @param field
+     */
+    setEmailValidation: function setEmailValidation(validator, field) {
+        if (field) {
+            validator.add({
+                selector: field,
+                validate: function validate(cb, val) {
+                    var result = _models_forms__WEBPACK_IMPORTED_MODULE_5__["default"].email(val);
+
+                    cb(result);
+                },
+                errorMessage: 'You must enter a valid email.'
+            });
+        }
+    },
+
+    /**
+     * Validate password fields
+     * @param validator
+     * @param passwordSelector
+     * @param password2Selector
+     * @param requirements
+     * @param isOptional
+     */
+    setPasswordValidation: function setPasswordValidation(validator, passwordSelector, password2Selector, requirements, isOptional) {
+        var $password = jquery__WEBPACK_IMPORTED_MODULE_3___default()(passwordSelector);
+        var passwordValidations = [{
+            selector: passwordSelector,
+            validate: function validate(cb, val) {
+                var result = val.length;
+
+                if (isOptional) {
+                    return cb(true);
+                }
+
+                cb(result);
+            },
+            errorMessage: 'You must enter a password.'
+        }, {
+            selector: passwordSelector,
+            validate: function validate(cb, val) {
+                var result = val.match(new RegExp(requirements.alpha)) && val.match(new RegExp(requirements.numeric)) && val.length >= requirements.minlength;
+
+                // If optional and nothing entered, it is valid
+                if (isOptional && val.length === 0) {
+                    return cb(true);
+                }
+
+                cb(result);
+            },
+            errorMessage: requirements.error
+        }, {
+            selector: password2Selector,
+            validate: function validate(cb, val) {
+                var result = val.length;
+
+                if (isOptional) {
+                    return cb(true);
+                }
+
+                cb(result);
+            },
+            errorMessage: 'You must enter a password.'
+        }, {
+            selector: password2Selector,
+            validate: function validate(cb, val) {
+                var result = val === $password.val();
+
+                cb(result);
+            },
+            errorMessage: 'Your passwords do not match.'
+        }];
+
+        validator.add(passwordValidations);
+    },
+
+    /**
+     * Validate password fields
+     * @param {Nod} validator
+     * @param {Object} selectors
+     * @param {string} selectors.errorSelector
+     * @param {string} selectors.fieldsetSelector
+     * @param {string} selectors.formSelector
+     * @param {string} selectors.maxPriceSelector
+     * @param {string} selectors.minPriceSelector
+     */
+    setMinMaxPriceValidation: function setMinMaxPriceValidation(validator, selectors) {
+        var errorSelector = selectors.errorSelector,
+            fieldsetSelector = selectors.fieldsetSelector,
+            formSelector = selectors.formSelector,
+            maxPriceSelector = selectors.maxPriceSelector,
+            minPriceSelector = selectors.minPriceSelector;
+
+
+        validator.configure({
+            form: formSelector,
+            preventSubmit: true,
+            successClass: '_' // KLUDGE: Don't apply success class
+        });
+
+        validator.add({
+            errorMessage: 'Min price must be less than max. price.',
+            selector: minPriceSelector,
+            validate: 'min-max:' + minPriceSelector + ':' + maxPriceSelector
+        });
+
+        validator.add({
+            errorMessage: 'Min price must be less than max. price.',
+            selector: maxPriceSelector,
+            validate: 'min-max:' + minPriceSelector + ':' + maxPriceSelector
+        });
+
+        validator.add({
+            errorMessage: 'Max. price is required.',
+            selector: maxPriceSelector,
+            validate: 'presence'
+        });
+
+        validator.add({
+            errorMessage: 'Min. price is required.',
+            selector: minPriceSelector,
+            validate: 'presence'
+        });
+
+        validator.add({
+            errorMessage: 'Input must be greater than 0.',
+            selector: [minPriceSelector, maxPriceSelector],
+            validate: 'min-number:0'
+        });
+
+        validator.setMessageOptions({
+            selector: [minPriceSelector, maxPriceSelector],
+            parent: fieldsetSelector,
+            errorSpan: errorSelector
+        });
+    },
+
+    /**
+     * Sets up a new validation when the form is dirty
+     * @param validator
+     * @param field
+     */
+    setStateCountryValidation: function setStateCountryValidation(validator, field) {
+        if (field) {
+            validator.add({
+                selector: field,
+                validate: 'presence',
+                errorMessage: 'The \'State/Province\' field cannot be blank.'
+            });
+        }
+    },
+
+    /**
+     * Removes classes from dirty form if previously checked
+     * @param field
+     */
+    cleanUpStateValidation: function cleanUpStateValidation(field) {
+        var $fieldClassElement = jquery__WEBPACK_IMPORTED_MODULE_3___default()('[data-type="' + field.data('fieldType') + '"]');
+
+        Object.keys(_nod__WEBPACK_IMPORTED_MODULE_4__["default"].classes).forEach(function (value) {
+            if ($fieldClassElement.hasClass(_nod__WEBPACK_IMPORTED_MODULE_4__["default"].classes[value])) {
+                $fieldClassElement.removeClass(_nod__WEBPACK_IMPORTED_MODULE_4__["default"].classes[value]);
+            }
+        });
+    }
+};
+
+
+
+/***/ }),
+
+/***/ "./assets/js/theme/common/models/forms.js":
+/*!************************************************!*\
+  !*** ./assets/js/theme/common/models/forms.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var forms = {
+    email: function email(value) {
+        var re = /^.+@.+\..+/;
+        return re.test(value);
+    },
+
+
+    /**
+     * Validates a password field
+     * @param value
+     * @returns {boolean}
+     */
+    password: function password(value) {
+        return this.notEmpty(value);
+    },
+
+
+    /**
+     * validates if a field is empty
+     * @param value
+     * @returns {boolean}
+     *
+     */
+    notEmpty: function notEmpty(value) {
+        return value.length > 0;
+    }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (forms);
+
+/***/ }),
+
+/***/ "./assets/js/theme/f/product-related-blog.js":
+/*!***************************************************!*\
+  !*** ./assets/js/theme/f/product-related-blog.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @bigcommerce/stencil-utils */ "./node_modules/@bigcommerce/stencil-utils/src/main.js");
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (post) {
+    function fetchPageByUrl(relatedContent) {
+        _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_1__["default"].api.getPage(relatedContent, { template: 'f/blog/related-article' }, function (err, content) {
+            if (err) {
+                throw new Error(err);
+            }
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()('.relatedContent').append(content);
+        });
+    }
+
+    fetchPageByUrl(post);
+
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.relatedContent').show();
+});
+
+/***/ }),
+
+/***/ "./assets/js/theme/f/selected-option.js":
+/*!**********************************************!*\
+  !*** ./assets/js/theme/f/selected-option.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+    var $src = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show-selected-option input');
+    var $selected = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show-selected-option input[checked]');
+    var $selectedOptionLabel = void 0;
+    var $selectedOption = void 0;
+
+    function changeLabel() {
+        $selectedOptionLabel = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).siblings().children('span[data-option-value]');
+        $selectedOption = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-option-label');
+
+        $selectedOptionLabel.text($selectedOption);
+    }
+
+    $selected.each(changeLabel);
+    $src.on('click', changeLabel);
+});
+
+/***/ }),
+
+/***/ "./assets/js/theme/f/size-preview.js":
+/*!*******************************************!*\
+  !*** ./assets/js/theme/f/size-preview.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @bigcommerce/stencil-utils */ "./node_modules/@bigcommerce/stencil-utils/src/main.js");
+/* harmony import */ var foundation_sites_js_foundation_foundation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! foundation-sites/js/foundation/foundation */ "./node_modules/foundation-sites/js/foundation/foundation.js");
+/* harmony import */ var foundation_sites_js_foundation_foundation__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(foundation_sites_js_foundation_foundation__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var foundation_sites_js_foundation_foundation_equalizer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! foundation-sites/js/foundation/foundation.equalizer */ "./node_modules/foundation-sites/js/foundation/foundation.equalizer.js");
+/* harmony import */ var foundation_sites_js_foundation_foundation_equalizer__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(foundation_sites_js_foundation_foundation_equalizer__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+    var $src = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.card-sizes');
+
+    function showSizePreview() {
+        var _this = this;
+
+        var productId = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-id');
+        _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_1__["default"].api.product.getById(productId, { template: 'f/swatches/product-sizes' }, function (err, resp) {
+            var sizeContent = jquery__WEBPACK_IMPORTED_MODULE_0___default.a.parseHTML(resp);
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()(_this).html(sizeContent);
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation('equalizer', 'reflow');
+        });
+    }
+
+    $src.each(showSizePreview);
+});
+
+/***/ }),
+
+/***/ "./assets/js/theme/f/swatch-preview.js":
+/*!*********************************************!*\
+  !*** ./assets/js/theme/f/swatch-preview.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @bigcommerce/stencil-utils */ "./node_modules/@bigcommerce/stencil-utils/src/main.js");
+/* harmony import */ var foundation_sites_js_foundation_foundation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! foundation-sites/js/foundation/foundation */ "./node_modules/foundation-sites/js/foundation/foundation.js");
+/* harmony import */ var foundation_sites_js_foundation_foundation__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(foundation_sites_js_foundation_foundation__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var foundation_sites_js_foundation_foundation_equalizer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! foundation-sites/js/foundation/foundation.equalizer */ "./node_modules/foundation-sites/js/foundation/foundation.equalizer.js");
+/* harmony import */ var foundation_sites_js_foundation_foundation_equalizer__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(foundation_sites_js_foundation_foundation_equalizer__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+    var $src = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.card-swatches');
+
+    function showSwatchPreview() {
+        var _this = this;
+
+        var productId = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-id');
+        _bigcommerce_stencil_utils__WEBPACK_IMPORTED_MODULE_1__["default"].api.product.getById(productId, { template: 'f/swatches/product-swatches' }, function (err, resp) {
+            var swatchContent = jquery__WEBPACK_IMPORTED_MODULE_0___default.a.parseHTML(resp);
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()(_this).html(swatchContent);
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation('equalizer', 'reflow');
+        });
+    }
+
+    $src.each(showSwatchPreview);
+});
+
+/***/ }),
+
+/***/ "./assets/js/theme/product.js":
+/*!************************************!*\
+  !*** ./assets/js/theme/product.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _page_manager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./page-manager */ "./assets/js/theme/page-manager.js");
+/* harmony import */ var _product_reviews__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./product/reviews */ "./assets/js/theme/product/reviews.js");
+/* harmony import */ var _common_collapsible__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./common/collapsible */ "./assets/js/theme/common/collapsible.js");
+/* harmony import */ var _common_product_details__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./common/product-details */ "./assets/js/theme/common/product-details.js");
+/* harmony import */ var _product_video_gallery__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./product/video-gallery */ "./assets/js/theme/product/video-gallery.js");
+/* harmony import */ var _common_form_utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./common/form-utils */ "./assets/js/theme/common/form-utils.js");
+/* harmony import */ var _f_swatch_preview__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./f/swatch-preview */ "./assets/js/theme/f/swatch-preview.js");
+/* harmony import */ var _f_size_preview__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./f/size-preview */ "./assets/js/theme/f/size-preview.js");
+/* harmony import */ var _f_product_related_blog__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./f/product-related-blog */ "./assets/js/theme/f/product-related-blog.js");
+/* harmony import */ var _f_selected_option__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./f/selected-option */ "./assets/js/theme/f/selected-option.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+/*
+ Import all product specific js
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+var Product = function (_PageManager) {
+    _inherits(Product, _PageManager);
+
+    function Product(context) {
+        _classCallCheck(this, Product);
+
+        var _this = _possibleConstructorReturn(this, _PageManager.call(this, context));
+
+        _this.url = window.location.href;
+        _this.$reviewLink = jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-reveal-id="modal-review-form"]');
+        return _this;
+    }
+
+    Product.prototype.onReady = function onReady() {
+        var _this2 = this;
+
+        // Listen for foundation modal close events to sanitize URL after review.
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('close.fndtn.reveal', function () {
+            if (_this2.url.indexOf('#write_review') !== -1 && typeof window.history.replaceState === 'function') {
+                window.history.replaceState(null, document.title, window.location.pathname);
+            }
+        });
+
+        if (this.context.relatedContent) {
+            Object(_f_product_related_blog__WEBPACK_IMPORTED_MODULE_9__["default"])(this.context.relatedContent);
+        }
+
+        var validator = void 0;
+
+        // Init collapsible
+        Object(_common_collapsible__WEBPACK_IMPORTED_MODULE_3__["default"])();
+
+        this.productDetails = new _common_product_details__WEBPACK_IMPORTED_MODULE_4__["default"](jquery__WEBPACK_IMPORTED_MODULE_0___default()('.productView'), this.context, window.BCData.product_attributes);
+        this.productDetails.setProductVariant();
+
+        Object(_product_video_gallery__WEBPACK_IMPORTED_MODULE_5__["default"])();
+
+        var $reviewForm = Object(_common_form_utils__WEBPACK_IMPORTED_MODULE_6__["classifyForm"])('.writeReview-form');
+        var review = new _product_reviews__WEBPACK_IMPORTED_MODULE_2__["default"]($reviewForm);
+
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').on('click', '[data-reveal-id="modal-review-form"]', function () {
+            validator = review.registerValidation(_this2.context);
+        });
+
+        $reviewForm.on('submit', function () {
+            if (validator) {
+                validator.performCheck();
+                return validator.areAll('valid');
+            }
+
+            return false;
+        });
+
+        // Load swatches onto product grid if enabled
+        if (this.context.enableSwatches) {
+            Object(_f_swatch_preview__WEBPACK_IMPORTED_MODULE_7__["default"])();
+        }
+
+        if (this.context.enableSizes) {
+            Object(_f_size_preview__WEBPACK_IMPORTED_MODULE_8__["default"])();
+        }
+
+        if (this.context.enableSelectedOptionLabel) {
+            Object(_f_selected_option__WEBPACK_IMPORTED_MODULE_10__["default"])();
+        }
+
+        this.productReviewHandler();
+    };
+
+    Product.prototype.productReviewHandler = function productReviewHandler() {
+        if (this.url.indexOf('#write_review') !== -1) {
+            this.$reviewLink.trigger('click');
+        }
+    };
+
+    return Product;
+}(_page_manager__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Product);
+
+/***/ }),
+
+/***/ "./assets/js/theme/product/reviews.js":
+/*!********************************************!*\
+  !*** ./assets/js/theme/product/reviews.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _common_nod__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../common/nod */ "./assets/js/theme/common/nod.js");
+/* harmony import */ var _common_collapsible__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../common/collapsible */ "./assets/js/theme/common/collapsible.js");
+/* harmony import */ var _common_models_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../common/models/forms */ "./assets/js/theme/common/models/forms.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+
+
+
+var _class = function () {
+    function _class($reviewForm) {
+        _classCallCheck(this, _class);
+
+        this.validator = Object(_common_nod__WEBPACK_IMPORTED_MODULE_1__["default"])({
+            submit: $reviewForm.find('input[type="submit"]')
+        });
+
+        this.$reviewsContent = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#product-reviews');
+        this.$collapsible = jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-collapsible]', this.$reviewsContent);
+
+        this.initLinkBind();
+        this.injectPaginationLink();
+        this.collapseReviews();
+    }
+
+    /**
+     * On initial page load, the user clicks on "(12 Reviews)" link
+     * The browser jumps to the review page and should expand the reviews section
+     */
+
+
+    _class.prototype.initLinkBind = function initLinkBind() {
+        var _this = this;
+
+        var $content = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#productReviews-content', this.$reviewsContent);
+
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.productView-reviewLink').on('click', function () {
+            if (!$content.hasClass('is-open')) {
+                _this.$collapsible.trigger(_common_collapsible__WEBPACK_IMPORTED_MODULE_2__["CollapsibleEvents"].click);
+            }
+        });
+    };
+
+    _class.prototype.collapseReviews = function collapseReviews() {
+        // We're in paginating state, do not collapse
+        if (window.location.hash && window.location.hash.indexOf('#product-reviews') === 0) {
+            return;
+        }
+
+        // force collapse on page load
+        this.$collapsible.trigger(_common_collapsible__WEBPACK_IMPORTED_MODULE_2__["CollapsibleEvents"].click);
+    };
+
+    /**
+     * Inject ID into the pagination link
+     */
+
+
+    _class.prototype.injectPaginationLink = function injectPaginationLink() {
+        var $nextLink = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.pagination-item--next .pagination-link', this.$reviewsContent);
+        var $prevLink = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.pagination-item--previous .pagination-link', this.$reviewsContent);
+
+        if ($nextLink.length) {
+            $nextLink.attr('href', $nextLink.attr('href') + ' #product-reviews');
+        }
+
+        if ($prevLink.length) {
+            $prevLink.attr('href', $prevLink.attr('href') + ' #product-reviews');
+        }
+    };
+
+    _class.prototype.registerValidation = function registerValidation(context) {
+        this.context = context;
+        this.validator.add([{
+            selector: '[name="revrating"]',
+            validate: 'presence',
+            errorMessage: this.context.reviewRating
+        }, {
+            selector: '[name="revtitle"]',
+            validate: 'presence',
+            errorMessage: this.context.reviewSubject
+        }, {
+            selector: '[name="revtext"]',
+            validate: 'presence',
+            errorMessage: this.context.reviewComment
+        }, {
+            selector: '[name="email"]',
+            validate: function validate(cb, val) {
+                var result = _common_models_forms__WEBPACK_IMPORTED_MODULE_3__["default"].email(val);
+                cb(result);
+            },
+            errorMessage: this.context.reviewEmail
+        }]);
+
+        return this.validator;
+    };
+
+    _class.prototype.validate = function validate() {
+        return this.validator.performCheck();
+    };
+
+    return _class;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (_class);
+
+/***/ }),
+
+/***/ "./assets/js/theme/product/video-gallery.js":
+/*!**************************************************!*\
+  !*** ./assets/js/theme/product/video-gallery.js ***!
+  \**************************************************/
+/*! exports provided: VideoGallery, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VideoGallery", function() { return VideoGallery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return videoGallery; });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var VideoGallery = function () {
+    function VideoGallery($element) {
+        _classCallCheck(this, VideoGallery);
+
+        this.$player = $element.find('[data-video-player]');
+        this.$videos = $element.find('[data-video-item]');
+        this.currentVideo = {};
+        this.bindEvents();
+    }
+
+    VideoGallery.prototype.selectNewVideo = function selectNewVideo(e) {
+        e.preventDefault();
+
+        var $target = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget);
+
+        this.currentVideo = {
+            id: $target.data('videoId'),
+            $selectedThumb: $target
+        };
+
+        this.setMainVideo();
+        this.setActiveThumb();
+    };
+
+    VideoGallery.prototype.setMainVideo = function setMainVideo() {
+        this.$player.attr('src', '//www.youtube.com/embed/' + this.currentVideo.id);
+    };
+
+    VideoGallery.prototype.setActiveThumb = function setActiveThumb() {
+        this.$videos.removeClass('is-active');
+        this.currentVideo.$selectedThumb.addClass('is-active');
+    };
+
+    VideoGallery.prototype.bindEvents = function bindEvents() {
+        this.$videos.on('click', this.selectNewVideo.bind(this));
+    };
+
+    return VideoGallery;
+}();
+
+function videoGallery() {
+    var pluginKey = 'video-gallery';
+    var $videoGallery = jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-' + pluginKey + ']');
+
+    $videoGallery.each(function (index, element) {
+        var $el = jquery__WEBPACK_IMPORTED_MODULE_0___default()(element);
+        var isInitialized = $el.data(pluginKey) instanceof VideoGallery;
+
+        if (isInitialized) {
+            return;
+        }
+
+        $el.data(pluginKey, new VideoGallery($el));
+    });
+}
+
+/***/ })
+
+}]);
+//# sourceMappingURL=theme-bundle.chunk.5.js.map

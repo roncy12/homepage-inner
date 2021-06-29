@@ -346,7 +346,15 @@ a.like-us {
     .productView.grn-matt-page span#stamped-badge-title {
         font-size: 16px !important;
     }
-
+    .track-order-div-pg {
+        background: #fff;
+        width: 55%;
+        margin: 0 auto;
+        padding-top: 4em;
+        padding-bottom: 2em;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
 }
 @media only screen and (max-width: 1450px) {
     .productView.grn-matt-page #stamped-main-widget {
@@ -800,6 +808,9 @@ section.productView-details.green-matt-details {
 .productView-thumbs.green-matt-thumb {
     left: 4.5%;
 }
+.sleep-mattress-text.story-text {
+    padding-top: 0;
+}
 }
 @media only screen and (max-width: 1080px)  {
     .most-affordable-desc {
@@ -927,6 +938,25 @@ section.productView-details.green-matt-details {
 .prodview-shipping.grn-mat-shp {
     left: 6.5em;
 }
+.support-text div {
+    width: 45%;
+    margin: 0 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cta-istruth h2.sprth2 {
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    padding-top: 8% !important;
+    text-transform: inherit;
+    margin-bottom:0;
+}
+.cta-istruth.track-order p {
+    margin-bottom: 8px !important;
+}
+
 }
 @media only screen and (max-width: 1024px)  {
     
@@ -1367,6 +1397,19 @@ li.productView-thumb.green-matt-li {
 .productView-options.grn-matt-opt .form-action.form-addToCart .button {
     width: 17.5em;
 }
+.track-order-div-pg {
+    background: #fff;
+    width: 65%;
+    margin: 0 auto;
+    padding-top: 4em;
+    padding-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.flexdiv100.sleep-mattress-div.sleep-story {
+    display: flex;
+}
+
 }
 
 @media only screen and (max-width: 1000px) {
@@ -1470,6 +1513,16 @@ li.productView-thumb.green-matt-li {
 .faq-banner-con.comparison-text h2 {
     font-size: 26px;
 }
+
+.steps.s2 p br, .steps.s1 p br, .steps.s3 p br, .steps.s4 p br {
+    display: none;
+}
+.steps.s1, .steps.s3 {
+    border-right: 1px solid transparent;
+}
+.quote-chrt>div>p>br {
+    display: none;
+}
 }
 @media only screen and (max-width: 967px) {
     // RONCY
@@ -1494,7 +1547,7 @@ li.productView-thumb.green-matt-li {
         text-align: left;
         background-color: transparent;
     }
-    
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -2028,6 +2081,36 @@ li.productView-thumb.green-matt-li {
     width: 85%;
     margin-left: 1.5em;
 }
+
+.banner-comparison.chart-page>div>div> p br {
+    display: none;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.banner-comparison.chart-page {
+    width: 85%;
+}
+.banner-comparison.chart-page>div>div {
+    left: 0 !important;
+}
+.flexdiv100.sleep-mattress-div.sleep-story {
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+.flexdiv100.sleep-mattress-div.sleep-story.ss-1 {
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+}
+.sleep-mattress-text.story-text {
+    width: 95%;
+}
+.sleep-mattress-text.story-text h4 br {
+    display:none;
+}
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -2971,6 +3054,19 @@ a.learn-button {
     margin: 0;
     margin-left: 1.5em;
 }
+.instruction-steps {
+
+    flex-direction: column;
+}
+
+.banner-comparison.chart-page>div>div> p {
+    font-size: 12px !important;
+    line-height: 1.5;
+}
+
+.quote-chrt>div>p{
+    font-size: 12px !important;
+}
 
 }
 
@@ -3028,7 +3124,18 @@ a.learn-button {
         margin: 0;
         margin-left: 1.5em;
     }
-
+    .support-text div {
+        width: 60%;
+        margin: 10px 5px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .track-order-div-pg {
+        width: 85%;
+    }
+    .support-text div a {
+        font-size: 14px;
+    }
 }
 @media only screen and (max-width: 420px) {
     .btn-rev {
@@ -3158,6 +3265,20 @@ a.learn-button {
     .prodview-shipping-details.grn-matt-ship {
         width: 85%;
         margin-left: 1.5em;
+    }
+    .cta-istruth h2.sprth2 {
+        color: #fff;
+        text-align: center;
+        font-weight: 700;
+        padding-top: 15% !important;
+        text-transform: inherit;
+        margin-bottom: 0;
+    }
+    .trackorder-container h2{
+        font-size: 28px;
+    }
+    .trackorder-container {
+        padding: 30px 62px;
     }
 }
 
@@ -3762,6 +3883,20 @@ a.reviewreal-button {
         width: 23rem !important;
         text-align: left;
         padding-right: 5em;
+    }
+    .track-order-div-pg {
+        width: 85%;
+        padding-top: 3em;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 2em;
+    }
+    .cta-istruth h2.sprth2 {
+        padding-top: 18% !important;
+
+    }
+    .col-12.text-left.chart-desc h2 {
+        font-size: 18px !important;
     }
 }
 
